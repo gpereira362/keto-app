@@ -144,14 +144,14 @@ test('fecha de inicio futura: se ve cuándo empieza y se puede empezar hoy', asy
   await page.getByLabel('Fecha de inicio').fill(future);
   await page.getByRole('button', { name: 'Empezar' }).click();
 
-  await expect(page.getByText(/^Empiezas el .* · se cambia en Ajustes$/)).toBeVisible();
+  await expect(page.getByText(/^Empiezas el .* ·/)).toBeVisible();
   await page.getByRole('button', { name: 'Empezar hoy' }).click();
-  await expect(page.getByText(/^Empezaste el .* · se cambia en Ajustes$/)).toBeVisible();
+  await expect(page.getByText(/^Empezaste el .* ·/)).toBeVisible();
   await expect(page.getByRole('button', { name: 'Empezar hoy' })).toHaveCount(0);
 
-  // En Ajustes se puede volver a cambiar.
-  await page.getByRole('button', { name: 'Más' }).click();
-  await page.getByRole('button', { name: /Ajustes/ }).click();
+  // El enlace "Cambiar fecha" lleva directo a Ajustes.
+  await page.getByRole('button', { name: 'Cambiar fecha' }).click();
+  await expect(page.getByRole('heading', { name: 'Fecha de inicio' })).toBeInViewport();
   page.on('dialog', (dlg) => dlg.accept());
   await page.getByLabel('Nueva fecha de inicio').fill(future);
   await page.getByRole('button', { name: 'Cambiar', exact: true }).click();

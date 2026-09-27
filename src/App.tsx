@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div className="min-h-dvh bg-stone-50">
       <main className="mx-auto max-w-md px-4 pb-28 pt-6">
-        {route === 'hoy' && <Hoy />}
+        {route === 'hoy' && <Hoy onChangeStartDate={() => go('ajustes', 'fecha')} />}
         <ErrorBoundary key={route}>
         {route === 'semana' && (
           <Semana key={param ?? 'actual'} initialWeek={param ? Number(param) : undefined} onShoppingList={(week) => go('compras', week)} />
@@ -82,7 +82,7 @@ export default function App() {
         {route === 'exclusiones' && <Exclusiones onBack={() => go('mas')} />}
         {route === 'mapa' && <Mapa onBack={() => go('mas')} onOpenWeek={(w) => go('semana', w)} />}
         {route === 'alimentos' && <Alimentos onBack={() => go('mas')} />}
-        {route === 'ajustes' && <Ajustes onBack={() => go('mas')} onExclusions={() => go('exclusiones')} />}
+        {route === 'ajustes' && <Ajustes focus={param} onBack={() => go('mas')} onExclusions={() => go('exclusiones')} />}
         {(route === 'registro' || route === 'progreso') && (
           <div className="space-y-4">
             <div role="tablist" aria-label="Registro" className="grid grid-cols-2 rounded-xl bg-stone-200/70 p-1">

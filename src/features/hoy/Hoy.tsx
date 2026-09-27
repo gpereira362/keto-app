@@ -37,7 +37,7 @@ function activeFast(logs: DailyLog[], weekStartedAt: string): string | undefined
   return broken ? undefined : started.fastStartedAt;
 }
 
-export function Hoy() {
+export function Hoy({ onChangeStartDate }: { onChangeStartDate: () => void }) {
   const state = useApp();
   const { profile, progress, logs, overrides, mealSwaps } = state;
   const now = useNow();
@@ -87,7 +87,10 @@ export function Hoy() {
         </div>
         <p className="text-sm text-stone-600">Paso {week.step} · {week.title}</p>
         <p className="text-xs text-stone-500">
-          {notStarted ? 'Empiezas' : 'Empezaste'} el {longDate(profile.startDate)} · se cambia en Ajustes
+          {notStarted ? 'Empiezas' : 'Empezaste'} el {longDate(profile.startDate)} ·{' '}
+          <button type="button" onClick={onChangeStartDate} className="-my-3 min-h-11 font-semibold text-emerald-800 underline">
+            Cambiar fecha
+          </button>
         </p>
         {!isToday && (
           <div className="mt-2 flex items-center justify-between gap-2 rounded-xl bg-stone-100 px-3 py-1 text-sm text-stone-700">

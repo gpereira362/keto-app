@@ -1,5 +1,5 @@
 // Ajustes: perfil, unidades, tamaños de paquete locales, respaldo JSON, borrar datos y aviso médico.
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { MedicalWarning } from '../../components/MedicalWarning';
 import { Button, Card, Chip, Field, inputClass } from '../../components/ui';
 import { idealWeight, validateIdealWeight } from '../../engine/body';
@@ -18,12 +18,16 @@ const METHOD_LABELS: Record<IdealWeightSource, string> = {
   bmi22: 'IMC 22', devine: 'Devine', robinson: 'Robinson', manual: 'Mi valor',
 };
 
-export function Ajustes({ onBack, onExclusions }: { onBack: () => void; onExclusions: () => void }) {
+export function Ajustes({ focus, onBack, onExclusions }: { focus?: string; onBack: () => void; onExclusions: () => void }) {
   const state = useApp();
   const { profile, settings } = state;
   const fileInput = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState<{ tone: 'ok' | 'error'; text: string } | null>(null);
   const [showPacks, setShowPacks] = useState(false);
+  // Desde Hoy ("Cambiar fecha") se llega directo a la fecha de inicio.
+  useEffect(() => {
+    if (focus === 'fecha') document.getElementById('fecha-inicio')?.scrollIntoView({ block: 'center' });
+  }, [focus]);
   if (!profile) return null;
   const units = profile.units;
   const set = (patch: Partial<Profile>) => state.updateProfile(patch);
@@ -212,8 +216,8 @@ export function Ajustes({ onBack, onExclusions }: { onBack: () => void; onExclus
 function StartDateCard({ startDate, onChange }: { startDate: string; onChange: (date: string) => void }) {
   const [date, setDate] = useState(startDate);
   return (
-    <Card className="space-y-3">
-      <h2 className="font-semibold text-stone-900">Fecha de inicio</h2>
+    <Card className="scroll-mt-4 space-y-3">
+      <h2 id="fecha-inicio" className="font-semibold text-stone-900">Fecha de inicio</h2>
       <p className="text-sm text-stone-600">El día 1 del programa es <span className="font-medium">{longDate(startDate)}</span>.</p>
       <div className="flex items-end gap-2">
         <div className="flex-1">
