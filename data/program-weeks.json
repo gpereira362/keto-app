@@ -1,0 +1,2267 @@
+[
+  {
+    "week": 1,
+    "step": "2",
+    "title": "Menos de 20 g de carbohidratos totales",
+    "phase": "Principiante",
+    "schedule": "3 comidas + café con crema. Come cada vez que tengas hambre real, sin picar entre comidas.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Vaciar el azúcar almacenada en el hígado y producir tu primera cetona.",
+    "rules": [
+      "Cuenta carbohidratos TOTALES, no netos: máximo 20 g al día.",
+      "El desayuno es obligatorio aunque no tengas hambre.",
+      "Sal agresiva: en la comida y disuelta en agua. Magnesio 300–400 mg (glicinato).",
+      "Cero alcohol (6 semanas) y cero edulcorantes.",
+      "Nada de ayunos esta semana."
+    ],
+    "measure": "Tira de cetonas en orina cada vez que orines. La mayoría ve rosa entre el día 4 y el 7 (hasta el día 10).",
+    "advanceWhen": "Pasa a la semana 2 al completar 7 días seguidos bajo 20 g de carbohidratos.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM1"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES3"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM3"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES4"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM1"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES5"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM4"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM3"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 2,
+    "step": "2",
+    "title": "Menos de 20 g de carbohidratos totales",
+    "phase": "Principiante",
+    "schedule": "3 comidas + café con crema. Grasa hasta sentirte llena.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Mantener la química estable mientras pasa la \"gripe keto\" y bajan los antojos.",
+    "rules": [
+      "Misma regla: menos de 20 g de carbohidratos totales.",
+      "Come grasa: no ayunes ni restrinjas calorías.",
+      "Si hay dolor de cabeza, calambres o cansancio: más sal y magnesio.",
+      "Nada de postres ni \"bombas de grasa\" dulces."
+    ],
+    "measure": "Tira de orina por la mañana. Anota energía, hambre y sueño.",
+    "advanceWhen": "Avanza cuando la tira salga rosa con regularidad.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM4"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM1"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES5"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES3"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM3"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES4"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM1"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM4"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 3,
+    "step": "2 → 3",
+    "title": "Hacia la adaptación a la grasa",
+    "phase": "Principiante",
+    "schedule": "3 comidas. Si al mediodía NO tienes hambre, puedes saltarte el almuerzo (no lo fuerces).",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Dejar que las hormonas de saciedad (hechas con grasa) se recuperen.",
+    "rules": [
+      "Sigue menos de 20 g de carbohidratos.",
+      "Desayuno siempre.",
+      "Escucha la ausencia de hambre en vez de mirar la báscula.",
+      "Comidas \"aburridas\" y repetidas: bajan los antojos."
+    ],
+    "measure": "Tira de orina por la mañana. Anota si alguna comida se te \"olvidó\".",
+    "advanceWhen": "La señal que buscas: \"se me olvidó comer y no tenía hambre\".",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM1"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES3"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM3"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES5"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM4"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES4"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM1"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM3"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 4,
+    "step": "3",
+    "title": "Me salté una comida \"sin querer\" (adaptada)",
+    "phase": "Principiante",
+    "schedule": "2 o 3 comidas según hambre. El almuerzo es opcional; desayuno y cena, sí.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Confirmar la adaptación keto. La fase de mucha grasa y 3 comidas no debe pasar de 4–6 semanas.",
+    "rules": [
+      "Menos de 20 g de carbohidratos.",
+      "No fuerces saltarte comidas: debe pasar solo.",
+      "Si nunca te pasa, sigue aquí (a algunas personas les toma hasta 10 semanas)."
+    ],
+    "measure": "Tira de orina. Si tienes glucómetro: glucosa en ayunas (meta menor de 100).",
+    "advanceWhen": "Avanza cuando te hayas saltado una comida sin hambre. Si no, repite las semanas 3–4.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:00",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES3"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM1"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES4"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM3"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES5"
+          },
+          {
+            "label": "Cena",
+            "time": "18:00",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES1"
+          },
+          {
+            "label": "Almuerzo",
+            "time": "12:30",
+            "meal": "ALM4"
+          },
+          {
+            "label": "Cena",
+            "time": "18:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "07:30",
+            "meal": "DES2"
+          },
+          {
+            "label": "Cena",
+            "time": "18:00",
+            "meal": "CEN2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 5,
+    "step": "4",
+    "title": "Dos comidas al día",
+    "phase": "Principiante",
+    "schedule": "2 \"bolos\" de comida al día: desayuno y cena. Nada entre ellos (ni picoteo, ni chicle).",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Lo que pasó por accidente ahora es una decisión: 2 comidas al día, 7 días seguidos.",
+    "rules": [
+      "Cualquier bocado cuenta como comida (un \"bolo\"). Solo 2 al día.",
+      "Café con crema permitido por la mañana.",
+      "Menos de 20 g de carbohidratos."
+    ],
+    "measure": "Tira de orina por la mañana. Marca en el calendario cada día cumplido.",
+    "advanceWhen": "Avanza con 7 días seguidos de 2 comidas.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "08:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Cena",
+            "time": "17:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "08:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Cena",
+            "time": "17:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "08:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Cena",
+            "time": "17:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "08:00",
+            "meal": "P2D"
+          },
+          {
+            "label": "Cena",
+            "time": "17:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "08:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Cena",
+            "time": "17:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "08:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Cena",
+            "time": "17:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Desayuno",
+            "time": "08:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Cena",
+            "time": "17:30",
+            "meal": "CEN2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 6,
+    "step": "5",
+    "title": "16:8",
+    "phase": "Metabolismo base",
+    "schedule": "Toda la comida dentro de 8 horas (ej. 09:00–17:00). 16 horas solo agua y sal.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Formalizar las 2 comidas en un horario fijo.",
+    "rules": [
+      "El café con grasa de la mañana todavía NO abre la ventana (son tus \"rueditas de entrenamiento\").",
+      "Elige una ventana que encaje con tu vida y sé constante.",
+      "Chicle solo dentro de la ventana."
+    ],
+    "measure": "Tira de orina en la mañana.",
+    "advanceWhen": "Sigue en 16:8 al menos 2 semanas antes de avanzar.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2D"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 7,
+    "step": "5",
+    "title": "16:8 (segunda semana)",
+    "phase": "Metabolismo base",
+    "schedule": "Ventana de 8 horas (ej. 09:00–17:00).",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Consolidar el 16:8 y probarlo en tu vida social.",
+    "rules": [
+      "Misma ventana todos los días.",
+      "Última comida antes de la puesta de sol.",
+      "Menos de 20 g de carbohidratos."
+    ],
+    "measure": "Tira de orina. Opcional: glucosa en ayunas.",
+    "advanceWhen": "Avanza tras 2 semanas estables en 16:8. Si la glucosa de la mañana sigue arriba de 100, pasar al paso 6 ayuda.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2D"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF1"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 8,
+    "step": "6",
+    "title": "16:8 avanzado",
+    "phase": "Metabolismo base",
+    "schedule": "Ventana de 8 horas. Las 16 horas de ayuno son limpias: café negro, té, agua y sal.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Quitar las rueditas: la bebida de la mañana sin grasa, sin MCT, sin endulzantes, sin calorías.",
+    "rules": [
+      "Café o té NEGRO + sal por la mañana.",
+      "La primera comida abre la ventana.",
+      "La grasa va dentro de las comidas."
+    ],
+    "measure": "Tira de orina. Glucosa en ayunas si tienes glucómetro.",
+    "advanceWhen": "Avanza cuando la mañana sin crema ya no sea una lucha.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2D"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "16:30",
+            "meal": "CEN2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 9,
+    "step": "6",
+    "title": "16:8 avanzado: \"aterriza y aprieta\"",
+    "phase": "Metabolismo base",
+    "schedule": "Aprieta la ventana: 7 horas (lun–mié) y luego 6 horas (jue–dom, 18:6). Muévela hacia más temprano.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.3
+    },
+    "goal": "Encoger la ventana poco a poco y comer más cerca del amanecer.",
+    "rules": [
+      "Nunca comas después de que se ponga el sol.",
+      "Desayuno fuerte: la proteína temprano ayuda al músculo.",
+      "Este paso puede ser tu destino por meses si te sientes bien."
+    ],
+    "measure": "Tira de orina. Consigue un medidor de sangre (glucosa + cetonas) para la semana 10.",
+    "advanceWhen": "Avanza si 18:6 te resulta cómodo. Si no, quédate aquí: no hay prisa.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2D"
+          },
+          {
+            "label": "Comida 2",
+            "time": "14:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "14:30",
+            "meal": "CEN5"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "14:30",
+            "meal": "CEN4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "09:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "14:30",
+            "meal": "CEN2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 10,
+    "step": "6 → 7",
+    "title": "20:4 hacia OMAD (23:1)",
+    "phase": "Metabolismo base",
+    "schedule": "Lun–mié: 2 comidas dentro de 4 horas (20:4). Jue–dom: OMAD, todas las calorías en 1 hora.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.6
+    },
+    "goal": "Llegar a una sola comida al día, comida en máximo una hora.",
+    "rules": [
+      "23 horas: solo agua, sal, té o café negro. Nada de caldo ni grasa.",
+      "La única comida debe llenarte: suficiente grasa y proteína.",
+      "OMAD es una temporada, no para siempre."
+    ],
+    "measure": "Desde aquí: medidor en sangre. Glucosa y cetonas al despertar.",
+    "advanceWhen": "Avanza si OMAD te deja con energía. Si hay mareo o irritabilidad, vuelve a 18:6 una semana más.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "11:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "14:30",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "11:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "14:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "11:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "14:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "13:00",
+            "meal": "OM1"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "13:00",
+            "meal": "OM2"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "13:00",
+            "meal": "OM3"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "13:00",
+            "meal": "OM4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 11,
+    "step": "8",
+    "title": "OMAD avanzado",
+    "phase": "Metabolismo base",
+    "schedule": "OMAD con la comida dentro de las 11 horas después del amanecer (si amanece a las 6:00, termina antes de las 17:00).",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.6
+    },
+    "goal": "Alinear la única comida con tu reloj biológico.",
+    "rules": [
+      "Comida temprana: idealmente entre 10:00 y 14:00.",
+      "Busca un grupo de apoyo: aquí pesa más la mente.",
+      "Sal de calidad varias veces al día."
+    ],
+    "measure": "Ratio Dr. Boz (glucosa ÷ cetonas) al despertar y antes de comer. Menor de 80 = pérdida de peso.",
+    "advanceWhen": "Avanza al ayuno de 36 h solo con presión y glucosa estables, y con aval médico si tomas medicamentos.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "06:30",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "11:00",
+            "meal": "OM1"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "06:30",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "11:00",
+            "meal": "OM2"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "06:30",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "11:00",
+            "meal": "OM3"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "06:30",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "11:00",
+            "meal": "OM4"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "06:30",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "11:00",
+            "meal": "OM5"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "06:30",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "11:00",
+            "meal": "OM1"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "06:30",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "11:00",
+            "meal": "OM2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 12,
+    "step": "9",
+    "title": "Ayuno de 36 horas",
+    "phase": "Estresar el metabolismo",
+    "schedule": "Una vez esta semana: cena el lunes, nada el martes, desayuno el miércoles. El resto de días: 2 comidas en 6 horas u OMAD.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.6
+    },
+    "goal": "Primer estrés controlado del metabolismo: 36 h aprovechando 2 noches de sueño.",
+    "rules": [
+      "⚠️ Si tomas medicamentos para presión o azúcar: solo con tu médico.",
+      "Cena del lunes abundante y saciante.",
+      "Martes: agua, sal (cristales en la lengua para el hambre), café negro. Rescate: caldo salado o cetonas exógenas.",
+      "Rompe el ayuno con una comida pequeña."
+    ],
+    "measure": "Ratio Dr. Boz la mañana del martes y del miércoles.",
+    "advanceWhen": "Avanza cuando termines el ayuno sin mareos y con buen ánimo.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Cena (inicio ayuno)",
+            "time": "16:00",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Todo el día",
+            "time": "—",
+            "meal": "AYU"
+          },
+          {
+            "label": "Si lo necesitas",
+            "time": "—",
+            "meal": "AYUC"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Romper ayuno",
+            "time": "06:00",
+            "meal": "RUP"
+          },
+          {
+            "label": "Comida 2",
+            "time": "12:00",
+            "meal": "OM1"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "12:00",
+            "meal": "OM4"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2D"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 13,
+    "step": "10",
+    "title": "36 horas sin comida de celebración",
+    "phase": "Estresar el metabolismo",
+    "schedule": "Repite el ayuno de 36 h. Al terminar, vuelves a tu comida normal, sin \"premio\".",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.6
+    },
+    "goal": "Romper la idea de que el ayuno es un castigo que se paga con un banquete.",
+    "rules": [
+      "⚠️ Con aval médico si tomas medicamentos.",
+      "La comida de salida es igual a cualquier otra.",
+      "Buena semana para ayunar en grupo con tu \"tribu\"."
+    ],
+    "measure": "Ratio Dr. Boz antes y después del ayuno.",
+    "advanceWhen": "Avanza cuando la comida de salida sea normal y tranquila.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Cena (inicio ayuno)",
+            "time": "16:00",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Todo el día",
+            "time": "—",
+            "meal": "AYU"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Romper ayuno (sin premio)",
+            "time": "06:00",
+            "meal": "RUPS"
+          },
+          {
+            "label": "Comida 2",
+            "time": "12:00",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "12:00",
+            "meal": "OM2"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN1"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "12:00",
+            "meal": "OM3"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "week": 14,
+    "step": "11",
+    "title": "Ayuno de 48 horas",
+    "phase": "Estresar el metabolismo",
+    "schedule": "Cena el lunes, nada el martes ni hasta la cena del miércoles. Mantiene tu horario de cena.",
+    "proteinGPerKg": {
+      "min": 1.0,
+      "max": 1.6
+    },
+    "goal": "Ayuno de 48 h: un patrón que se puede repetir (Dr. Boz lo considera seguro hasta 2 veces por semana).",
+    "rules": [
+      "⚠️ Con aval médico si tomas medicamentos.",
+      "Sal abundante y agua los dos días.",
+      "Sin comida de celebración al terminar.",
+      "Después: vuelve a tu ritmo base (16:8, 18:6 u OMAD)."
+    ],
+    "measure": "Ratio Dr. Boz cada mañana: menor de 40 indica autofagia.",
+    "advanceWhen": "Siguiente paso (12): ayuno de 72 h una vez por semana durante 8 semanas, solo si tu médico lo aprueba.",
+    "days": [
+      {
+        "day": "Lun",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2B"
+          },
+          {
+            "label": "Cena (inicio ayuno)",
+            "time": "17:00",
+            "meal": "CEN2"
+          }
+        ]
+      },
+      {
+        "day": "Mar",
+        "slots": [
+          {
+            "label": "Todo el día",
+            "time": "—",
+            "meal": "AYU"
+          }
+        ]
+      },
+      {
+        "day": "Mié",
+        "slots": [
+          {
+            "label": "Hasta la cena",
+            "time": "—",
+            "meal": "AYU"
+          },
+          {
+            "label": "Romper ayuno",
+            "time": "17:00",
+            "meal": "RUP"
+          }
+        ]
+      },
+      {
+        "day": "Jue",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2A"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN3"
+          }
+        ]
+      },
+      {
+        "day": "Vie",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "12:00",
+            "meal": "OM1"
+          }
+        ]
+      },
+      {
+        "day": "Sáb",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "Comida 1",
+            "time": "10:00",
+            "meal": "P2C"
+          },
+          {
+            "label": "Comida 2",
+            "time": "15:30",
+            "meal": "CEN6"
+          }
+        ]
+      },
+      {
+        "day": "Dom",
+        "slots": [
+          {
+            "label": "Al despertar",
+            "time": "07:00",
+            "meal": "CAF0"
+          },
+          {
+            "label": "OMAD (1 h)",
+            "time": "12:00",
+            "meal": "OM4"
+          }
+        ]
+      }
+    ]
+  }
+]

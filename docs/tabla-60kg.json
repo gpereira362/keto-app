@@ -1,0 +1,691 @@
+{
+ "idealWeightKg": 60,
+ "days": [
+  {
+   "week": 1,
+   "day": "Lun",
+   "protein": 76.9,
+   "fat": 104.5,
+   "carbs": 12.6
+  },
+  {
+   "week": 1,
+   "day": "Mar",
+   "protein": 85.4,
+   "fat": 114.2,
+   "carbs": 5.5
+  },
+  {
+   "week": 1,
+   "day": "Mié",
+   "protein": 69.6,
+   "fat": 121.9,
+   "carbs": 8.2
+  },
+  {
+   "week": 1,
+   "day": "Jue",
+   "protein": 72.0,
+   "fat": 115.0,
+   "carbs": 13.5
+  },
+  {
+   "week": 1,
+   "day": "Vie",
+   "protein": 85.2,
+   "fat": 127.0,
+   "carbs": 6.1
+  },
+  {
+   "week": 1,
+   "day": "Sáb",
+   "protein": 85.0,
+   "fat": 135.0,
+   "carbs": 6.3
+  },
+  {
+   "week": 1,
+   "day": "Dom",
+   "protein": 72.9,
+   "fat": 101.6,
+   "carbs": 11.0
+  },
+  {
+   "week": 2,
+   "day": "Lun",
+   "protein": 85.9,
+   "fat": 115.5,
+   "carbs": 6.8
+  },
+  {
+   "week": 2,
+   "day": "Mar",
+   "protein": 75.9,
+   "fat": 122.0,
+   "carbs": 11.2
+  },
+  {
+   "week": 2,
+   "day": "Mié",
+   "protein": 80.3,
+   "fat": 121.6,
+   "carbs": 3.7
+  },
+  {
+   "week": 2,
+   "day": "Jue",
+   "protein": 74.8,
+   "fat": 106.7,
+   "carbs": 10.3
+  },
+  {
+   "week": 2,
+   "day": "Vie",
+   "protein": 83.4,
+   "fat": 118.6,
+   "carbs": 7.6
+  },
+  {
+   "week": 2,
+   "day": "Sáb",
+   "protein": 69.0,
+   "fat": 128.2,
+   "carbs": 12.0
+  },
+  {
+   "week": 2,
+   "day": "Dom",
+   "protein": 90.8,
+   "fat": 120.5,
+   "carbs": 7.3
+  },
+  {
+   "week": 3,
+   "day": "Lun",
+   "protein": 79.0,
+   "fat": 117.4,
+   "carbs": 12.2
+  },
+  {
+   "week": 3,
+   "day": "Mar",
+   "protein": 77.9,
+   "fat": 114.7,
+   "carbs": 3.4
+  },
+  {
+   "week": 3,
+   "day": "Mié",
+   "protein": 74.8,
+   "fat": 106.7,
+   "carbs": 10.3
+  },
+  {
+   "week": 3,
+   "day": "Jue",
+   "protein": 81.0,
+   "fat": 124.7,
+   "carbs": 5.4
+  },
+  {
+   "week": 3,
+   "day": "Vie",
+   "protein": 87.6,
+   "fat": 120.9,
+   "carbs": 8.4
+  },
+  {
+   "week": 3,
+   "day": "Sáb",
+   "protein": 73.8,
+   "fat": 133.2,
+   "carbs": 12.5
+  },
+  {
+   "week": 3,
+   "day": "Dom",
+   "protein": 75.0,
+   "fat": 114.5,
+   "carbs": 10.6
+  },
+  {
+   "week": 4,
+   "day": "Lun",
+   "protein": 88.1,
+   "fat": 106.3,
+   "carbs": 6.4
+  },
+  {
+   "week": 4,
+   "day": "Mar",
+   "protein": 61.4,
+   "fat": 86.9,
+   "carbs": 5.4
+  },
+  {
+   "week": 4,
+   "day": "Mié",
+   "protein": 68.6,
+   "fat": 118.0,
+   "carbs": 8.9
+  },
+  {
+   "week": 4,
+   "day": "Jue",
+   "protein": 77.2,
+   "fat": 121.2,
+   "carbs": 13.5
+  },
+  {
+   "week": 4,
+   "day": "Vie",
+   "protein": 56.4,
+   "fat": 96.1,
+   "carbs": 4.0
+  },
+  {
+   "week": 4,
+   "day": "Sáb",
+   "protein": 85.5,
+   "fat": 136.3,
+   "carbs": 7.6
+  },
+  {
+   "week": 4,
+   "day": "Dom",
+   "protein": 61.4,
+   "fat": 86.9,
+   "carbs": 5.4
+  },
+  {
+   "week": 5,
+   "day": "Lun",
+   "protein": 72.6,
+   "fat": 98.5,
+   "carbs": 6.1
+  },
+  {
+   "week": 5,
+   "day": "Mar",
+   "protein": 70.6,
+   "fat": 107.5,
+   "carbs": 3.0
+  },
+  {
+   "week": 5,
+   "day": "Mié",
+   "protein": 74.2,
+   "fat": 79.9,
+   "carbs": 5.6
+  },
+  {
+   "week": 5,
+   "day": "Jue",
+   "protein": 69.9,
+   "fat": 103.8,
+   "carbs": 8.6
+  },
+  {
+   "week": 5,
+   "day": "Vie",
+   "protein": 65.3,
+   "fat": 100.8,
+   "carbs": 4.3
+  },
+  {
+   "week": 5,
+   "day": "Sáb",
+   "protein": 72.9,
+   "fat": 122.8,
+   "carbs": 5.4
+  },
+  {
+   "week": 5,
+   "day": "Dom",
+   "protein": 76.3,
+   "fat": 92.8,
+   "carbs": 5.2
+  },
+  {
+   "week": 6,
+   "day": "Lun",
+   "protein": 72.6,
+   "fat": 98.5,
+   "carbs": 6.1
+  },
+  {
+   "week": 6,
+   "day": "Mar",
+   "protein": 70.6,
+   "fat": 107.5,
+   "carbs": 3.0
+  },
+  {
+   "week": 6,
+   "day": "Mié",
+   "protein": 74.2,
+   "fat": 79.9,
+   "carbs": 5.6
+  },
+  {
+   "week": 6,
+   "day": "Jue",
+   "protein": 69.9,
+   "fat": 103.8,
+   "carbs": 8.6
+  },
+  {
+   "week": 6,
+   "day": "Vie",
+   "protein": 65.3,
+   "fat": 100.8,
+   "carbs": 4.3
+  },
+  {
+   "week": 6,
+   "day": "Sáb",
+   "protein": 72.9,
+   "fat": 122.8,
+   "carbs": 5.4
+  },
+  {
+   "week": 6,
+   "day": "Dom",
+   "protein": 76.3,
+   "fat": 92.8,
+   "carbs": 5.2
+  },
+  {
+   "week": 7,
+   "day": "Lun",
+   "protein": 76.0,
+   "fat": 94.1,
+   "carbs": 5.5
+  },
+  {
+   "week": 7,
+   "day": "Mar",
+   "protein": 65.1,
+   "fat": 99.0,
+   "carbs": 4.0
+  },
+  {
+   "week": 7,
+   "day": "Mié",
+   "protein": 73.0,
+   "fat": 99.2,
+   "carbs": 9.6
+  },
+  {
+   "week": 7,
+   "day": "Jue",
+   "protein": 69.0,
+   "fat": 95.1,
+   "carbs": 3.5
+  },
+  {
+   "week": 7,
+   "day": "Vie",
+   "protein": 75.0,
+   "fat": 111.6,
+   "carbs": 4.1
+  },
+  {
+   "week": 7,
+   "day": "Sáb",
+   "protein": 67.4,
+   "fat": 114.3,
+   "carbs": 6.4
+  },
+  {
+   "week": 7,
+   "day": "Dom",
+   "protein": 68.8,
+   "fat": 93.3,
+   "carbs": 3.1
+  },
+  {
+   "week": 8,
+   "day": "Lun",
+   "protein": 71.8,
+   "fat": 87.7,
+   "carbs": 5.3
+  },
+  {
+   "week": 8,
+   "day": "Mar",
+   "protein": 69.8,
+   "fat": 96.7,
+   "carbs": 2.2
+  },
+  {
+   "week": 8,
+   "day": "Mié",
+   "protein": 73.4,
+   "fat": 69.1,
+   "carbs": 4.8
+  },
+  {
+   "week": 8,
+   "day": "Jue",
+   "protein": 69.1,
+   "fat": 93.0,
+   "carbs": 7.8
+  },
+  {
+   "week": 8,
+   "day": "Vie",
+   "protein": 64.5,
+   "fat": 90.0,
+   "carbs": 3.5
+  },
+  {
+   "week": 8,
+   "day": "Sáb",
+   "protein": 72.1,
+   "fat": 112.0,
+   "carbs": 4.6
+  },
+  {
+   "week": 8,
+   "day": "Dom",
+   "protein": 75.5,
+   "fat": 82.0,
+   "carbs": 4.4
+  },
+  {
+   "week": 9,
+   "day": "Lun",
+   "protein": 71.8,
+   "fat": 87.7,
+   "carbs": 5.3
+  },
+  {
+   "week": 9,
+   "day": "Mar",
+   "protein": 69.8,
+   "fat": 96.7,
+   "carbs": 2.2
+  },
+  {
+   "week": 9,
+   "day": "Mié",
+   "protein": 73.4,
+   "fat": 69.1,
+   "carbs": 4.8
+  },
+  {
+   "week": 9,
+   "day": "Jue",
+   "protein": 69.1,
+   "fat": 93.0,
+   "carbs": 7.8
+  },
+  {
+   "week": 9,
+   "day": "Vie",
+   "protein": 64.5,
+   "fat": 90.0,
+   "carbs": 3.5
+  },
+  {
+   "week": 9,
+   "day": "Sáb",
+   "protein": 72.1,
+   "fat": 112.0,
+   "carbs": 4.6
+  },
+  {
+   "week": 9,
+   "day": "Dom",
+   "protein": 75.5,
+   "fat": 82.0,
+   "carbs": 4.4
+  },
+  {
+   "week": 10,
+   "day": "Lun",
+   "protein": 77.3,
+   "fat": 96.2,
+   "carbs": 4.3
+  },
+  {
+   "week": 10,
+   "day": "Mar",
+   "protein": 64.3,
+   "fat": 88.2,
+   "carbs": 3.2
+  },
+  {
+   "week": 10,
+   "day": "Mié",
+   "protein": 72.4,
+   "fat": 86.6,
+   "carbs": 3.4
+  },
+  {
+   "week": 10,
+   "day": "Jue",
+   "protein": 71.1,
+   "fat": 78.0,
+   "carbs": 4.3
+  },
+  {
+   "week": 10,
+   "day": "Vie",
+   "protein": 70.1,
+   "fat": 85.3,
+   "carbs": 3.1
+  },
+  {
+   "week": 10,
+   "day": "Sáb",
+   "protein": 69.0,
+   "fat": 85.9,
+   "carbs": 0.8
+  },
+  {
+   "week": 10,
+   "day": "Dom",
+   "protein": 70.7,
+   "fat": 79.3,
+   "carbs": 2.6
+  },
+  {
+   "week": 11,
+   "day": "Lun",
+   "protein": 71.1,
+   "fat": 78.0,
+   "carbs": 4.3
+  },
+  {
+   "week": 11,
+   "day": "Mar",
+   "protein": 70.1,
+   "fat": 85.3,
+   "carbs": 3.1
+  },
+  {
+   "week": 11,
+   "day": "Mié",
+   "protein": 69.0,
+   "fat": 85.9,
+   "carbs": 0.8
+  },
+  {
+   "week": 11,
+   "day": "Jue",
+   "protein": 70.7,
+   "fat": 79.3,
+   "carbs": 2.6
+  },
+  {
+   "week": 11,
+   "day": "Vie",
+   "protein": 70.4,
+   "fat": 88.0,
+   "carbs": 6.3
+  },
+  {
+   "week": 11,
+   "day": "Sáb",
+   "protein": 71.1,
+   "fat": 78.0,
+   "carbs": 4.3
+  },
+  {
+   "week": 11,
+   "day": "Dom",
+   "protein": 70.1,
+   "fat": 85.3,
+   "carbs": 3.1
+  },
+  {
+   "week": 12,
+   "day": "Lun",
+   "protein": 77.3,
+   "fat": 96.2,
+   "carbs": 4.3
+  },
+  {
+   "week": 12,
+   "day": "Mar",
+   "protein": 6.0,
+   "fat": 0.5,
+   "carbs": 0
+  },
+  {
+   "week": 12,
+   "day": "Mié",
+   "protein": 83.9,
+   "fat": 104.4,
+   "carbs": 6.7
+  },
+  {
+   "week": 12,
+   "day": "Jue",
+   "protein": 64.3,
+   "fat": 88.2,
+   "carbs": 3.2
+  },
+  {
+   "week": 12,
+   "day": "Vie",
+   "protein": 72.4,
+   "fat": 86.6,
+   "carbs": 3.4
+  },
+  {
+   "week": 12,
+   "day": "Sáb",
+   "protein": 70.7,
+   "fat": 79.3,
+   "carbs": 2.6
+  },
+  {
+   "week": 12,
+   "day": "Dom",
+   "protein": 64.9,
+   "fat": 90.7,
+   "carbs": 7.1
+  },
+  {
+   "week": 13,
+   "day": "Lun",
+   "protein": 68.7,
+   "fat": 92.3,
+   "carbs": 4.3
+  },
+  {
+   "week": 13,
+   "day": "Mar",
+   "protein": 0,
+   "fat": 0,
+   "carbs": 0
+  },
+  {
+   "week": 13,
+   "day": "Mié",
+   "protein": 62.9,
+   "fat": 61.7,
+   "carbs": 3.5
+  },
+  {
+   "week": 13,
+   "day": "Jue",
+   "protein": 70.1,
+   "fat": 85.3,
+   "carbs": 3.1
+  },
+  {
+   "week": 13,
+   "day": "Vie",
+   "protein": 75.2,
+   "fat": 83.3,
+   "carbs": 4.7
+  },
+  {
+   "week": 13,
+   "day": "Sáb",
+   "protein": 69.0,
+   "fat": 85.9,
+   "carbs": 0.8
+  },
+  {
+   "week": 13,
+   "day": "Dom",
+   "protein": 68.0,
+   "fat": 82.5,
+   "carbs": 2.3
+  },
+  {
+   "week": 14,
+   "day": "Lun",
+   "protein": 77.3,
+   "fat": 96.2,
+   "carbs": 4.3
+  },
+  {
+   "week": 14,
+   "day": "Mar",
+   "protein": 0,
+   "fat": 0,
+   "carbs": 0
+  },
+  {
+   "week": 14,
+   "day": "Mié",
+   "protein": 12.8,
+   "fat": 26.3,
+   "carbs": 2.4
+  },
+  {
+   "week": 14,
+   "day": "Jue",
+   "protein": 64.3,
+   "fat": 88.2,
+   "carbs": 3.2
+  },
+  {
+   "week": 14,
+   "day": "Vie",
+   "protein": 71.1,
+   "fat": 78.0,
+   "carbs": 4.3
+  },
+  {
+   "week": 14,
+   "day": "Sáb",
+   "protein": 72.4,
+   "fat": 86.6,
+   "carbs": 3.4
+  },
+  {
+   "week": 14,
+   "day": "Dom",
+   "protein": 70.7,
+   "fat": 79.3,
+   "carbs": 2.6
+  }
+ ]
+}

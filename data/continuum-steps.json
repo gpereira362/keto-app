@@ -1,0 +1,86 @@
+[
+  {
+    "step": 1,
+    "phase": "Principiante",
+    "title": "Comer cada 2–4 horas",
+    "notes": "Punto de partida",
+    "minDuration": null
+  },
+  {
+    "step": 2,
+    "phase": "Principiante",
+    "title": "Menos de 20 g de carbohidratos totales",
+    "notes": "Semanas 1–3; tira de orina rosa entre el día 4 y el 10",
+    "minDuration": null
+  },
+  {
+    "step": 3,
+    "phase": "Principiante",
+    "title": "Me salté una comida sin querer",
+    "notes": "Señal de adaptación; puede tardar hasta 10 semanas",
+    "minDuration": null
+  },
+  {
+    "step": 4,
+    "phase": "Principiante",
+    "title": "Dos comidas (bolos) al día",
+    "notes": null,
+    "minDuration": "7 días seguidos"
+  },
+  {
+    "step": 5,
+    "phase": "Metabolismo base",
+    "title": "16:8 con café con grasa permitido",
+    "notes": null,
+    "minDuration": "2 semanas mínimo"
+  },
+  {
+    "step": 6,
+    "phase": "Metabolismo base",
+    "title": "16:8 avanzado: mañana sin calorías; luego apretar a 7 h y 6 h",
+    "notes": null,
+    "minDuration": "Sin prisa; puede ser destino"
+  },
+  {
+    "step": 7,
+    "phase": "Metabolismo base",
+    "title": "OMAD 23:1 (todo en 1 hora)",
+    "notes": "Empieza medidor en sangre",
+    "minDuration": null
+  },
+  {
+    "step": 8,
+    "phase": "Metabolismo base",
+    "title": "OMAD dentro de 11 h del amanecer",
+    "notes": "Ratio Dr. Boz mañana y antes de comer",
+    "minDuration": null
+  },
+  {
+    "step": 9,
+    "phase": "Estresar el metabolismo",
+    "title": "Ayuno de 36 h",
+    "notes": "Con médico si hay medicamentos de presión o azúcar",
+    "minDuration": null
+  },
+  {
+    "step": 10,
+    "phase": "Estresar el metabolismo",
+    "title": "36 h sin comida de celebración",
+    "notes": null,
+    "minDuration": null
+  },
+  {
+    "step": 11,
+    "phase": "Estresar el metabolismo",
+    "title": "Ayuno de 48 h",
+    "notes": "Hasta 2 veces por semana",
+    "minDuration": null
+  },
+  {
+    "step": 12,
+    "phase": "Estresar el metabolismo",
+    "title": "Ayuno de 72 h, 1 vez/semana × 8 semanas",
+    "notes": "Solo con supervisión médica",
+    "minDuration": null
+  }
+]

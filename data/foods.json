@@ -1,0 +1,1662 @@
+[
+  {
+    "id": "huevo",
+    "unit": "huevo",
+    "unitPlural": "huevos",
+    "protein": 6.3,
+    "fat": 5.0,
+    "carbs": 0.4,
+    "roundStep": 1,
+    "scalable": true,
+    "allergens": [
+      "huevo"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 12,
+      "packUnit": "unid",
+      "packLabel": "docena",
+      "shopName": "Huevos"
+    }
+  },
+  {
+    "id": "yema",
+    "unit": "yema",
+    "unitPlural": "yemas",
+    "protein": 2.7,
+    "fat": 4.5,
+    "carbs": 0.6,
+    "roundStep": 1,
+    "scalable": true,
+    "allergens": [
+      "huevo"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 12,
+      "packUnit": "unid",
+      "packLabel": "docena",
+      "buyAs": "huevo",
+      "shopName": "Yema"
+    }
+  },
+  {
+    "id": "mantequilla",
+    "unit": "cda de mantequilla",
+    "unitPlural": "cdas de mantequilla",
+    "protein": 0.1,
+    "fat": 11.5,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 14,
+      "rawFactor": 1,
+      "pack": 227,
+      "packUnit": "g",
+      "packLabel": "barra/paquete de 227 g",
+      "shopName": "Mantequilla"
+    }
+  },
+  {
+    "id": "ghee_g",
+    "unit": "g de ghee",
+    "unitPlural": null,
+    "protein": 0,
+    "fat": 0.995,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "frasco de 400 g",
+      "shopName": "Ghee"
+    }
+  },
+  {
+    "id": "sebo_g",
+    "unit": "g de sebo de res",
+    "unitPlural": null,
+    "protein": 0,
+    "fat": 1.0,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "frasco de 400 g",
+      "shopName": "Sebo de res"
+    }
+  },
+  {
+    "id": "mant_g",
+    "unit": "g de mantequilla o ghee",
+    "unitPlural": null,
+    "protein": 0.009,
+    "fat": 0.81,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 227,
+      "packUnit": "g",
+      "packLabel": "barra/paquete de 227 g",
+      "buyAs": "mantequilla",
+      "shopName": "Mantequilla o ghee"
+    }
+  },
+  {
+    "id": "crema",
+    "unit": "cda de crema de leche espesa",
+    "unitPlural": "cdas de crema de leche espesa",
+    "protein": 0.4,
+    "fat": 5.4,
+    "carbs": 0.4,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 15,
+      "rawFactor": 1,
+      "pack": 473,
+      "packUnit": "ml",
+      "packLabel": "envase de 473 ml",
+      "shopName": "Crema de leche espesa"
+    }
+  },
+  {
+    "id": "aceite",
+    "unit": "cda de aceite de oliva",
+    "unitPlural": "cdas de aceite de oliva",
+    "protein": 0,
+    "fat": 13.5,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 15,
+      "rawFactor": 1,
+      "pack": 500,
+      "packUnit": "ml",
+      "packLabel": "botella de 500 ml",
+      "shopName": "Aceite de oliva extra virgen"
+    }
+  },
+  {
+    "id": "mayo",
+    "unit": "cda de mayonesa (sin azúcar)",
+    "unitPlural": "cdas de mayonesa (sin azúcar)",
+    "protein": 0.1,
+    "fat": 10.3,
+    "carbs": 0.1,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [
+      "huevo"
+    ],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 14,
+      "rawFactor": 1,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "frasco de 400 g",
+      "note": "sin azúcar, idealmente con aceite de aguacate",
+      "shopName": "Mayonesa sin azúcar"
+    }
+  },
+  {
+    "id": "cheddar",
+    "unit": "g de queso cheddar (rallado en casa)",
+    "unitPlural": null,
+    "protein": 0.25,
+    "fat": 0.33,
+    "carbs": 0.013,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 200,
+      "packUnit": "g",
+      "packLabel": "bloque de 200 g",
+      "note": "comprar en bloque y rallar en casa",
+      "shopName": "Queso cheddar (rallado en casa)"
+    }
+  },
+  {
+    "id": "azul",
+    "unit": "g de queso azul",
+    "unitPlural": null,
+    "protein": 0.21,
+    "fat": 0.29,
+    "carbs": 0.023,
+    "roundStep": 5,
+    "scalable": false,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 150,
+      "packUnit": "g",
+      "packLabel": "paquete de 150 g",
+      "shopName": "Queso azul"
+    }
+  },
+  {
+    "id": "agria",
+    "unit": "cda de crema agria",
+    "unitPlural": "cdas de crema agria",
+    "protein": 0.3,
+    "fat": 2.3,
+    "carbs": 0.6,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 12,
+      "rawFactor": 1,
+      "pack": 250,
+      "packUnit": "g",
+      "packLabel": "envase de 250 g",
+      "shopName": "Crema agria"
+    }
+  },
+  {
+    "id": "tocino",
+    "unit": "lonja de tocino",
+    "unitPlural": "lonjas de tocino",
+    "protein": 3.0,
+    "fat": 3.3,
+    "carbs": 0.1,
+    "roundStep": 1,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 12,
+      "packUnit": "unid",
+      "packLabel": "paquete de 12 lonjas (≈340 g)",
+      "shopName": "Tocino"
+    }
+  },
+  {
+    "id": "ribeye",
+    "unit": "g de ribeye (cocido)",
+    "unitPlural": null,
+    "protein": 0.245,
+    "fat": 0.22,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.3,
+      "packUnit": "g",
+      "note": "pedir al carnicero en cortes de ~2.5 cm",
+      "shopName": "Ribeye"
+    }
+  },
+  {
+    "id": "molida",
+    "unit": "g de carne molida 80/20 (cruda)",
+    "unitPlural": null,
+    "protein": 0.172,
+    "fat": 0.2,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 500,
+      "packUnit": "g",
+      "packLabel": "paquete de 500 g",
+      "shopName": "Carne molida 80/20"
+    }
+  },
+  {
+    "id": "salmon",
+    "unit": "g de salmón con piel (crudo)",
+    "unitPlural": null,
+    "protein": 0.204,
+    "fat": 0.134,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "pescado"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "packUnit": "g",
+      "note": "con piel",
+      "shopName": "Salmón con piel"
+    }
+  },
+  {
+    "id": "panceta",
+    "unit": "g de panceta de cerdo (cocida)",
+    "unitPlural": null,
+    "protein": 0.17,
+    "fat": 0.42,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.4,
+      "packUnit": "g",
+      "shopName": "Panceta de cerdo"
+    }
+  },
+  {
+    "id": "cordero",
+    "unit": "g de paleta de cordero asada",
+    "unitPlural": null,
+    "protein": 0.28,
+    "fat": 0.2,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.5,
+      "packUnit": "g",
+      "shopName": "Paleta de cordero asada"
+    }
+  },
+  {
+    "id": "sardina_g",
+    "unit": "g de sardinas (escurridas)",
+    "unitPlural": null,
+    "protein": 0.246,
+    "fat": 0.115,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "pescado"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 0.01,
+      "rawFactor": 1,
+      "pack": 1,
+      "packUnit": "unid",
+      "packLabel": "lata (≈100 g escurridos)",
+      "buyAs": "sardinas",
+      "shopName": "Sardinas (escurridas)"
+    }
+  },
+  {
+    "id": "sardinas",
+    "unit": "lata de sardinas en aceite de oliva, con su aceite (≈100 g)",
+    "unitPlural": "latas de sardinas en aceite de oliva, con su aceite",
+    "protein": 24.0,
+    "fat": 17.0,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [
+      "pescado"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 1,
+      "packUnit": "unid",
+      "packLabel": "lata (≈120 g)",
+      "shopName": "Sardinas en aceite de oliva"
+    }
+  },
+  {
+    "id": "alitas",
+    "unit": "g de alitas con piel (carne comestible, ≈6 alitas por 120 g)",
+    "unitPlural": null,
+    "protein": 0.27,
+    "fat": 0.19,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Aves",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.9,
+      "packUnit": "g",
+      "note": "peso con hueso",
+      "shopName": "Alitas de pollo"
+    }
+  },
+  {
+    "id": "muslo",
+    "unit": "g de muslo de pollo con piel (cocido)",
+    "unitPlural": null,
+    "protein": 0.24,
+    "fat": 0.15,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Aves",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.9,
+      "packUnit": "g",
+      "note": "con hueso y piel",
+      "shopName": "Muslos de pollo con piel"
+    }
+  },
+  {
+    "id": "brat",
+    "unit": "bratwurst (≈85 g)",
+    "unitPlural": "bratwursts (≈85 g c/u)",
+    "protein": 11.7,
+    "fat": 24.9,
+    "carbs": 2.4,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 5,
+      "packUnit": "unid",
+      "packLabel": "paquete de 5",
+      "shopName": "Bratwurst"
+    }
+  },
+  {
+    "id": "salchicha",
+    "unit": "g de salchicha de cerdo (sin azúcar)",
+    "unitPlural": null,
+    "protein": 0.19,
+    "fat": 0.28,
+    "carbs": 0.01,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "paquete de 400 g",
+      "note": "revisar que no tenga azúcar ni harina",
+      "shopName": "Salchicha de cerdo (sin azúcar)"
+    }
+  },
+  {
+    "id": "brisket",
+    "unit": "g de brisket/pecho de res con su grasa (cocido)",
+    "unitPlural": null,
+    "protein": 0.23,
+    "fat": 0.25,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.5,
+      "packUnit": "g",
+      "shopName": "Brisket/pecho de res con su grasa"
+    }
+  },
+  {
+    "id": "chucrut",
+    "unit": "½ taza de chucrut",
+    "unitPlural": null,
+    "protein": 0.6,
+    "fat": 0.1,
+    "carbs": 3.0,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 70,
+      "rawFactor": 1,
+      "pack": 800,
+      "packUnit": "g",
+      "packLabel": "frasco de 800 g",
+      "note": "refrigerado, sin azúcar",
+      "shopName": "Chucrut (sin azúcar)"
+    }
+  },
+  {
+    "id": "espinaca",
+    "unit": "½ taza de espinaca congelada",
+    "unitPlural": null,
+    "protein": 3.0,
+    "fat": 0.4,
+    "carbs": 3.5,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 95,
+      "rawFactor": 1,
+      "pack": 300,
+      "packUnit": "g",
+      "packLabel": "bolsa congelada de 300 g",
+      "shopName": "Espinaca congelada"
+    }
+  },
+  {
+    "id": "esparragos",
+    "unit": "porción de 6 espárragos",
+    "unitPlural": null,
+    "protein": 2.0,
+    "fat": 0.2,
+    "carbs": 3.5,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 90,
+      "rawFactor": 1.4,
+      "pack": 450,
+      "packUnit": "g",
+      "packLabel": "manojo de 450 g",
+      "note": "se descarta la base dura",
+      "shopName": "Espárragos"
+    }
+  },
+  {
+    "id": "coliflor",
+    "unit": "½ taza de coliflor",
+    "unitPlural": null,
+    "protein": 1.1,
+    "fat": 0.3,
+    "carbs": 2.5,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 62,
+      "rawFactor": 1.3,
+      "pack": 600,
+      "packUnit": "g",
+      "packLabel": "coliflor mediana (≈600 g)",
+      "shopName": "Coliflor"
+    }
+  },
+  {
+    "id": "aguacate",
+    "unit": "¼ de aguacate",
+    "unitPlural": null,
+    "protein": 1.0,
+    "fat": 7.3,
+    "carbs": 4.3,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 0.25,
+      "rawFactor": 1,
+      "pack": 1,
+      "packUnit": "unid",
+      "packLabel": "aguacate mediano",
+      "shopName": "Aguacate"
+    }
+  },
+  {
+    "id": "lechuga",
+    "unit": "taza de lechuga",
+    "unitPlural": null,
+    "protein": 0.6,
+    "fat": 0.1,
+    "carbs": 1.4,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 47,
+      "rawFactor": 1.2,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "lechuga (≈8 tazas)",
+      "shopName": "Lechuga"
+    }
+  },
+  {
+    "id": "apio",
+    "unit": "2 tallos de apio",
+    "unitPlural": null,
+    "protein": 0.5,
+    "fat": 0.1,
+    "carbs": 2.4,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 80,
+      "rawFactor": 1,
+      "pack": 450,
+      "packUnit": "g",
+      "packLabel": "atado (≈8 tallos)",
+      "shopName": "Apio"
+    }
+  },
+  {
+    "id": "aceitunas",
+    "unit": "6 aceitunas",
+    "unitPlural": null,
+    "protein": 0.2,
+    "fat": 2.8,
+    "carbs": 1.6,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 26,
+      "rawFactor": 1,
+      "pack": 200,
+      "packUnit": "g",
+      "packLabel": "frasco de 200 g escurridas",
+      "shopName": "Aceitunas"
+    }
+  },
+  {
+    "id": "mostaza",
+    "unit": "cda de mostaza",
+    "unitPlural": null,
+    "protein": 0.6,
+    "fat": 0.5,
+    "carbs": 0.9,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [
+      "mostaza"
+    ],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 15,
+      "rawFactor": 1,
+      "pack": 250,
+      "packUnit": "g",
+      "packLabel": "frasco de 250 g",
+      "shopName": "Mostaza"
+    }
+  },
+  {
+    "id": "caldo",
+    "unit": "taza de caldo de hueso bien salado",
+    "unitPlural": null,
+    "protein": 6.0,
+    "fat": 0.5,
+    "carbs": 0,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 240,
+      "rawFactor": 1,
+      "pack": 1000,
+      "packUnit": "ml",
+      "packLabel": "caja de 1 L",
+      "note": "solo si lo usas como rescate en ayunos",
+      "shopName": "Caldo de hueso"
+    }
+  },
+  {
+    "id": "entrecot",
+    "unit": "g de entrecot o New York con su grasa (cocido)",
+    "unitPlural": null,
+    "protein": 0.25,
+    "fat": 0.18,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.3,
+      "packUnit": "g",
+      "shopName": "Entrecot o New York con su grasa"
+    }
+  },
+  {
+    "id": "picana",
+    "unit": "g de picaña con su capa de grasa (cocida)",
+    "unitPlural": null,
+    "protein": 0.26,
+    "fat": 0.2,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.3,
+      "packUnit": "g",
+      "shopName": "Picaña con su capa de grasa"
+    }
+  },
+  {
+    "id": "costilla_res",
+    "unit": "g de costilla de res sin hueso (cocida)",
+    "unitPlural": null,
+    "protein": 0.22,
+    "fat": 0.3,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 2.2,
+      "packUnit": "g",
+      "note": "con hueso",
+      "shopName": "Costilla de res sin hueso"
+    }
+  },
+  {
+    "id": "molida_85",
+    "unit": "g de carne molida de res 85/15 (cruda)",
+    "unitPlural": null,
+    "protein": 0.185,
+    "fat": 0.15,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 500,
+      "packUnit": "g",
+      "packLabel": "paquete de 500 g",
+      "shopName": "Carne molida de res 85/15"
+    }
+  },
+  {
+    "id": "molida_cordero",
+    "unit": "g de carne molida de cordero (cruda)",
+    "unitPlural": null,
+    "protein": 0.17,
+    "fat": 0.23,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 500,
+      "packUnit": "g",
+      "packLabel": "paquete de 500 g",
+      "shopName": "Carne molida de cordero"
+    }
+  },
+  {
+    "id": "higado_res",
+    "unit": "g de hígado de res (cocido)",
+    "unitPlural": null,
+    "protein": 0.29,
+    "fat": 0.053,
+    "carbs": 0.051,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.3,
+      "packUnit": "g",
+      "shopName": "Hígado de res"
+    }
+  },
+  {
+    "id": "costillas_cerdo",
+    "unit": "g de costillas de cerdo sin hueso (cocidas)",
+    "unitPlural": null,
+    "protein": 0.25,
+    "fat": 0.23,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 2.0,
+      "packUnit": "g",
+      "note": "con hueso",
+      "shopName": "Costillas de cerdo sin hueso"
+    }
+  },
+  {
+    "id": "paleta_cerdo",
+    "unit": "g de paleta o pernil de cerdo asado",
+    "unitPlural": null,
+    "protein": 0.23,
+    "fat": 0.2,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.4,
+      "packUnit": "g",
+      "shopName": "Paleta o pernil de cerdo asado"
+    }
+  },
+  {
+    "id": "chuleta_cerdo",
+    "unit": "g de chuleta de cerdo con su grasa (cocida)",
+    "unitPlural": null,
+    "protein": 0.27,
+    "fat": 0.14,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.5,
+      "packUnit": "g",
+      "note": "con hueso",
+      "shopName": "Chuleta de cerdo con su grasa"
+    }
+  },
+  {
+    "id": "molida_cerdo",
+    "unit": "g de carne molida de cerdo (cruda)",
+    "unitPlural": null,
+    "protein": 0.17,
+    "fat": 0.21,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 500,
+      "packUnit": "g",
+      "packLabel": "paquete de 500 g",
+      "shopName": "Carne molida de cerdo"
+    }
+  },
+  {
+    "id": "chorizo",
+    "unit": "g de chorizo fresco sin azúcar (cocido)",
+    "unitPlural": null,
+    "protein": 0.24,
+    "fat": 0.38,
+    "carbs": 0.02,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "paquete de 400 g",
+      "note": "sin azúcar",
+      "shopName": "Chorizo fresco sin azúcar"
+    }
+  },
+  {
+    "id": "salami",
+    "unit": "g de salami",
+    "unitPlural": null,
+    "protein": 0.22,
+    "fat": 0.34,
+    "carbs": 0.015,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 150,
+      "packUnit": "g",
+      "packLabel": "paquete de 150 g",
+      "shopName": "Salami"
+    }
+  },
+  {
+    "id": "pato",
+    "unit": "g de pato con piel (cocido)",
+    "unitPlural": null,
+    "protein": 0.19,
+    "fat": 0.28,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Aves",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.8,
+      "packUnit": "g",
+      "shopName": "Pato con piel"
+    }
+  },
+  {
+    "id": "pavo_muslo",
+    "unit": "g de muslo de pavo con piel (cocido)",
+    "unitPlural": null,
+    "protein": 0.28,
+    "fat": 0.1,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Aves",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.7,
+      "packUnit": "g",
+      "note": "con hueso",
+      "shopName": "Muslo de pavo con piel"
+    }
+  },
+  {
+    "id": "pechuga",
+    "unit": "g de pechuga de pollo sin piel (cocida)",
+    "unitPlural": null,
+    "protein": 0.31,
+    "fat": 0.036,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Aves",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.3,
+      "packUnit": "g",
+      "shopName": "Pechuga de pollo sin piel"
+    }
+  },
+  {
+    "id": "caballa",
+    "unit": "g de caballa o macarela (en lata o cocida)",
+    "unitPlural": null,
+    "protein": 0.24,
+    "fat": 0.18,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "pescado"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 0.01,
+      "rawFactor": 1,
+      "pack": 1,
+      "packUnit": "unid",
+      "packLabel": "lata (≈100 g escurridos)",
+      "shopName": "Caballa en lata"
+    }
+  },
+  {
+    "id": "arenque",
+    "unit": "g de arenque (en lata o cocido)",
+    "unitPlural": null,
+    "protein": 0.23,
+    "fat": 0.12,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "pescado"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 0.01,
+      "rawFactor": 1,
+      "pack": 1,
+      "packUnit": "unid",
+      "packLabel": "lata (≈100 g escurridos)",
+      "shopName": "Arenque en lata"
+    }
+  },
+  {
+    "id": "trucha",
+    "unit": "g de trucha con piel (cruda)",
+    "unitPlural": null,
+    "protein": 0.2,
+    "fat": 0.066,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "pescado"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "packUnit": "g",
+      "shopName": "Trucha con piel"
+    }
+  },
+  {
+    "id": "atun_aceite",
+    "unit": "g de atún en aceite de oliva (escurrido)",
+    "unitPlural": null,
+    "protein": 0.29,
+    "fat": 0.08,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "pescado"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 0.01,
+      "rawFactor": 1,
+      "pack": 1,
+      "packUnit": "unid",
+      "packLabel": "lata (≈100 g escurridos)",
+      "shopName": "Atún en aceite de oliva"
+    }
+  },
+  {
+    "id": "camaron",
+    "unit": "g de camarón (crudo)",
+    "unitPlural": null,
+    "protein": 0.2,
+    "fat": 0.005,
+    "carbs": 0,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "mariscos"
+    ],
+    "category": "Pescados y mariscos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.2,
+      "pack": 454,
+      "packUnit": "g",
+      "packLabel": "bolsa de 454 g",
+      "shopName": "Camarón"
+    }
+  },
+  {
+    "id": "ghee_cda",
+    "unit": "cda de ghee",
+    "unitPlural": "cdas de ghee",
+    "protein": 0,
+    "fat": 12.7,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 13,
+      "rawFactor": 1,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "frasco de 400 g",
+      "buyAs": "ghee_g",
+      "shopName": "Ghee"
+    }
+  },
+  {
+    "id": "manteca_cerdo",
+    "unit": "cda de manteca de cerdo",
+    "unitPlural": "cdas de manteca de cerdo",
+    "protein": 0,
+    "fat": 12.8,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [
+      "cerdo"
+    ],
+    "category": "Cerdo y embutidos",
+    "purchase": {
+      "perUnit": 13,
+      "rawFactor": 1,
+      "pack": 450,
+      "packUnit": "g",
+      "packLabel": "paquete de 450 g",
+      "shopName": "Manteca de cerdo"
+    }
+  },
+  {
+    "id": "sebo_cda",
+    "unit": "cda de sebo de res",
+    "unitPlural": "cdas de sebo de res",
+    "protein": 0,
+    "fat": 12.8,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Carnes",
+    "purchase": {
+      "perUnit": 13,
+      "rawFactor": 1,
+      "pack": 400,
+      "packUnit": "g",
+      "packLabel": "frasco de 400 g",
+      "buyAs": "sebo_g",
+      "shopName": "Sebo de res"
+    }
+  },
+  {
+    "id": "aceite_aguacate",
+    "unit": "cda de aceite de aguacate",
+    "unitPlural": "cdas de aceite de aguacate",
+    "protein": 0,
+    "fat": 14.0,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 15,
+      "rawFactor": 1,
+      "pack": 500,
+      "packUnit": "ml",
+      "packLabel": "botella de 500 ml",
+      "shopName": "Aceite de aguacate"
+    }
+  },
+  {
+    "id": "aceite_coco",
+    "unit": "cda de aceite de coco",
+    "unitPlural": "cdas de aceite de coco",
+    "protein": 0,
+    "fat": 13.5,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": true,
+    "allergens": [
+      "coco"
+    ],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 15,
+      "rawFactor": 1,
+      "pack": 400,
+      "packUnit": "ml",
+      "packLabel": "frasco de 400 ml",
+      "shopName": "Aceite de coco"
+    }
+  },
+  {
+    "id": "mct",
+    "unit": "cda de aceite MCT",
+    "unitPlural": "cdas de aceite MCT",
+    "protein": 0,
+    "fat": 14.0,
+    "carbs": 0,
+    "roundStep": 0.5,
+    "scalable": false,
+    "allergens": [
+      "coco"
+    ],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 15,
+      "rawFactor": 1,
+      "pack": 473,
+      "packUnit": "ml",
+      "packLabel": "botella de 473 ml",
+      "shopName": "Aceite MCT"
+    }
+  },
+  {
+    "id": "leche_coco",
+    "unit": "cda de leche de coco entera (de lata)",
+    "unitPlural": "cdas de leche de coco entera",
+    "protein": 0.3,
+    "fat": 3.6,
+    "carbs": 0.5,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [
+      "coco"
+    ],
+    "category": "Despensa",
+    "purchase": {
+      "perUnit": 15,
+      "rawFactor": 1,
+      "pack": 400,
+      "packUnit": "ml",
+      "packLabel": "lata de 400 ml",
+      "shopName": "Leche de coco entera"
+    }
+  },
+  {
+    "id": "gouda",
+    "unit": "g de queso gouda",
+    "unitPlural": null,
+    "protein": 0.25,
+    "fat": 0.27,
+    "carbs": 0.022,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 200,
+      "packUnit": "g",
+      "packLabel": "bloque de 200 g",
+      "note": "comprar en bloque y rallar en casa",
+      "shopName": "Queso gouda"
+    }
+  },
+  {
+    "id": "manchego",
+    "unit": "g de queso manchego",
+    "unitPlural": null,
+    "protein": 0.25,
+    "fat": 0.33,
+    "carbs": 0.005,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 200,
+      "packUnit": "g",
+      "packLabel": "bloque de 200 g",
+      "note": "comprar en bloque y rallar en casa",
+      "shopName": "Queso manchego"
+    }
+  },
+  {
+    "id": "parmesano",
+    "unit": "g de queso parmesano",
+    "unitPlural": null,
+    "protein": 0.36,
+    "fat": 0.26,
+    "carbs": 0.032,
+    "roundStep": 5,
+    "scalable": true,
+    "allergens": [
+      "lacteos"
+    ],
+    "category": "Huevos y lácteos",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1,
+      "pack": 150,
+      "packUnit": "g",
+      "packLabel": "trozo de 150 g",
+      "shopName": "Queso parmesano"
+    }
+  },
+  {
+    "id": "calabacin",
+    "unit": "g de calabacín",
+    "unitPlural": null,
+    "protein": 0.012,
+    "fat": 0.003,
+    "carbs": 0.031,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 200,
+      "packUnit": "g",
+      "packLabel": "calabacín mediano (≈200 g)",
+      "shopName": "Calabacín"
+    }
+  },
+  {
+    "id": "pepino",
+    "unit": "g de pepino",
+    "unitPlural": null,
+    "protein": 0.0065,
+    "fat": 0.001,
+    "carbs": 0.036,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 300,
+      "packUnit": "g",
+      "packLabel": "pepino (≈300 g)",
+      "shopName": "Pepino"
+    }
+  },
+  {
+    "id": "champinones",
+    "unit": "g de champiñones",
+    "unitPlural": null,
+    "protein": 0.031,
+    "fat": 0.003,
+    "carbs": 0.033,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 250,
+      "packUnit": "g",
+      "packLabel": "bandeja de 250 g",
+      "shopName": "Champiñones"
+    }
+  },
+  {
+    "id": "repollo",
+    "unit": "g de repollo",
+    "unitPlural": null,
+    "protein": 0.013,
+    "fat": 0.001,
+    "carbs": 0.058,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 900,
+      "packUnit": "g",
+      "packLabel": "repollo pequeño (≈900 g)",
+      "shopName": "Repollo"
+    }
+  },
+  {
+    "id": "brocoli",
+    "unit": "g de brócoli",
+    "unitPlural": null,
+    "protein": 0.028,
+    "fat": 0.004,
+    "carbs": 0.066,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 350,
+      "packUnit": "g",
+      "packLabel": "cabeza (≈350 g)",
+      "shopName": "Brócoli"
+    }
+  },
+  {
+    "id": "ejotes",
+    "unit": "g de ejotes o judías verdes",
+    "unitPlural": null,
+    "protein": 0.018,
+    "fat": 0.002,
+    "carbs": 0.07,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 450,
+      "packUnit": "g",
+      "packLabel": "bolsa de 450 g",
+      "shopName": "Ejotes o judías verdes"
+    }
+  },
+  {
+    "id": "pimiento",
+    "unit": "g de pimiento verde",
+    "unitPlural": null,
+    "protein": 0.0086,
+    "fat": 0.002,
+    "carbs": 0.046,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 150,
+      "packUnit": "g",
+      "packLabel": "pimiento (≈150 g)",
+      "shopName": "Pimiento verde"
+    }
+  },
+  {
+    "id": "romana",
+    "unit": "g de lechuga romana",
+    "unitPlural": null,
+    "protein": 0.012,
+    "fat": 0.003,
+    "carbs": 0.033,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 500,
+      "packUnit": "g",
+      "packLabel": "lechuga romana (≈500 g)",
+      "shopName": "Lechuga romana"
+    }
+  },
+  {
+    "id": "rucula",
+    "unit": "g de rúcula",
+    "unitPlural": null,
+    "protein": 0.026,
+    "fat": 0.007,
+    "carbs": 0.037,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 140,
+      "packUnit": "g",
+      "packLabel": "bolsa de 140 g",
+      "shopName": "Rúcula"
+    }
+  },
+  {
+    "id": "espinaca_fresca",
+    "unit": "g de espinaca fresca",
+    "unitPlural": null,
+    "protein": 0.029,
+    "fat": 0.004,
+    "carbs": 0.036,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 280,
+      "packUnit": "g",
+      "packLabel": "bolsa de 280 g",
+      "shopName": "Espinaca fresca"
+    }
+  },
+  {
+    "id": "esparragos_g",
+    "unit": "g de espárragos",
+    "unitPlural": null,
+    "protein": 0.022,
+    "fat": 0.001,
+    "carbs": 0.039,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 450,
+      "packUnit": "g",
+      "packLabel": "manojo de 450 g",
+      "shopName": "Espárragos"
+    }
+  },
+  {
+    "id": "coliflor_g",
+    "unit": "g de coliflor",
+    "unitPlural": null,
+    "protein": 0.019,
+    "fat": 0.003,
+    "carbs": 0.05,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 600,
+      "packUnit": "g",
+      "packLabel": "coliflor mediana",
+      "shopName": "Coliflor"
+    }
+  },
+  {
+    "id": "apio_g",
+    "unit": "g de apio",
+    "unitPlural": null,
+    "protein": 0.007,
+    "fat": 0.002,
+    "carbs": 0.03,
+    "roundStep": 10,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 1,
+      "rawFactor": 1.1,
+      "pack": 450,
+      "packUnit": "g",
+      "packLabel": "atado",
+      "shopName": "Apio"
+    }
+  },
+  {
+    "id": "kimchi",
+    "unit": "½ taza de kimchi sin azúcar",
+    "unitPlural": null,
+    "protein": 0.8,
+    "fat": 0.4,
+    "carbs": 1.8,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 75,
+      "rawFactor": 1,
+      "pack": 450,
+      "packUnit": "g",
+      "packLabel": "frasco de 450 g",
+      "shopName": "Kimchi (sin azúcar)"
+    }
+  },
+  {
+    "id": "pepinillos",
+    "unit": "½ taza de pepinillos encurtidos sin azúcar",
+    "unitPlural": null,
+    "protein": 0.3,
+    "fat": 0.1,
+    "carbs": 1.6,
+    "roundStep": 1,
+    "scalable": false,
+    "allergens": [],
+    "category": "Verduras",
+    "purchase": {
+      "perUnit": 70,
+      "rawFactor": 1,
+      "pack": 500,
+      "packUnit": "g",
+      "packLabel": "frasco de 500 g",
+      "shopName": "Pepinillos (sin azúcar)"
+    }
+  }
+]

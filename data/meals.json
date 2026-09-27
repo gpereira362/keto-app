@@ -1,0 +1,644 @@
+[
+  {
+    "id": "CAF1",
+    "name": "Café + crema + sal",
+    "items": [
+      {
+        "food": "crema",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "CAF0",
+    "name": "Café negro o té + sal (sin calorías)",
+    "items": []
+  },
+  {
+    "id": "DES1",
+    "name": "Huevos revueltos con queso",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 3
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "cheddar",
+        "qty": 30
+      }
+    ]
+  },
+  {
+    "id": "DES2",
+    "name": "Huevos con tocino",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "tocino",
+        "qty": 3
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "DES3",
+    "name": "Carne molida en mantequilla + huevo",
+    "items": [
+      {
+        "food": "molida",
+        "qty": 100
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "huevo",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "DES4",
+    "name": "Huevos con espinaca y queso",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 3
+      },
+      {
+        "food": "espinaca",
+        "qty": 1
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "cheddar",
+        "qty": 20
+      }
+    ]
+  },
+  {
+    "id": "DES5",
+    "name": "Huevos con salchicha",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "salchicha",
+        "qty": 60
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "ALM1",
+    "name": "Bratwurst con chucrut",
+    "items": [
+      {
+        "food": "brat",
+        "qty": 1
+      },
+      {
+        "food": "mostaza",
+        "qty": 1
+      },
+      {
+        "food": "chucrut",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "ALM2",
+    "name": "Sardinas con mayonesa",
+    "items": [
+      {
+        "food": "sardinas",
+        "qty": 1
+      },
+      {
+        "food": "mayo",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "ALM3",
+    "name": "Huevos duros con aguacate",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "aguacate",
+        "qty": 1
+      },
+      {
+        "food": "mayo",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "ALM4",
+    "name": "Muslo de pollo con ensalada",
+    "items": [
+      {
+        "food": "muslo",
+        "qty": 100
+      },
+      {
+        "food": "lechuga",
+        "qty": 1
+      },
+      {
+        "food": "aceite",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "CEN1",
+    "name": "Alitas con salsa de queso azul",
+    "items": [
+      {
+        "food": "alitas",
+        "qty": 120
+      },
+      {
+        "food": "agria",
+        "qty": 2
+      },
+      {
+        "food": "azul",
+        "qty": 15
+      },
+      {
+        "food": "apio",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "CEN2",
+    "name": "Ribeye con espárragos",
+    "items": [
+      {
+        "food": "ribeye",
+        "qty": 150
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "esparragos",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "CEN3",
+    "name": "Salmón con ensalada",
+    "items": [
+      {
+        "food": "salmon",
+        "qty": 150
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "lechuga",
+        "qty": 1
+      },
+      {
+        "food": "aceite",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "CEN4",
+    "name": "Panceta con huevos y chucrut",
+    "items": [
+      {
+        "food": "panceta",
+        "qty": 120
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "chucrut",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "CEN5",
+    "name": "Hamburguesa sin pan con queso",
+    "items": [
+      {
+        "food": "molida",
+        "qty": 150
+      },
+      {
+        "food": "cheddar",
+        "qty": 20
+      },
+      {
+        "food": "mayo",
+        "qty": 1
+      },
+      {
+        "food": "lechuga",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "CEN6",
+    "name": "Brisket con coliflor",
+    "items": [
+      {
+        "food": "brisket",
+        "qty": 150
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "coliflor",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "P2A",
+    "name": "Huevos, tocino y queso",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 3
+      },
+      {
+        "food": "tocino",
+        "qty": 3
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "cheddar",
+        "qty": 20
+      }
+    ]
+  },
+  {
+    "id": "P2B",
+    "name": "Carne molida con huevos",
+    "items": [
+      {
+        "food": "molida",
+        "qty": 150
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "P2C",
+    "name": "Sardinas con huevos",
+    "items": [
+      {
+        "food": "sardinas",
+        "qty": 1
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "mayo",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "P2D",
+    "name": "Huevos con salchicha y espinaca",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 3
+      },
+      {
+        "food": "salchicha",
+        "qty": 60
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1
+      },
+      {
+        "food": "espinaca",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "OM1",
+    "name": "Ribeye + huevos + espárragos",
+    "items": [
+      {
+        "food": "ribeye",
+        "qty": 230
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1.5
+      },
+      {
+        "food": "esparragos",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "OM2",
+    "name": "Hamburguesa doble sin pan",
+    "items": [
+      {
+        "food": "molida",
+        "qty": 250
+      },
+      {
+        "food": "huevo",
+        "qty": 3
+      },
+      {
+        "food": "cheddar",
+        "qty": 30
+      },
+      {
+        "food": "mayo",
+        "qty": 1
+      },
+      {
+        "food": "lechuga",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "OM3",
+    "name": "Sardinas + panceta + huevos",
+    "items": [
+      {
+        "food": "sardinas",
+        "qty": 1.5
+      },
+      {
+        "food": "panceta",
+        "qty": 120
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "OM4",
+    "name": "Salmón + huevos + ensalada",
+    "items": [
+      {
+        "food": "salmon",
+        "qty": 250
+      },
+      {
+        "food": "huevo",
+        "qty": 3
+      },
+      {
+        "food": "mantequilla",
+        "qty": 1.5
+      },
+      {
+        "food": "lechuga",
+        "qty": 1
+      },
+      {
+        "food": "aceite",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "OM5",
+    "name": "Brisket + bratwurst + chucrut",
+    "items": [
+      {
+        "food": "brisket",
+        "qty": 250
+      },
+      {
+        "food": "brat",
+        "qty": 1
+      },
+      {
+        "food": "chucrut",
+        "qty": 1
+      },
+      {
+        "food": "mostaza",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "RUP",
+    "name": "Romper el ayuno: comida pequeña",
+    "items": [
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "aceitunas",
+        "qty": 1
+      },
+      {
+        "food": "aceite",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "RUPS",
+    "name": "Romper el ayuno: sardinas",
+    "items": [
+      {
+        "food": "sardinas",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "AYU",
+    "name": "Ayuno: agua, sal, café negro o té",
+    "items": []
+  },
+  {
+    "id": "AYUC",
+    "name": "Ayuno (opción de rescate): caldo salado",
+    "items": [
+      {
+        "food": "caldo",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "DB1a",
+    "name": "Ribeye + 2 huevos + sebo",
+    "items": [
+      {
+        "food": "ribeye",
+        "qty": 200
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "sebo_g",
+        "qty": 75
+      }
+    ]
+  },
+  {
+    "id": "DB1b",
+    "name": "Salmón + 2 yemas + ghee",
+    "items": [
+      {
+        "food": "salmon",
+        "qty": 170
+      },
+      {
+        "food": "yema",
+        "qty": 2
+      },
+      {
+        "food": "ghee_g",
+        "qty": 50
+      }
+    ]
+  },
+  {
+    "id": "DB2a",
+    "name": "Carne molida 80/20 + 2 huevos + sebo",
+    "items": [
+      {
+        "food": "molida",
+        "qty": 225
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "sebo_g",
+        "qty": 75
+      }
+    ]
+  },
+  {
+    "id": "DB2b",
+    "name": "Panceta + salmón + mantequilla/ghee",
+    "items": [
+      {
+        "food": "panceta",
+        "qty": 170
+      },
+      {
+        "food": "salmon",
+        "qty": 85
+      },
+      {
+        "food": "mant_g",
+        "qty": 20
+      }
+    ]
+  },
+  {
+    "id": "DB3a",
+    "name": "Paleta de cordero + 1 huevo + sebo",
+    "items": [
+      {
+        "food": "cordero",
+        "qty": 170
+      },
+      {
+        "food": "huevo",
+        "qty": 1
+      },
+      {
+        "food": "sebo_g",
+        "qty": 70
+      }
+    ]
+  },
+  {
+    "id": "DB3b",
+    "name": "Sardinas + 2 huevos + ghee",
+    "items": [
+      {
+        "food": "sardina_g",
+        "qty": 170
+      },
+      {
+        "food": "huevo",
+        "qty": 2
+      },
+      {
+        "food": "ghee_g",
+        "qty": 85
+      }
+    ]
+  }
+]

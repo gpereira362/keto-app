@@ -1,0 +1,701 @@
+{
+ "semana1_60kg": {
+  "week": 1,
+  "idealWeightKg": 60,
+  "lines": [
+   {
+    "food": "brisket",
+    "category": "Carnes",
+    "name": "Brisket/pecho de res con su grasa",
+    "need": 225,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": null
+   },
+   {
+    "food": "molida",
+    "category": "Carnes",
+    "name": "Carne molida 80/20",
+    "need": 250,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "paquete de 500 g",
+    "note": null
+   },
+   {
+    "food": "ribeye",
+    "category": "Carnes",
+    "name": "Ribeye",
+    "need": 195,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "pedir al carnicero en cortes de ~2.5 cm"
+   },
+   {
+    "food": "brat",
+    "category": "Cerdo y embutidos",
+    "name": "Bratwurst",
+    "need": 2.0,
+    "unit": "unid",
+    "packs": 1,
+    "packLabel": "paquete de 5",
+    "note": null
+   },
+   {
+    "food": "panceta",
+    "category": "Cerdo y embutidos",
+    "name": "Panceta de cerdo",
+    "need": 168,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": null
+   },
+   {
+    "food": "salchicha",
+    "category": "Cerdo y embutidos",
+    "name": "Salchicha de cerdo (sin azúcar)",
+    "need": 66,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "paquete de 400 g",
+    "note": "revisar que no tenga azúcar ni harina"
+   },
+   {
+    "food": "tocino",
+    "category": "Cerdo y embutidos",
+    "name": "Tocino",
+    "need": 6,
+    "unit": "unid",
+    "packs": 1,
+    "packLabel": "paquete de 12 lonjas (≈340 g)",
+    "note": null
+   },
+   {
+    "food": "alitas",
+    "category": "Aves",
+    "name": "Alitas de pollo",
+    "need": 456,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "peso con hueso"
+   },
+   {
+    "food": "muslo",
+    "category": "Aves",
+    "name": "Muslos de pollo con piel",
+    "need": 190,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "con hueso y piel"
+   },
+   {
+    "food": "salmon",
+    "category": "Pescados y mariscos",
+    "name": "Salmón con piel",
+    "need": 150,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "con piel"
+   },
+   {
+    "food": "sardinas",
+    "category": "Pescados y mariscos",
+    "name": "Sardinas en aceite de oliva",
+    "need": 2.0,
+    "unit": "unid",
+    "packs": 2,
+    "packLabel": "lata (≈120 g)",
+    "note": null
+   },
+   {
+    "food": "agria",
+    "category": "Huevos y lácteos",
+    "name": "Crema agria",
+    "need": 48,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "envase de 250 g",
+    "note": null
+   },
+   {
+    "food": "crema",
+    "category": "Huevos y lácteos",
+    "name": "Crema de leche espesa",
+    "need": 210,
+    "unit": "ml",
+    "packs": 1,
+    "packLabel": "envase de 473 ml",
+    "note": null
+   },
+   {
+    "food": "huevo",
+    "category": "Huevos y lácteos",
+    "name": "Huevos",
+    "need": 22,
+    "unit": "unid",
+    "packs": 2,
+    "packLabel": "docena",
+    "note": null
+   },
+   {
+    "food": "mantequilla",
+    "category": "Huevos y lácteos",
+    "name": "Mantequilla",
+    "need": 140,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "barra/paquete de 227 g",
+    "note": null
+   },
+   {
+    "food": "azul",
+    "category": "Huevos y lácteos",
+    "name": "Queso azul",
+    "need": 30,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "paquete de 150 g",
+    "note": null
+   },
+   {
+    "food": "cheddar",
+    "category": "Huevos y lácteos",
+    "name": "Queso cheddar (rallado en casa)",
+    "need": 100,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "bloque de 200 g",
+    "note": "comprar en bloque y rallar en casa"
+   },
+   {
+    "food": "aguacate",
+    "category": "Verduras",
+    "name": "Aguacate",
+    "need": 0.5,
+    "unit": "unid",
+    "packs": 1,
+    "packLabel": "aguacate mediano",
+    "note": null
+   },
+   {
+    "food": "apio",
+    "category": "Verduras",
+    "name": "Apio",
+    "need": 160,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "atado (≈8 tallos)",
+    "note": null
+   },
+   {
+    "food": "chucrut",
+    "category": "Verduras",
+    "name": "Chucrut (sin azúcar)",
+    "need": 210,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "frasco de 800 g",
+    "note": "refrigerado, sin azúcar"
+   },
+   {
+    "food": "coliflor",
+    "category": "Verduras",
+    "name": "Coliflor",
+    "need": 81,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "coliflor mediana (≈600 g)",
+    "note": null
+   },
+   {
+    "food": "espinaca",
+    "category": "Verduras",
+    "name": "Espinaca congelada",
+    "need": 95,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "bolsa congelada de 300 g",
+    "note": null
+   },
+   {
+    "food": "esparragos",
+    "category": "Verduras",
+    "name": "Espárragos",
+    "need": 126,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "manojo de 450 g",
+    "note": "se descarta la base dura"
+   },
+   {
+    "food": "lechuga",
+    "category": "Verduras",
+    "name": "Lechuga",
+    "need": 169,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "lechuga (≈8 tazas)",
+    "note": null
+   },
+   {
+    "food": "aceite",
+    "category": "Despensa",
+    "name": "Aceite de oliva extra virgen",
+    "need": 30,
+    "unit": "ml",
+    "packs": 1,
+    "packLabel": "botella de 500 ml",
+    "note": null
+   },
+   {
+    "food": "mayo",
+    "category": "Despensa",
+    "name": "Mayonesa sin azúcar",
+    "need": 70,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "frasco de 400 g",
+    "note": "sin azúcar, idealmente con aceite de aguacate"
+   },
+   {
+    "food": "mostaza",
+    "category": "Despensa",
+    "name": "Mostaza",
+    "need": 30,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "frasco de 250 g",
+    "note": null
+   }
+  ],
+  "staples": [
+   "Sal de buena calidad",
+   "Café o té",
+   "Agua con gas (opcional)",
+   "Magnesio 300–400 mg",
+   "Tiras de cetonas en orina"
+  ]
+ },
+ "semana1_60kg_sin_pescado_con_despensa": {
+  "week": 1,
+  "idealWeightKg": 60,
+  "lines": [
+   {
+    "food": "brisket",
+    "category": "Carnes",
+    "name": "Brisket/pecho de res con su grasa",
+    "need": 225,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": null
+   },
+   {
+    "food": "molida",
+    "category": "Carnes",
+    "name": "Carne molida 80/20",
+    "need": 250,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "paquete de 500 g",
+    "note": null
+   },
+   {
+    "food": "ribeye",
+    "category": "Carnes",
+    "name": "Ribeye",
+    "need": 618,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "pedir al carnicero en cortes de ~2.5 cm"
+   },
+   {
+    "food": "brat",
+    "category": "Cerdo y embutidos",
+    "name": "Bratwurst",
+    "need": 2.0,
+    "unit": "unid",
+    "packs": 1,
+    "packLabel": "paquete de 5",
+    "note": null
+   },
+   {
+    "food": "panceta",
+    "category": "Cerdo y embutidos",
+    "name": "Panceta de cerdo",
+    "need": 168,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": null
+   },
+   {
+    "food": "salchicha",
+    "category": "Cerdo y embutidos",
+    "name": "Salchicha de cerdo (sin azúcar)",
+    "need": 66,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "paquete de 400 g",
+    "note": "revisar que no tenga azúcar ni harina"
+   },
+   {
+    "food": "tocino",
+    "category": "Cerdo y embutidos",
+    "name": "Tocino",
+    "need": 6,
+    "unit": "unid",
+    "packs": 1,
+    "packLabel": "paquete de 12 lonjas (≈340 g)",
+    "note": null
+   },
+   {
+    "food": "alitas",
+    "category": "Aves",
+    "name": "Alitas de pollo",
+    "need": 456,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "peso con hueso"
+   },
+   {
+    "food": "muslo",
+    "category": "Aves",
+    "name": "Muslos de pollo con piel",
+    "need": 190,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "con hueso y piel"
+   },
+   {
+    "food": "agria",
+    "category": "Huevos y lácteos",
+    "name": "Crema agria",
+    "need": 48,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "envase de 250 g",
+    "note": null
+   },
+   {
+    "food": "crema",
+    "category": "Huevos y lácteos",
+    "name": "Crema de leche espesa",
+    "need": 210,
+    "unit": "ml",
+    "packs": 1,
+    "packLabel": "envase de 473 ml",
+    "note": null
+   },
+   {
+    "food": "huevo",
+    "category": "Huevos y lácteos",
+    "name": "Huevos",
+    "need": 16,
+    "unit": "unid",
+    "packs": 2,
+    "packLabel": "docena",
+    "note": null
+   },
+   {
+    "food": "mantequilla",
+    "category": "Huevos y lácteos",
+    "name": "Mantequilla",
+    "need": 140,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "barra/paquete de 227 g",
+    "note": null
+   },
+   {
+    "food": "azul",
+    "category": "Huevos y lácteos",
+    "name": "Queso azul",
+    "need": 30,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "paquete de 150 g",
+    "note": null
+   },
+   {
+    "food": "cheddar",
+    "category": "Huevos y lácteos",
+    "name": "Queso cheddar (rallado en casa)",
+    "need": 100,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "bloque de 200 g",
+    "note": "comprar en bloque y rallar en casa"
+   },
+   {
+    "food": "aguacate",
+    "category": "Verduras",
+    "name": "Aguacate",
+    "need": 0.5,
+    "unit": "unid",
+    "packs": 1,
+    "packLabel": "aguacate mediano",
+    "note": null
+   },
+   {
+    "food": "apio",
+    "category": "Verduras",
+    "name": "Apio",
+    "need": 160,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "atado (≈8 tallos)",
+    "note": null
+   },
+   {
+    "food": "chucrut",
+    "category": "Verduras",
+    "name": "Chucrut (sin azúcar)",
+    "need": 210,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "frasco de 800 g",
+    "note": "refrigerado, sin azúcar"
+   },
+   {
+    "food": "coliflor",
+    "category": "Verduras",
+    "name": "Coliflor",
+    "need": 81,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "coliflor mediana (≈600 g)",
+    "note": null
+   },
+   {
+    "food": "espinaca",
+    "category": "Verduras",
+    "name": "Espinaca congelada",
+    "need": 95,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "bolsa congelada de 300 g",
+    "note": null
+   },
+   {
+    "food": "esparragos",
+    "category": "Verduras",
+    "name": "Espárragos",
+    "need": 126,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "manojo de 450 g",
+    "note": "se descarta la base dura"
+   },
+   {
+    "food": "lechuga",
+    "category": "Verduras",
+    "name": "Lechuga",
+    "need": 169,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "lechuga (≈8 tazas)",
+    "note": null
+   },
+   {
+    "food": "mayo",
+    "category": "Despensa",
+    "name": "Mayonesa sin azúcar",
+    "need": 70,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "frasco de 400 g",
+    "note": "sin azúcar, idealmente con aceite de aguacate"
+   },
+   {
+    "food": "mostaza",
+    "category": "Despensa",
+    "name": "Mostaza",
+    "need": 30,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "frasco de 250 g",
+    "note": null
+   }
+  ],
+  "staples": [
+   "Sal de buena calidad",
+   "Café o té",
+   "Agua con gas (opcional)",
+   "Magnesio 300–400 mg",
+   "Tiras de cetonas en orina"
+  ]
+ },
+ "semana10_75kg": {
+  "week": 10,
+  "idealWeightKg": 75,
+  "lines": [
+   {
+    "food": "brisket",
+    "category": "Carnes",
+    "name": "Brisket/pecho de res con su grasa",
+    "need": 285,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": null
+   },
+   {
+    "food": "molida",
+    "category": "Carnes",
+    "name": "Carne molida 80/20",
+    "need": 500,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "paquete de 500 g",
+    "note": null
+   },
+   {
+    "food": "ribeye",
+    "category": "Carnes",
+    "name": "Ribeye",
+    "need": 624,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "pedir al carnicero en cortes de ~2.5 cm"
+   },
+   {
+    "food": "panceta",
+    "category": "Cerdo y embutidos",
+    "name": "Panceta de cerdo",
+    "need": 210,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": null
+   },
+   {
+    "food": "tocino",
+    "category": "Cerdo y embutidos",
+    "name": "Tocino",
+    "need": 4,
+    "unit": "unid",
+    "packs": 1,
+    "packLabel": "paquete de 12 lonjas (≈340 g)",
+    "note": null
+   },
+   {
+    "food": "salmon",
+    "category": "Pescados y mariscos",
+    "name": "Salmón con piel",
+    "need": 500,
+    "unit": "g",
+    "packs": null,
+    "packLabel": null,
+    "note": "con piel"
+   },
+   {
+    "food": "sardinas",
+    "category": "Pescados y mariscos",
+    "name": "Sardinas en aceite de oliva",
+    "need": 3.0,
+    "unit": "unid",
+    "packs": 3,
+    "packLabel": "lata (≈120 g)",
+    "note": null
+   },
+   {
+    "food": "huevo",
+    "category": "Huevos y lácteos",
+    "name": "Huevos",
+    "need": 20,
+    "unit": "unid",
+    "packs": 2,
+    "packLabel": "docena",
+    "note": null
+   },
+   {
+    "food": "mantequilla",
+    "category": "Huevos y lácteos",
+    "name": "Mantequilla",
+    "need": 126,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "barra/paquete de 227 g",
+    "note": null
+   },
+   {
+    "food": "cheddar",
+    "category": "Huevos y lácteos",
+    "name": "Queso cheddar (rallado en casa)",
+    "need": 65,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "bloque de 200 g",
+    "note": "comprar en bloque y rallar en casa"
+   },
+   {
+    "food": "coliflor",
+    "category": "Verduras",
+    "name": "Coliflor",
+    "need": 81,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "coliflor mediana (≈600 g)",
+    "note": null
+   },
+   {
+    "food": "esparragos",
+    "category": "Verduras",
+    "name": "Espárragos",
+    "need": 252,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "manojo de 450 g",
+    "note": "se descarta la base dura"
+   },
+   {
+    "food": "lechuga",
+    "category": "Verduras",
+    "name": "Lechuga",
+    "need": 169,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "lechuga (≈8 tazas)",
+    "note": null
+   },
+   {
+    "food": "aceite",
+    "category": "Despensa",
+    "name": "Aceite de oliva extra virgen",
+    "need": 30,
+    "unit": "ml",
+    "packs": 1,
+    "packLabel": "botella de 500 ml",
+    "note": null
+   },
+   {
+    "food": "mayo",
+    "category": "Despensa",
+    "name": "Mayonesa sin azúcar",
+    "need": 28,
+    "unit": "g",
+    "packs": 1,
+    "packLabel": "frasco de 400 g",
+    "note": "sin azúcar, idealmente con aceite de aguacate"
+   }
+  ],
+  "staples": [
+   "Sal de buena calidad",
+   "Café o té",
+   "Agua con gas (opcional)",
+   "Magnesio 300–400 mg",
+   "Tiras de glucosa y cetonas para el medidor"
+  ]
+ }
+}

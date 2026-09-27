@@ -1,0 +1,312 @@
+[
+  {
+    "id": "carne_res_grasa",
+    "label": "Carnes rojas grasas",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "ribeye",
+      "picana",
+      "entrecot",
+      "costilla_res",
+      "brisket",
+      "cordero",
+      "costillas_cerdo",
+      "paleta_cerdo",
+      "pato",
+      "chuleta_cerdo",
+      "higado_res"
+    ]
+  },
+  {
+    "id": "carne_molida",
+    "label": "Carne molida",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "molida",
+      "molida_cordero",
+      "molida_cerdo",
+      "molida_85",
+      "salchicha",
+      "chorizo"
+    ]
+  },
+  {
+    "id": "cerdo_graso",
+    "label": "Cortes grasos",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "panceta",
+      "costillas_cerdo",
+      "paleta_cerdo",
+      "costilla_res",
+      "pato",
+      "brisket",
+      "chuleta_cerdo"
+    ]
+  },
+  {
+    "id": "embutidos",
+    "label": "Salchichas y embutidos",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "brat",
+      "salchicha",
+      "chorizo",
+      "salami",
+      "molida_cerdo",
+      "molida"
+    ]
+  },
+  {
+    "id": "tocino",
+    "label": "Tocino y afines",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "tocino",
+      "salami",
+      "chorizo",
+      "salchicha",
+      "panceta"
+    ]
+  },
+  {
+    "id": "aves",
+    "label": "Aves con piel",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "alitas",
+      "muslo",
+      "pavo_muslo",
+      "pato",
+      "pechuga"
+    ]
+  },
+  {
+    "id": "pescado_graso",
+    "label": "Pescados grasos",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "salmon",
+      "sardina_g",
+      "caballa",
+      "arenque",
+      "trucha",
+      "atun_aceite",
+      "camaron"
+    ]
+  },
+  {
+    "id": "pescado_lata",
+    "label": "Pescado en lata",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "sardinas",
+      "caballa",
+      "arenque",
+      "atun_aceite",
+      "salmon"
+    ]
+  },
+  {
+    "id": "huevo",
+    "label": "Huevos",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "members": [
+      "huevo",
+      "salchicha",
+      "tocino",
+      "molida",
+      "chorizo",
+      "sardina_g"
+    ]
+  },
+  {
+    "id": "yema",
+    "label": "Yemas",
+    "matchBy": "fat",
+    "fatTopUp": false,
+    "members": [
+      "yema",
+      "mantequilla",
+      "ghee_cda",
+      "aceite"
+    ]
+  },
+  {
+    "id": "grasa_cocina",
+    "label": "Grasas para cocinar",
+    "matchBy": "fat",
+    "fatTopUp": false,
+    "members": [
+      "mantequilla",
+      "ghee_cda",
+      "sebo_cda",
+      "manteca_cerdo",
+      "aceite",
+      "aceite_aguacate",
+      "aceite_coco"
+    ]
+  },
+  {
+    "id": "grasa_gramos",
+    "label": "Grasas (en gramos)",
+    "matchBy": "fat",
+    "fatTopUp": false,
+    "members": [
+      "sebo_g",
+      "ghee_g",
+      "mant_g",
+      "manteca_cerdo",
+      "aceite",
+      "aceite_aguacate"
+    ]
+  },
+  {
+    "id": "crema_cafe",
+    "label": "Para el café",
+    "matchBy": "fat",
+    "fatTopUp": false,
+    "members": [
+      "crema",
+      "leche_coco",
+      "mct"
+    ],
+    "extraCandidates": [
+      "mantequilla"
+    ]
+  },
+  {
+    "id": "queso",
+    "label": "Quesos",
+    "matchBy": "fat",
+    "fatTopUp": false,
+    "members": [
+      "cheddar",
+      "gouda",
+      "manchego",
+      "parmesano",
+      "azul",
+      "aceitunas",
+      "aceite",
+      "aguacate"
+    ]
+  },
+  {
+    "id": "salsa_cremosa",
+    "label": "Salsas cremosas",
+    "matchBy": "fat",
+    "fatTopUp": false,
+    "members": [
+      "agria",
+      "mayo",
+      "leche_coco",
+      "aguacate",
+      "aceite"
+    ]
+  },
+  {
+    "id": "grasa_vegetal",
+    "label": "Grasas vegetales",
+    "matchBy": "fat",
+    "fatTopUp": false,
+    "members": [
+      "aguacate",
+      "aceitunas",
+      "aceite",
+      "mayo"
+    ]
+  },
+  {
+    "id": "verdura",
+    "label": "Verduras bajas en carbohidratos",
+    "matchBy": "carbs",
+    "fatTopUp": false,
+    "members": [
+      "esparragos",
+      "coliflor",
+      "espinaca",
+      "lechuga",
+      "apio",
+      "calabacin",
+      "pepino",
+      "champinones",
+      "romana",
+      "rucula",
+      "espinaca_fresca",
+      "pimiento",
+      "repollo",
+      "brocoli",
+      "ejotes",
+      "esparragos_g",
+      "coliflor_g",
+      "apio_g"
+    ]
+  },
+  {
+    "id": "fermentado",
+    "label": "Fermentados",
+    "matchBy": "carbs",
+    "fatTopUp": false,
+    "members": [
+      "chucrut",
+      "kimchi",
+      "pepinillos"
+    ]
+  },
+  {
+    "id": "condimento",
+    "label": "Condimentos",
+    "matchBy": "carbs",
+    "fatTopUp": false,
+    "members": [
+      "mostaza",
+      "pepinillos"
+    ]
+  },
+  {
+    "id": "proteina_general",
+    "label": "Cualquier proteína animal",
+    "matchBy": "protein",
+    "fatTopUp": true,
+    "fallback": true,
+    "members": [
+      "ribeye",
+      "molida",
+      "picana",
+      "costilla_res",
+      "brisket",
+      "cordero",
+      "molida_cordero",
+      "muslo",
+      "pato",
+      "pavo_muslo",
+      "costillas_cerdo",
+      "paleta_cerdo",
+      "salmon",
+      "caballa",
+      "chorizo"
+    ]
+  },
+  {
+    "id": "__fat_topup_order",
+    "label": "Orden para completar grasa",
+    "members": [
+      "mantequilla",
+      "ghee_cda",
+      "aceite",
+      "aceite_aguacate",
+      "manteca_cerdo",
+      "sebo_cda",
+      "aceite_coco"
+    ]
+  }
+]

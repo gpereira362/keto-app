@@ -1,0 +1,785 @@
+{
+ "espárragos (1 porción) sin exclusiones": [
+  {
+   "food": "espinaca",
+   "items": [
+    {
+     "food": "espinaca",
+     "qty": 1
+    }
+   ],
+   "group": "verdura",
+   "macros": {
+    "protein": 3.0,
+    "fat": 0.4,
+    "carbs": 3.5
+   },
+   "delta": {
+    "protein": 1.0,
+    "fat": 0.2,
+    "carbs": 0.0
+   },
+   "flags": [
+    "magro"
+   ],
+   "score": 20.1
+  },
+  {
+   "food": "coliflor",
+   "items": [
+    {
+     "food": "coliflor",
+     "qty": 1
+    }
+   ],
+   "group": "verdura",
+   "macros": {
+    "protein": 1.1,
+    "fat": 0.3,
+    "carbs": 2.5
+   },
+   "delta": {
+    "protein": -0.9,
+    "fat": 0.1,
+    "carbs": -1.0
+   },
+   "flags": [
+    "magro"
+   ],
+   "score": 20.9
+  },
+  {
+   "food": "lechuga",
+   "items": [
+    {
+     "food": "lechuga",
+     "qty": 2
+    }
+   ],
+   "group": "verdura",
+   "macros": {
+    "protein": 1.2,
+    "fat": 0.2,
+    "carbs": 2.8
+   },
+   "delta": {
+    "protein": -0.8,
+    "fat": 0.0,
+    "carbs": -0.7
+   },
+   "flags": [
+    "magro"
+   ],
+   "score": 23.9
+  },
+  {
+   "food": "calabacin",
+   "items": [
+    {
+     "food": "calabacin",
+     "qty": 110
+    }
+   ],
+   "group": "verdura",
+   "macros": {
+    "protein": 1.3,
+    "fat": 0.3,
+    "carbs": 3.4
+   },
+   "delta": {
+    "protein": -0.7,
+    "fat": 0.1,
+    "carbs": -0.1
+   },
+   "flags": [
+    "magro"
+   ],
+   "score": 26.1
+  },
+  {
+   "food": "apio",
+   "items": [
+    {
+     "food": "apio",
+     "qty": 1
+    }
+   ],
+   "group": "verdura",
+   "macros": {
+    "protein": 0.5,
+    "fat": 0.1,
+    "carbs": 2.4
+   },
+   "delta": {
+    "protein": -1.5,
+    "fat": -0.1,
+    "carbs": -1.1
+   },
+   "flags": [
+    "magro"
+   ],
+   "score": 27.9
+  },
+  {
+   "food": "pepino",
+   "items": [
+    {
+     "food": "pepino",
+     "qty": 100
+    }
+   ],
+   "group": "verdura",
+   "macros": {
+    "protein": 0.7,
+    "fat": 0.1,
+    "carbs": 3.6
+   },
+   "delta": {
+    "protein": -1.4,
+    "fat": -0.1,
+    "carbs": 0.1
+   },
+   "flags": [
+    "magro"
+   ],
+   "score": 28.8
+  }
+ ],
+ "ribeye 150 g": [
+  {
+   "food": "picana",
+   "items": [
+    {
+     "food": "picana",
+     "qty": 140
+    }
+   ],
+   "group": "carne_res_grasa",
+   "macros": {
+    "protein": 36.4,
+    "fat": 28.0,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.4,
+    "fat": -5.0,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 4.9
+  },
+  {
+   "food": "entrecot",
+   "items": [
+    {
+     "food": "entrecot",
+     "qty": 145
+    },
+    {
+     "food": "mantequilla",
+     "qty": 0.5
+    }
+   ],
+   "group": "carne_res_grasa",
+   "macros": {
+    "protein": 36.3,
+    "fat": 31.8,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.5,
+    "fat": -1.2,
+    "carbs": 0.0
+   },
+   "flags": [
+    "grasa-añadida"
+   ],
+   "score": 5.1
+  },
+  {
+   "food": "cordero",
+   "items": [
+    {
+     "food": "cordero",
+     "qty": 130
+    },
+    {
+     "food": "mantequilla",
+     "qty": 0.5
+    }
+   ],
+   "group": "carne_res_grasa",
+   "macros": {
+    "protein": 36.5,
+    "fat": 31.8,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.3,
+    "fat": -1.2,
+    "carbs": 0.0
+   },
+   "flags": [
+    "grasa-añadida"
+   ],
+   "score": 10.9
+  },
+  {
+   "food": "brisket",
+   "items": [
+    {
+     "food": "brisket",
+     "qty": 160
+    }
+   ],
+   "group": "carne_res_grasa",
+   "macros": {
+    "protein": 36.8,
+    "fat": 40.0,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.1,
+    "fat": 7.0,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 11.6
+  },
+  {
+   "food": "costillas_cerdo",
+   "items": [
+    {
+     "food": "costillas_cerdo",
+     "qty": 145
+    }
+   ],
+   "group": "carne_res_grasa",
+   "macros": {
+    "protein": 36.2,
+    "fat": 33.4,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.5,
+    "fat": 0.4,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 12.7
+  },
+  {
+   "food": "paleta_cerdo",
+   "items": [
+    {
+     "food": "paleta_cerdo",
+     "qty": 160
+    }
+   ],
+   "group": "carne_res_grasa",
+   "macros": {
+    "protein": 36.8,
+    "fat": 32.0,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.1,
+    "fat": -1.0,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 14.6
+  }
+ ],
+ "salmón 150 g": [
+  {
+   "food": "sardina_g",
+   "items": [
+    {
+     "food": "sardina_g",
+     "qty": 125
+    },
+    {
+     "food": "mantequilla",
+     "qty": 0.5
+    }
+   ],
+   "group": "pescado_graso",
+   "macros": {
+    "protein": 30.8,
+    "fat": 20.1,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.2,
+    "fat": 0.0,
+    "carbs": 0.0
+   },
+   "flags": [
+    "grasa-añadida"
+   ],
+   "score": 2.2
+  },
+  {
+   "food": "caballa",
+   "items": [
+    {
+     "food": "caballa",
+     "qty": 130
+    }
+   ],
+   "group": "pescado_graso",
+   "macros": {
+    "protein": 31.2,
+    "fat": 23.4,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.6,
+    "fat": 3.3,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 6.2
+  },
+  {
+   "food": "sardinas",
+   "items": [
+    {
+     "food": "sardinas",
+     "qty": 1.5
+    }
+   ],
+   "group": "pescado_lata",
+   "macros": {
+    "protein": 36.0,
+    "fat": 25.5,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 5.4,
+    "fat": 5.4,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 8.1
+  },
+  {
+   "food": "arenque",
+   "items": [
+    {
+     "food": "arenque",
+     "qty": 135
+    }
+   ],
+   "group": "pescado_graso",
+   "macros": {
+    "protein": 31.1,
+    "fat": 16.2,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.5,
+    "fat": -3.9,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 8.4
+  },
+  {
+   "food": "ribeye",
+   "items": [
+    {
+     "food": "ribeye",
+     "qty": 125
+    }
+   ],
+   "group": "proteina_general",
+   "macros": {
+    "protein": 30.6,
+    "fat": 27.5,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.0,
+    "fat": 7.4,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 23.7
+  },
+  {
+   "food": "trucha",
+   "items": [
+    {
+     "food": "trucha",
+     "qty": 155
+    },
+    {
+     "food": "mantequilla",
+     "qty": 1.0
+    }
+   ],
+   "group": "pescado_graso",
+   "macros": {
+    "protein": 31.1,
+    "fat": 21.7,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.5,
+    "fat": 1.6,
+    "carbs": 0.0
+   },
+   "flags": [
+    "grasa-añadida",
+    "magro"
+   ],
+   "score": 24.3
+  }
+ ],
+ "3 huevos": [
+  {
+   "food": "tocino",
+   "items": [
+    {
+     "food": "tocino",
+     "qty": 6
+    }
+   ],
+   "group": "huevo",
+   "macros": {
+    "protein": 18.0,
+    "fat": 19.8,
+    "carbs": 0.6
+   },
+   "delta": {
+    "protein": -0.9,
+    "fat": 4.8,
+    "carbs": -0.6
+   },
+   "flags": [],
+   "score": 9.1
+  },
+  {
+   "food": "salchicha",
+   "items": [
+    {
+     "food": "salchicha",
+     "qty": 100
+    }
+   ],
+   "group": "huevo",
+   "macros": {
+    "protein": 19.0,
+    "fat": 28.0,
+    "carbs": 1.0
+   },
+   "delta": {
+    "protein": 0.1,
+    "fat": 13.0,
+    "carbs": -0.2
+   },
+   "flags": [],
+   "score": 9.2
+  },
+  {
+   "food": "molida",
+   "items": [
+    {
+     "food": "molida",
+     "qty": 110
+    }
+   ],
+   "group": "huevo",
+   "macros": {
+    "protein": 18.9,
+    "fat": 22.0,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": 0.0,
+    "fat": 7.0,
+    "carbs": -1.2
+   },
+   "flags": [],
+   "score": 13.1
+  },
+  {
+   "food": "sardina_g",
+   "items": [
+    {
+     "food": "sardina_g",
+     "qty": 75
+    },
+    {
+     "food": "mantequilla",
+     "qty": 0.5
+    }
+   ],
+   "group": "huevo",
+   "macros": {
+    "protein": 18.5,
+    "fat": 14.4,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.4,
+    "fat": -0.6,
+    "carbs": -1.2
+   },
+   "flags": [
+    "grasa-añadida"
+   ],
+   "score": 14.3
+  },
+  {
+   "food": "chorizo",
+   "items": [
+    {
+     "food": "chorizo",
+     "qty": 80
+    }
+   ],
+   "group": "huevo",
+   "macros": {
+    "protein": 19.2,
+    "fat": 30.4,
+    "carbs": 1.6
+   },
+   "delta": {
+    "protein": 0.3,
+    "fat": 15.4,
+    "carbs": 0.4
+   },
+   "flags": [],
+   "score": 17.2
+  }
+ ],
+ "mantequilla 1 cda": [
+  {
+   "food": "ghee_cda",
+   "items": [
+    {
+     "food": "ghee_cda",
+     "qty": 1.0
+    }
+   ],
+   "group": "yema",
+   "macros": {
+    "protein": 0.0,
+    "fat": 12.7,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.1,
+    "fat": 1.2,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 4.7
+  },
+  {
+   "food": "sebo_cda",
+   "items": [
+    {
+     "food": "sebo_cda",
+     "qty": 1.0
+    }
+   ],
+   "group": "grasa_cocina",
+   "macros": {
+    "protein": 0.0,
+    "fat": 12.8,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.1,
+    "fat": 1.3,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 4.8
+  },
+  {
+   "food": "manteca_cerdo",
+   "items": [
+    {
+     "food": "manteca_cerdo",
+     "qty": 1.0
+    }
+   ],
+   "group": "grasa_cocina",
+   "macros": {
+    "protein": 0.0,
+    "fat": 12.8,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.1,
+    "fat": 1.3,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 6.8
+  },
+  {
+   "food": "aceite",
+   "items": [
+    {
+     "food": "aceite",
+     "qty": 1.0
+    }
+   ],
+   "group": "yema",
+   "macros": {
+    "protein": 0.0,
+    "fat": 13.5,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.1,
+    "fat": 2.0,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 7.1
+  },
+  {
+   "food": "aceite_aguacate",
+   "items": [
+    {
+     "food": "aceite_aguacate",
+     "qty": 1.0
+    }
+   ],
+   "group": "grasa_cocina",
+   "macros": {
+    "protein": 0.0,
+    "fat": 14.0,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.1,
+    "fat": 2.5,
+    "carbs": 0.0
+   },
+   "flags": [],
+   "score": 11.3
+  }
+ ],
+ "crema de café 2 cdas, alergia a lácteos": [
+  {
+   "food": "leche_coco",
+   "items": [
+    {
+     "food": "leche_coco",
+     "qty": 3
+    }
+   ],
+   "group": "crema_cafe",
+   "macros": {
+    "protein": 0.9,
+    "fat": 10.8,
+    "carbs": 1.5
+   },
+   "delta": {
+    "protein": 0.1,
+    "fat": 0.0,
+    "carbs": 0.7
+   },
+   "flags": [],
+   "score": 4.2
+  },
+  {
+   "food": "mct",
+   "items": [
+    {
+     "food": "mct",
+     "qty": 1.0
+    }
+   ],
+   "group": "crema_cafe",
+   "macros": {
+    "protein": 0.0,
+    "fat": 14.0,
+    "carbs": 0.0
+   },
+   "delta": {
+    "protein": -0.8,
+    "fat": 3.2,
+    "carbs": -0.8
+   },
+   "flags": [],
+   "score": 8.8
+  }
+ ],
+ "DES1 con alergia al huevo": [
+  [
+   {
+    "food": "mantequilla",
+    "qty": 1.0
+   },
+   {
+    "food": "cheddar",
+    "qty": 30
+   },
+   {
+    "food": "tocino",
+    "qty": 6
+   }
+  ],
+  [
+   {
+    "original": {
+     "food": "huevo",
+     "qty": 3
+    },
+    "replacement": [
+     {
+      "food": "tocino",
+      "qty": 6
+     }
+    ]
+   }
+  ]
+ ],
+ "CEN4 sin cerdo": [
+  [
+   {
+    "food": "huevo",
+    "qty": 2
+   },
+   {
+    "food": "chucrut",
+    "qty": 1
+   },
+   {
+    "food": "costilla_res",
+    "qty": 95
+   },
+   {
+    "food": "mantequilla",
+    "qty": 2.0
+   }
+  ],
+  [
+   {
+    "original": {
+     "food": "panceta",
+     "qty": 120
+    },
+    "replacement": [
+     {
+      "food": "costilla_res",
+      "qty": 95
+     },
+     {
+      "food": "mantequilla",
+      "qty": 2.0
+     }
+    ]
+   }
+  ]
+ ]
+}
