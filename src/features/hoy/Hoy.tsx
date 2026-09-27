@@ -147,7 +147,7 @@ export function Hoy() {
 
       {plan.slots.map((slot) => (
         <MealCard
-          key={slot.slotIndex}
+          key={`${plan.week}-${plan.dayIndex}-${slot.slotIndex}`}
           slot={slot}
           eaten={isToday && !!log?.mealsEaten.includes(slot.mealId)}
           disabled={notStarted}

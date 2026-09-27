@@ -1,5 +1,11 @@
 import { expect, test, type Page } from '@playwright/test';
 
+/** Abre todas las comidas del día (se muestran cerradas). */
+async function openMeals(page: Page) {
+  const closed = page.locator('button[aria-expanded="false"]');
+  while (await closed.count()) await closed.first().click();
+}
+
 /** Onboarding completo: 165 cm → 60 kg de peso ideal (IMC 22). */
 async function onboarding(page: Page, opts: { allergy?: string } = {}) {
   await page.goto('/');
@@ -26,6 +32,9 @@ test('onboarding → hoy con el plan de 60 kg; se guarda y funciona sin conexió
   expect(Date.now() - start).toBeLessThan(60_000);
 
   // Día 1 de la semana 1 con 60 kg: 3 huevos, totales de docs/tabla-60kg.json (12,6 g de carbohidratos).
+  // Las comidas empiezan cerradas: solo el nombre; al tocar se ven los ingredientes.
+  await expect(page.getByText('3 huevos', { exact: true })).toHaveCount(0);
+  await page.getByRole('button', { name: /Desayuno.*Huevos revueltos con queso/ }).click();
   await expect(page.getByText('3 huevos', { exact: true })).toBeVisible();
   await expect(page.getByText(/12,6 g/)).toBeVisible();
 
@@ -41,9 +50,11 @@ test('onboarding → hoy con el plan de 60 kg; se guarda y funciona sin conexió
   await expect(page.getByRole('heading', { name: /Semana 1 · día 1/ })).toBeVisible();
 
   // "Comí esto" se guarda después de recargar.
+  await openMeals(page);
   await page.getByRole('button', { name: 'Comí esto' }).nth(1).click();
   await page.reload();
-  await expect(page.getByRole('button', { name: '✓ Comido' })).toHaveCount(1);
+  await openMeals(page);
+  await expect(page.getByRole('button', { name: '✓ Comido', exact: true })).toHaveCount(1);
 
   // Sin conexión después de la primera carga (service worker).
   await page.evaluate(() => navigator.serviceWorker.ready);
@@ -60,6 +71,7 @@ test('cambiar un ingrediente actualiza el plan y la lista de compras sin recarga
   await expect(page.getByText(/^22 → 2 docenas$/)).toBeVisible(); // Huevos, semana 1
 
   await page.getByRole('button', { name: 'Hoy' }).click();
+  await openMeals(page);
   await page.getByRole('button', { name: 'Cambiar 3 huevos' }).click();
   const sheet = page.getByRole('dialog', { name: 'Cambiar ingrediente' });
   await sheet.getByRole('radio', { name: /^6 lonjas de tocino/ }).click();
@@ -79,6 +91,7 @@ test('una alergia no aparece en ningún lugar, y el respaldo se exporta e import
   await onboarding(page, { allergy: 'Huevo' });
 
   // Plan: ningún ingrediente con huevo ni mayonesa (los nombres de las comidas no cambian).
+  await openMeals(page);
   await expect(page.getByText(/^\d+ huevos?$/)).toHaveCount(0);
   await expect(page.getByText(/cdas? de mayonesa/)).toHaveCount(0);
   await expect(page.getByText('en lugar de Huevos').first()).toBeVisible();
@@ -116,5 +129,6 @@ test('una alergia no aparece en ningún lugar, y el respaldo se exporta e import
   await page.getByLabel('Archivo de respaldo').setInputFiles(file!);
   await expect(page.getByText('Datos importados.')).toBeVisible();
   await page.getByRole('button', { name: 'Hoy' }).click();
+  await openMeals(page);
   await expect(page.getByText('en lugar de Huevos').first()).toBeVisible(); // volvió la alergia
 });

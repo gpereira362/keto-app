@@ -1,3 +1,4 @@
+import { useId, useState } from 'react';
 import { Button, Card, MacroChips, cx } from '../../components/ui';
 import { mealCategory } from '../../engine/plan';
 import type { PlannedItem, PlannedSlot } from '../../engine/types';
@@ -13,19 +14,36 @@ export function MealCard({ slot, eaten, onToggleEaten, onChangeItem, onSwapMeal,
 }) {
   const fasting = mealCategory(slot.mealId) === 'AYU';
   const hasFood = slot.items.length > 0;
+  // Cerrada: solo el momento, la hora y la comida. Al tocarla se abren los ingredientes.
+  const [open, setOpen] = useState(false);
+  const detailsId = useId();
   return (
     <Card className={cx(eaten && 'bg-emerald-50/60 ring-emerald-200')}>
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">{slot.label}</p>
-        <p className="text-sm tabular-nums text-stone-500">{slot.time}</p>
-      </div>
-      <div className="mt-1 flex items-baseline justify-between gap-3">
-        <h3 className="font-semibold text-stone-900">{slot.mealName}</h3>
+      <div className="flex items-start justify-between gap-3">
+        <button
+          type="button"
+          onClick={() => hasFood && setOpen(!open)}
+          aria-expanded={hasFood ? open : undefined}
+          aria-controls={hasFood ? detailsId : undefined}
+          className={cx('-m-2 flex min-w-0 flex-1 items-center gap-2 rounded-xl p-2 text-left', hasFood && 'hover:bg-stone-50')}
+        >
+          <span className="min-w-0 flex-1">
+            <span className="block text-xs font-semibold uppercase tracking-wide text-stone-500">
+              {slot.label}
+              {slot.time !== '—' && <span className="ml-2 font-normal normal-case tabular-nums">{slot.time}</span>}
+              {eaten && <span className="ml-2 font-semibold normal-case text-emerald-800">✓ comido</span>}
+            </span>
+            <span className="mt-0.5 block font-semibold text-stone-900">{slot.mealName}</span>
+          </span>
+          {hasFood && (
+            <span aria-hidden className={cx('shrink-0 text-lg text-stone-400 transition-transform', open && 'rotate-180')}>⌄</span>
+          )}
+        </button>
         {onSwapMeal && !fasting && (
           <button
             type="button"
             onClick={onSwapMeal}
-            className="-my-2 min-h-11 shrink-0 text-xs font-semibold text-emerald-800 hover:underline"
+            className="min-h-11 shrink-0 text-xs font-semibold text-emerald-800 hover:underline"
             aria-label={`Cambiar comida: ${slot.mealName}`}
           >
             Cambiar comida
@@ -33,7 +51,8 @@ export function MealCard({ slot, eaten, onToggleEaten, onChangeItem, onSwapMeal,
         )}
       </div>
 
-      {hasFood && (
+      {hasFood && open && (
+      <div id={detailsId}>
         <ul className="mt-3 space-y-2">
           {slot.items.map((it, i) => (
             <li key={`${it.food}-${i}`} className="flex items-start justify-between gap-3">
@@ -67,9 +86,7 @@ export function MealCard({ slot, eaten, onToggleEaten, onChangeItem, onSwapMeal,
             </li>
           ))}
         </ul>
-      )}
 
-      {hasFood && (
         <div className="mt-3 flex items-center justify-between gap-3 border-t border-stone-100 pt-3">
           <MacroChips m={slot.macros} className="font-medium text-stone-700" />
           {onToggleEaten && !fasting && (
@@ -78,6 +95,7 @@ export function MealCard({ slot, eaten, onToggleEaten, onChangeItem, onSwapMeal,
             </Button>
           )}
         </div>
+      </div>
       )}
     </Card>
   );
