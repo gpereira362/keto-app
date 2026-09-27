@@ -15,7 +15,9 @@ npm run preview    # sirve dist/ para probarla
 
 `npm run e2e` usa el Microsoft Edge instalado en Windows. En otro sistema: `npx playwright install chromium` y quitar `channel` en `playwright.config.ts`.
 
-Para instalarla en el celular: publica `dist/` en cualquier hosting estático con HTTPS, ábrela en el navegador del teléfono y elige "Agregar a la pantalla de inicio". Después de la primera carga funciona sin conexión.
+**App publicada:** https://gpereira362.github.io/keto-app/ — se vuelve a publicar sola en cada push a `main` si pasan las pruebas (`.github/workflows/deploy.yml`). Para instalarla en el celular, ábrela en el navegador del teléfono y elige "Agregar a la pantalla de inicio". Después de la primera carga funciona sin conexión.
+
+La app se compila para la ruta `/` salvo que se defina `BASE_PATH` (el workflow usa `/keto-app/`).
 
 ## Pantallas
 
