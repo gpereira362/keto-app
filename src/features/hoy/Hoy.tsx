@@ -86,6 +86,9 @@ export function Hoy() {
           <Button variant="secondary" aria-label="Día siguiente" disabled={!next} onClick={() => next && setViewing(next)}>›</Button>
         </div>
         <p className="text-sm text-stone-600">Paso {week.step} · {week.title}</p>
+        <p className="text-xs text-stone-500">
+          {notStarted ? 'Empiezas' : 'Empezaste'} el {longDate(profile.startDate)} · se cambia en Ajustes
+        </p>
         {!isToday && (
           <div className="mt-2 flex items-center justify-between gap-2 rounded-xl bg-stone-100 px-3 py-1 text-sm text-stone-700">
             <span>{(pos.week - todayPos.week) * 7 + pos.dayIndex - todayPos.dayIndex < 0 ? 'Día anterior' : 'Vista previa'}</span>
@@ -96,7 +99,8 @@ export function Hoy() {
 
       {notStarted && (
         <div className="rounded-2xl bg-sky-50 p-4 text-sm text-sky-900 ring-1 ring-sky-200">
-          Empiezas el <span className="font-semibold">{longDate(profile.startDate)}</span>. Así se verá tu primer día.
+          <p>Empiezas el <span className="font-semibold">{longDate(profile.startDate)}</span>. Así se verá tu primer día.</p>
+          <Button className="mt-3" onClick={() => { state.setStartDate(today); setViewing(null); }}>Empezar hoy</Button>
         </div>
       )}
 

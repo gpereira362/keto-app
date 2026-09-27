@@ -132,3 +132,28 @@ test('una alergia no aparece en ningún lugar, y el respaldo se exporta e import
   await openMeals(page);
   await expect(page.getByText('en lugar de Huevos').first()).toBeVisible(); // volvió la alergia
 });
+
+test('fecha de inicio futura: se ve cuándo empieza y se puede empezar hoy', async ({ page }) => {
+  const d = new Date();
+  d.setDate(d.getDate() + 3);
+  const future = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+  await page.goto('/');
+  await page.getByLabel('Peso actual (kg)').fill('72');
+  for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Siguiente' }).click();
+  await page.getByLabel('Fecha de inicio').fill(future);
+  await page.getByRole('button', { name: 'Empezar' }).click();
+
+  await expect(page.getByText(/^Empiezas el .* · se cambia en Ajustes$/)).toBeVisible();
+  await page.getByRole('button', { name: 'Empezar hoy' }).click();
+  await expect(page.getByText(/^Empezaste el .* · se cambia en Ajustes$/)).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Empezar hoy' })).toHaveCount(0);
+
+  // En Ajustes se puede volver a cambiar.
+  await page.getByRole('button', { name: 'Más' }).click();
+  await page.getByRole('button', { name: /Ajustes/ }).click();
+  page.on('dialog', (dlg) => dlg.accept());
+  await page.getByLabel('Nueva fecha de inicio').fill(future);
+  await page.getByRole('button', { name: 'Cambiar', exact: true }).click();
+  await expect(page.getByText(/Vuelves a la semana 1/)).toBeVisible();
+});

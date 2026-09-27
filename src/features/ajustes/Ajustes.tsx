@@ -5,6 +5,7 @@ import { Button, Card, Chip, Field, inputClass } from '../../components/ui';
 import { idealWeight, validateIdealWeight } from '../../engine/body';
 import { FOOD_LIST } from '../../engine/data';
 import type { FoodId, IdealWeightSource, Profile } from '../../engine/types';
+import { longDate } from '../../lib/date';
 import { fmt, parseNumber, weightFromInput, weightToDisplay } from '../../lib/units';
 import { backupFileName, makeBackup, readBackup } from '../../store/backup';
 import { useApp, type AppData } from '../../store/useApp';
@@ -125,6 +126,11 @@ export function Ajustes({ onBack, onExclusions }: { onBack: () => void; onExclus
         </label>
       </Card>
 
+      <StartDateCard
+        startDate={profile.startDate}
+        onChange={(d) => { state.setStartDate(d); setMessage({ tone: 'ok', text: `Nueva fecha de inicio: ${longDate(d)}. Vuelves a la semana 1.` }); }}
+      />
+
       <Card className="space-y-3">
         <h2 className="font-semibold text-stone-900">Unidades</h2>
         <div className="flex flex-wrap gap-2">
@@ -200,6 +206,32 @@ export function Ajustes({ onBack, onExclusions }: { onBack: () => void; onExclus
         Uso educativo. Basado en el Keto Continuum de Dr. Boz (Annette Bosworth, MD). Macros aproximados (USDA).
       </p>
     </div>
+  );
+}
+
+function StartDateCard({ startDate, onChange }: { startDate: string; onChange: (date: string) => void }) {
+  const [date, setDate] = useState(startDate);
+  return (
+    <Card className="space-y-3">
+      <h2 className="font-semibold text-stone-900">Fecha de inicio</h2>
+      <p className="text-sm text-stone-600">El día 1 del programa es <span className="font-medium">{longDate(startDate)}</span>.</p>
+      <div className="flex items-end gap-2">
+        <div className="flex-1">
+          <Field label="Nueva fecha de inicio">
+            <input type="date" className={inputClass} value={date} onChange={(e) => setDate(e.target.value)} />
+          </Field>
+        </div>
+        <Button
+          variant="secondary"
+          disabled={!date || date === startDate}
+          onClick={() => {
+            if (window.confirm(`¿Empezar el programa el ${longDate(date)}? Vuelves a la semana 1 desde esa fecha. Tus registros se conservan.`)) onChange(date);
+          }}
+        >
+          Cambiar
+        </Button>
+      </div>
+    </Card>
   );
 }
 

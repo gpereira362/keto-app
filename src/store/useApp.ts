@@ -45,6 +45,8 @@ export interface AppActions {
   setPantry(week: number, food: FoodId, amount: number): void;
   setSettings(patch: Partial<Settings>): void;
   updateProfile(patch: Partial<Profile>): void;
+  /** Cambia la fecha de inicio: el programa vuelve a la semana 1 desde esa fecha. Los registros se conservan. */
+  setStartDate(date: string): void;
   /** Cambia una comida completa (misma categoría). Devuelve los cambios anteriores para "Deshacer". */
   swapMeal(swap: MealSwap): MealSwap[];
   restoreMealSwaps(prev: MealSwap[]): void;
@@ -124,6 +126,8 @@ export const useApp = create<AppData & AppActions>()(
           ],
         })),
 
+      setStartDate: (date) =>
+        set((s) => (s.profile ? { profile: { ...s.profile, startDate: date }, progress: startProgress(date) } : {})),
       updateProfile: (patch) => set((s) => (s.profile ? { profile: { ...s.profile, ...patch } } : {})),
       swapMeal: (swap) => {
         const prev = get().mealSwaps;

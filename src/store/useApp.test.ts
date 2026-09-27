@@ -93,6 +93,17 @@ describe('estado de la app', () => {
     expect(useApp.getState().logs).toHaveLength(1);
   });
 
+  it('cambiar la fecha de inicio vuelve a la semana 1 y conserva los registros', () => {
+    useApp.getState().completeOnboarding(profile, []);
+    useApp.getState().advance('2026-10-12');
+    useApp.getState().toggleMealEaten('2026-10-06', 'DES1');
+    useApp.getState().setStartDate('2026-10-20');
+    const s = useApp.getState();
+    expect(s.profile?.startDate).toBe('2026-10-20');
+    expect(s.progress).toMatchObject({ currentWeek: 1, weekStartedAt: '2026-10-20' });
+    expect(s.logs).toHaveLength(1);
+  });
+
   it('las exclusiones vencidas no llegan al motor', () => {
     const p = planProfile(
       { profile, exclusions: [{ type: 'food', id: 'esparragos', reason: 'no-disponible', until: '2026-10-11' }] },
