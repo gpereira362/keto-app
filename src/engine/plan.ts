@@ -314,3 +314,27 @@ export function mealSwapOptions(day: DayPlan, slotIndex: number, profile: PlanPr
     };
   });
 }
+
+// ---------------------------------------------------------------- recorrer los días del programa
+
+export interface ProgramDay { week: number; dayIndex: number }
+
+/** Mueve `delta` días dentro del programa (semana 1 día 1 … semana 14 día 7). null si se sale. */
+export function stepProgramDay(pos: ProgramDay, delta: number): ProgramDay | null {
+  const n = (pos.week - 1) * 7 + pos.dayIndex + delta;
+  if (n < 0 || n >= 14 * 7) return null;
+  return { week: Math.floor(n / 7) + 1, dayIndex: n % 7 };
+}
+
+/**
+ * Fecha de un día del programa: real para semanas ya empezadas (según el historial),
+ * estimada para las siguientes (si se avanza una semana cada 7 días).
+ */
+export function programDayDate(progress: ProgressState, pos: ProgramDay): { date: string; estimated: boolean } {
+  if (pos.week === progress.currentWeek) return { date: addDays(progress.weekStartedAt, pos.dayIndex), estimated: false };
+  if (pos.week < progress.currentWeek) {
+    const h = [...progress.history].reverse().find((x) => x.week === pos.week);
+    if (h) return { date: addDays(h.startedAt, pos.dayIndex), estimated: false };
+  }
+  return { date: addDays(progress.weekStartedAt, (pos.week - progress.currentWeek) * 7 + pos.dayIndex), estimated: true };
+}

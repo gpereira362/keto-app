@@ -3,10 +3,12 @@ import { useCallback, useEffect, useState } from 'react';
 import { Toast, type ToastData } from '../../components/Toast';
 import { MealSwapSheet } from '../alimentos/MealSwapSheet';
 import { ChangeSheet } from '../cambiar-ingrediente/ChangeSheet';
-import { Card, EstimatedNote } from '../../components/ui';
+import { MedicalWarning } from '../../components/MedicalWarning';
+import { Button, Card, EstimatedNote } from '../../components/ui';
 import { programWeek } from '../../engine/data';
 import {
-  eatingWindow, formatDuration, getTodayPlan, isFastingWeek, mealCategory, mealsInCategory, windowStatus,
+  eatingWindow, formatDuration, getTodayPlan, isFastingWeek, mealCategory, mealsInCategory, planDay, programDayDate,
+  stepProgramDay, windowStatus, type ProgramDay,
 } from '../../engine/plan';
 import type { DailyLog, PlannedItem } from '../../engine/types';
 import { localDate, localTime, longDate } from '../../lib/date';
@@ -43,12 +45,26 @@ export function Hoy() {
   const [swapping, setSwapping] = useState<number | null>(null);
   const [toast, setToast] = useState<ToastData | null>(null);
   const closeToast = useCallback(() => setToast(null), []);
+  /** Día del programa que se está mirando; null = hoy. */
+  const [viewing, setViewing] = useState<ProgramDay | null>(null);
   if (!profile || !progress) return null;
 
   const today = localDate(now);
   const notStarted = today < profile.startDate;
   const date = notStarted ? profile.startDate : today;
-  const plan = getTodayPlan(planProfile(state, today), progress, date, { overrides, mealSwaps });
+  const profileForPlan = planProfile(state, today);
+  const todayPlan = getTodayPlan(profileForPlan, progress, date, { overrides, mealSwaps });
+  const todayPos: ProgramDay = { week: todayPlan.week, dayIndex: todayPlan.dayIndex };
+  const pos = viewing ?? todayPos;
+  const isToday = pos.week === todayPos.week && pos.dayIndex === todayPos.dayIndex;
+  const plan = isToday
+    ? todayPlan
+    : planDay(programWeek(pos.week).days[pos.dayIndex], profileForPlan, {
+      week: pos.week, overrides, mealSwaps, sunriseTime: profile.sunriseTime,
+    });
+  const shown = programDayDate(progress, pos);
+  const prev = stepProgramDay(pos, -1);
+  const next = stepProgramDay(pos, 1);
   const week = programWeek(plan.week);
   const log = logs.find((l) => l.date === today);
   const win = eatingWindow(plan);
@@ -59,9 +75,23 @@ export function Hoy() {
   return (
     <div className="space-y-4">
       <header>
-        <p className="text-sm font-medium text-emerald-800 first-letter:uppercase">{longDate(today)}</p>
-        <h1 className="text-2xl font-bold text-stone-900">Semana {plan.week} · día {plan.dayIndex + 1}</h1>
+        <p className="text-sm font-medium text-emerald-800 first-letter:uppercase">
+          {isToday ? longDate(today) : `${longDate(shown.date)}${shown.estimated ? ' (estimada)' : ''}`}
+        </p>
+        <div className="flex items-center gap-2">
+          <Button variant="secondary" aria-label="Día anterior" disabled={!prev} onClick={() => prev && setViewing(prev)}>‹</Button>
+          <h1 className="flex-1 text-center text-2xl font-bold text-stone-900" aria-live="polite">
+            Semana {plan.week} · día {plan.dayIndex + 1}
+          </h1>
+          <Button variant="secondary" aria-label="Día siguiente" disabled={!next} onClick={() => next && setViewing(next)}>›</Button>
+        </div>
         <p className="text-sm text-stone-600">Paso {week.step} · {week.title}</p>
+        {!isToday && (
+          <div className="mt-2 flex items-center justify-between gap-2 rounded-xl bg-stone-100 px-3 py-1 text-sm text-stone-700">
+            <span>{(pos.week - todayPos.week) * 7 + pos.dayIndex - todayPos.dayIndex < 0 ? 'Día anterior' : 'Vista previa'}</span>
+            <Button variant="ghost" onClick={() => setViewing(null)}>Volver a hoy</Button>
+          </div>
+        )}
       </header>
 
       {notStarted && (
@@ -70,13 +100,13 @@ export function Hoy() {
         </div>
       )}
 
-      {!notStarted && (
+      {!notStarted && isToday && (
         <AdvanceBanner
           progress={progress}
           logs={logs}
           today={today}
           profile={profile}
-          daysInWeek={plan.daysInWeek}
+          daysInWeek={todayPlan.daysInWeek}
           onAdvance={() => state.advance(today)}
           onRepeat={() => state.repeat(today)}
           onAcknowledge={() => state.updateLog(today, { medicalWarningAcknowledged: true })}
@@ -88,7 +118,7 @@ export function Hoy() {
           <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">Ventana de comida</p>
           <p className="text-lg font-semibold tabular-nums text-stone-900">{win ? `${win.opens} – ${win.closes}` : 'Día de ayuno'}</p>
         </div>
-        {!notStarted && (
+        {!notStarted && isToday && (
           <p className="text-right text-sm text-stone-600" aria-live="polite">
             {status.state === 'antes' && <>Abre en<br /><span className="font-semibold text-stone-900">{formatDuration(status.minutes)}</span></>}
             {status.state === 'abierta' && <>Cierra en<br /><span className="font-semibold text-emerald-800">{formatDuration(status.minutes)}</span></>}
@@ -98,7 +128,9 @@ export function Hoy() {
         )}
       </Card>
 
-      {fasting && (
+      {/* Regla 6: en semanas de ayuno la advertencia se ve siempre; el ayuno solo se inicia desde el día de hoy. */}
+      {fasting && !isToday && <MedicalWarning />}
+      {fasting && isToday && (
         <FastingCard
           log={log}
           activeFastStart={activeFast(logs, progress.weekStartedAt)}
@@ -117,9 +149,9 @@ export function Hoy() {
         <MealCard
           key={slot.slotIndex}
           slot={slot}
-          eaten={!!log?.mealsEaten.includes(slot.mealId)}
+          eaten={isToday && !!log?.mealsEaten.includes(slot.mealId)}
           disabled={notStarted}
-          onToggleEaten={() => state.toggleMealEaten(today, slot.mealId)}
+          onToggleEaten={isToday ? () => state.toggleMealEaten(today, slot.mealId) : undefined}
           onChangeItem={(item) => setChanging({ slotIndex: slot.slotIndex, item })}
           onSwapMeal={mealsInCategory(mealCategory(slot.mealId)).length > 1 ? () => setSwapping(slot.slotIndex) : undefined}
         />

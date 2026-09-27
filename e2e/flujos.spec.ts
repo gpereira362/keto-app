@@ -29,6 +29,17 @@ test('onboarding → hoy con el plan de 60 kg; se guarda y funciona sin conexió
   await expect(page.getByText('3 huevos', { exact: true })).toBeVisible();
   await expect(page.getByText(/12,6 g/)).toBeVisible();
 
+  // Recorrer los días: anterior deshabilitado en el día 1; siguiente muestra el día 2 como vista previa.
+  await expect(page.getByRole('button', { name: 'Día anterior' })).toBeDisabled();
+  await page.getByRole('button', { name: 'Día siguiente' }).click();
+  await expect(page.getByRole('heading', { name: /Semana 1 · día 2/ })).toBeVisible();
+  await expect(page.getByText('Vista previa')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Comí esto' })).toHaveCount(0);
+  for (let i = 0; i < 6; i++) await page.getByRole('button', { name: 'Día siguiente' }).click();
+  await expect(page.getByRole('heading', { name: /Semana 2 · día 1/ })).toBeVisible();
+  await page.getByRole('button', { name: 'Volver a hoy' }).click();
+  await expect(page.getByRole('heading', { name: /Semana 1 · día 1/ })).toBeVisible();
+
   // "Comí esto" se guarda después de recargar.
   await page.getByRole('button', { name: 'Comí esto' }).nth(1).click();
   await page.reload();

@@ -3,7 +3,7 @@ import tabla from '../../docs/tabla-60kg.json';
 import { WEEKS, programWeek } from './data';
 import {
   addDays, eatingWindow, eatingWindowClose, fastingHours, formatDuration, getTodayPlan, getWeekPlan, isFastingWeek, mealCategory, planDay, programPositionForDate,
-  mealSwapOptions, swapMeal, windowStatus,
+  mealSwapOptions, programDayDate, stepProgramDay, swapMeal, windowStatus,
 } from './plan';
 import { CARB_LIMIT } from './scaling';
 import { isExcluded } from './substitutions';
@@ -203,5 +203,28 @@ describe('cambiar una comida completa', () => {
         });
       }
     }
+  });
+});
+
+describe('recorrer los días del programa', () => {
+  it('avanza y retrocede cruzando semanas, sin salirse de las 14', () => {
+    expect(stepProgramDay({ week: 1, dayIndex: 0 }, 1)).toEqual({ week: 1, dayIndex: 1 });
+    expect(stepProgramDay({ week: 1, dayIndex: 6 }, 1)).toEqual({ week: 2, dayIndex: 0 });
+    expect(stepProgramDay({ week: 2, dayIndex: 0 }, -1)).toEqual({ week: 1, dayIndex: 6 });
+    expect(stepProgramDay({ week: 1, dayIndex: 0 }, -1)).toBeNull();
+    expect(stepProgramDay({ week: 14, dayIndex: 6 }, 1)).toBeNull();
+  });
+
+  it('fecha real en semanas empezadas y estimada en las siguientes', () => {
+    const progress = {
+      currentWeek: 2, weekStartedAt: '2026-10-12',
+      history: [
+        { week: 1, startedAt: '2026-10-05', endedAt: '2026-10-12', repeated: false },
+        { week: 2, startedAt: '2026-10-12', repeated: false },
+      ],
+    };
+    expect(programDayDate(progress, { week: 1, dayIndex: 2 })).toEqual({ date: '2026-10-07', estimated: false });
+    expect(programDayDate(progress, { week: 2, dayIndex: 3 })).toEqual({ date: '2026-10-15', estimated: false });
+    expect(programDayDate(progress, { week: 4, dayIndex: 0 })).toEqual({ date: '2026-10-26', estimated: true });
   });
 });
