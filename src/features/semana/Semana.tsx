@@ -94,7 +94,7 @@ export function Semana({ initialWeek, onShoppingList }: { initialWeek?: number; 
 
       {days.map((d) => (
         <Card key={d.day} flush className={cx('pb-1', d.dayIndex === todayIndex && 'ring-2 ring-emerald-600')}>
-          <div className="flex items-baseline justify-between px-4 pt-3">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 rounded-t-2xl bg-emerald-50 px-4 py-2.5">
             <h2 className="font-semibold text-stone-900">
               Día {d.dayIndex + 1}
               <span className="ml-2 text-sm font-normal text-stone-500">{shortDate(addDays(weekStart, d.dayIndex))}</span>

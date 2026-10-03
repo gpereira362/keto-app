@@ -66,11 +66,11 @@ export default function App() {
   const onboarded = useApp((s) => !!s.profile && !!s.progress);
   const [{ route, param }, go] = useRoute();
 
-  if (!hydrated) return <div className="min-h-dvh bg-stone-50" aria-busy="true" />;
-  if (!onboarded) return <div className="min-h-dvh bg-stone-50"><Onboarding /></div>;
+  if (!hydrated) return <div className="min-h-dvh bg-gradient-to-b from-emerald-50 via-stone-50 to-amber-50/40" aria-busy="true" />;
+  if (!onboarded) return <div className="min-h-dvh bg-gradient-to-b from-emerald-50 via-stone-50 to-amber-50/40"><Onboarding /></div>;
 
   return (
-    <div className="min-h-dvh bg-stone-50">
+    <div className="min-h-dvh bg-gradient-to-b from-emerald-50 via-stone-50 to-amber-50/40">
       <main className="mx-auto max-w-md px-4 pb-28 pt-6">
         {route === 'hoy' && <Hoy onChangeStartDate={() => go('ajustes', 'fecha')} />}
         <ErrorBoundary key={route}>
@@ -85,7 +85,7 @@ export default function App() {
         {route === 'ajustes' && <Ajustes focus={param} onBack={() => go('mas')} onExclusions={() => go('exclusiones')} />}
         {(route === 'registro' || route === 'progreso') && (
           <div className="space-y-4">
-            <div role="tablist" aria-label="Registro" className="grid grid-cols-2 rounded-xl bg-stone-200/70 p-1">
+            <div role="tablist" aria-label="Registro" className="grid grid-cols-2 rounded-xl bg-emerald-100 p-1">
               {(['registro', 'progreso'] as const).map((r) => (
                 <button
                   key={r}
@@ -95,7 +95,7 @@ export default function App() {
                   onClick={() => go(r)}
                   className={cx(
                     'min-h-10 rounded-lg text-sm font-semibold',
-                    route === r ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600',
+                    route === r ? 'bg-emerald-700 text-white shadow-sm' : 'text-emerald-900',
                   )}
                 >
                   {r === 'registro' ? 'Día' : 'Progreso'}
@@ -116,11 +116,16 @@ export default function App() {
                 onClick={() => go(t.id)}
                 aria-current={tabOf(route) === t.id ? 'page' : undefined}
                 className={cx(
-                  'flex min-h-14 w-full flex-col items-center justify-center text-xs font-medium',
-                  tabOf(route) === t.id ? 'text-emerald-800' : 'text-stone-500',
+                  'flex min-h-14 w-full flex-col items-center justify-center gap-0.5 text-xs font-medium',
+                  tabOf(route) === t.id ? 'font-semibold text-emerald-800' : 'text-stone-500',
                 )}
               >
-                <span aria-hidden className="text-lg leading-none">{t.icon}</span>
+                <span
+                  aria-hidden
+                  className={cx('rounded-full px-3 py-0.5 text-lg leading-none', tabOf(route) === t.id && 'bg-emerald-100')}
+                >
+                  {t.icon}
+                </span>
                 {t.label}
               </button>
             </li>

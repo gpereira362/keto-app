@@ -8,6 +8,7 @@ import { isFastingWeek } from '../../engine/plan';
 import { AISLE_ORDER, lineParts, shoppingList, shoppingListText } from '../../engine/shopping';
 import type { FoodId, ShoppingLine } from '../../engine/types';
 import { localDate } from '../../lib/date';
+import { AISLE_THEME } from '../../lib/theme';
 import { planProfile, useApp } from '../../store/useApp';
 
 const UNIT_LABEL = { g: 'g', ml: 'ml', unid: 'unidades' } as const;
@@ -85,7 +86,9 @@ export function ListaCompras({ initialWeek }: { initialWeek?: number }) {
             if (!lines.length) return null;
             return (
               <Card key={aisle} flush>
-                <h3 className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-stone-500">{aisle}</h3>
+                <h3 className={cx('rounded-t-2xl px-4 py-2 text-xs font-semibold uppercase tracking-wide', AISLE_THEME[aisle].head)}>
+                  <span aria-hidden className="mr-1.5">{AISLE_THEME[aisle].icon}</span>{aisle}
+                </h3>
                 <ul className="divide-y divide-stone-100">
                   {lines.map((l) => {
                     const key = `${l.food}-${l.trip ?? 0}`;

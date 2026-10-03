@@ -3,6 +3,7 @@ import { Button, Card, MacroChips, cx } from '../../components/ui';
 import { mealCategory } from '../../engine/plan';
 import type { PlannedItem, PlannedSlot } from '../../engine/types';
 import { foodName } from '../../lib/labels';
+import { mealTheme } from '../../lib/theme';
 
 export function MealCard({ slot, eaten, onToggleEaten, onChangeItem, onSwapMeal, disabled }: {
   slot: PlannedSlot;
@@ -12,23 +13,28 @@ export function MealCard({ slot, eaten, onToggleEaten, onChangeItem, onSwapMeal,
   onSwapMeal?: () => void;
   disabled?: boolean;
 }) {
-  const fasting = mealCategory(slot.mealId) === 'AYU';
+  const category = mealCategory(slot.mealId);
+  const fasting = category === 'AYU';
+  const theme = mealTheme(category);
   const hasFood = slot.items.length > 0;
   // Cerrada: solo el momento, la hora y la comida. Al tocarla se abren los ingredientes.
   const [open, setOpen] = useState(false);
   const detailsId = useId();
   return (
-    <Card className={cx(eaten && 'bg-emerald-50/60 ring-emerald-200')}>
+    <Card className={cx('border-l-4', theme.bar, eaten && 'bg-emerald-50/60 ring-emerald-200')}>
       <div className="flex items-start justify-between gap-3">
         <button
           type="button"
           onClick={() => hasFood && setOpen(!open)}
           aria-expanded={hasFood ? open : undefined}
           aria-controls={hasFood ? detailsId : undefined}
-          className={cx('-m-2 flex min-w-0 flex-1 items-center gap-2 rounded-xl p-2 text-left', hasFood && 'hover:bg-stone-50')}
+          className={cx('-m-2 flex min-w-0 flex-1 items-center gap-3 rounded-xl p-2 text-left', hasFood && 'hover:bg-stone-50')}
         >
+          <span aria-hidden className={cx('flex size-10 shrink-0 items-center justify-center rounded-full text-lg', theme.badge)}>
+            {eaten ? '✓' : theme.icon}
+          </span>
           <span className="min-w-0 flex-1">
-            <span className="block text-xs font-semibold uppercase tracking-wide text-stone-500">
+            <span className={cx('block text-xs font-semibold uppercase tracking-wide', theme.label)}>
               {slot.label}
               {slot.time !== '—' && <span className="ml-2 font-normal normal-case tabular-nums">{slot.time}</span>}
               {eaten && <span className="ml-2 font-semibold normal-case text-emerald-800">✓ comido</span>}

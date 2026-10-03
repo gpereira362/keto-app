@@ -8,15 +8,20 @@ export function cx(...c: (string | false | null | undefined)[]): string {
 }
 
 export function Card({ children, className, flush }: { children: ReactNode; className?: string; flush?: boolean }) {
+  // Si se pasa un fondo o un borde de color, reemplaza al blanco/gris por defecto (dos clases del mismo tipo chocan).
+  const ownBg = /(^|\s)bg-/.test(className ?? '');
+  const ownRing = /(^|\s)ring-(?!1(\s|$))/.test(className ?? '');
   return (
-    <section className={cx('rounded-2xl bg-white shadow-sm ring-1 ring-stone-200', !flush && 'p-4', className)}>{children}</section>
+    <section className={cx('rounded-2xl shadow-sm ring-1', !ownBg && 'bg-white', !ownRing && 'ring-stone-200', !flush && 'p-4', className)}>
+      {children}
+    </section>
   );
 }
 
 type Variant = 'primary' | 'secondary' | 'ghost' | 'danger';
 const VARIANTS: Record<Variant, string> = {
   primary: 'bg-emerald-700 text-white hover:bg-emerald-800 disabled:bg-stone-300',
-  secondary: 'bg-white text-stone-800 ring-1 ring-stone-300 hover:bg-stone-50 disabled:text-stone-400',
+  secondary: 'bg-white text-emerald-900 ring-1 ring-emerald-200 hover:bg-emerald-50 disabled:text-stone-400 disabled:ring-stone-200',
   ghost: 'text-emerald-800 hover:bg-emerald-50',
   danger: 'bg-red-700 text-white hover:bg-red-800',
 };
@@ -81,12 +86,14 @@ export function grams(n: number, digits = 0): string {
   return `${String(pyRound(n, digits)).replace('.', ',')} g`;
 }
 
+/** Proteína azul, grasa ámbar, carbohidratos rosa: siempre con su letra, nunca solo el color. */
 export function MacroChips({ m, className }: { m: Macros; className?: string }) {
+  const pill = 'rounded-full px-1.5 py-0.5';
   return (
-    <span className={cx('inline-flex gap-2 text-xs tabular-nums text-stone-500', className)}>
-      <span title="Proteína">P {grams(m.protein)}</span>
-      <span title="Grasa">G {grams(m.fat)}</span>
-      <span title="Carbohidratos">C {grams(m.carbs, 1)}</span>
+    <span className={cx('inline-flex flex-wrap gap-1 text-[11px] tabular-nums', className)}>
+      <span title="Proteína" className={cx(pill, 'bg-sky-50 text-sky-800')}>P {grams(m.protein)}</span>
+      <span title="Grasa" className={cx(pill, 'bg-amber-50 text-amber-800')}>G {grams(m.fat)}</span>
+      <span title="Carbohidratos" className={cx(pill, 'bg-rose-50 text-rose-800')}>C {grams(m.carbs, 1)}</span>
     </span>
   );
 }

@@ -74,28 +74,46 @@ export function Hoy({ onChangeStartDate }: { onChangeStartDate: () => void }) {
 
   return (
     <div className="space-y-4">
-      <header>
-        <p className="text-sm font-medium text-emerald-800 first-letter:uppercase">
+      <header className="rounded-3xl bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-500 p-4 text-white shadow-md">
+        <p className="text-sm font-medium text-emerald-50 first-letter:uppercase">
           {isToday ? longDate(today) : `${longDate(shown.date)}${shown.estimated ? ' (estimada)' : ''}`}
         </p>
-        <div className="flex items-center gap-2">
-          <Button variant="secondary" aria-label="Día anterior" disabled={!prev} onClick={() => prev && setViewing(prev)}>‹</Button>
-          <h1 className="flex-1 text-center text-2xl font-bold text-stone-900" aria-live="polite">
+        <div className="mt-1 flex items-center gap-2">
+          <button
+            type="button"
+            aria-label="Día anterior"
+            disabled={!prev}
+            onClick={() => prev && setViewing(prev)}
+            className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-xl font-semibold hover:bg-white/30 disabled:opacity-40"
+          >
+            ‹
+          </button>
+          <h1 className="flex-1 text-center text-2xl font-bold" aria-live="polite">
             Semana {plan.week} · día {plan.dayIndex + 1}
           </h1>
-          <Button variant="secondary" aria-label="Día siguiente" disabled={!next} onClick={() => next && setViewing(next)}>›</Button>
+          <button
+            type="button"
+            aria-label="Día siguiente"
+            disabled={!next}
+            onClick={() => next && setViewing(next)}
+            className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-xl font-semibold hover:bg-white/30 disabled:opacity-40"
+          >
+            ›
+          </button>
         </div>
-        <p className="text-sm text-stone-600">Paso {week.step} · {week.title}</p>
-        <p className="text-xs text-stone-500">
+        <p className="mt-1 text-sm text-emerald-50">Paso {week.step} · {week.title}</p>
+        <p className="text-xs text-emerald-100">
           {notStarted ? 'Empiezas' : 'Empezaste'} el {longDate(profile.startDate)} ·{' '}
-          <button type="button" onClick={onChangeStartDate} className="-my-3 min-h-11 font-semibold text-emerald-800 underline">
+          <button type="button" onClick={onChangeStartDate} className="-my-3 min-h-11 font-semibold text-white underline">
             Cambiar fecha
           </button>
         </p>
         {!isToday && (
-          <div className="mt-2 flex items-center justify-between gap-2 rounded-xl bg-stone-100 px-3 py-1 text-sm text-stone-700">
+          <div className="mt-3 flex items-center justify-between gap-2 rounded-xl bg-white/15 px-3 py-1 text-sm">
             <span>{(pos.week - todayPos.week) * 7 + pos.dayIndex - todayPos.dayIndex < 0 ? 'Día anterior' : 'Vista previa'}</span>
-            <Button variant="ghost" onClick={() => setViewing(null)}>Volver a hoy</Button>
+            <button type="button" onClick={() => setViewing(null)} className="min-h-11 rounded-xl bg-white px-3 font-semibold text-emerald-800">
+              Volver a hoy
+            </button>
           </div>
         )}
       </header>
@@ -120,9 +138,9 @@ export function Hoy({ onChangeStartDate }: { onChangeStartDate: () => void }) {
         />
       )}
 
-      <Card className="flex items-center justify-between gap-3">
+      <Card className="flex items-center justify-between gap-3 bg-amber-50 ring-amber-200">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">Ventana de comida</p>
+          <p className="text-xs font-semibold uppercase tracking-wide text-amber-800">⏰ Ventana de comida</p>
           <p className="text-lg font-semibold tabular-nums text-stone-900">{win ? `${win.opens} – ${win.closes}` : 'Día de ayuno'}</p>
         </div>
         {!notStarted && isToday && (
