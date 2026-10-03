@@ -157,3 +157,20 @@ test('fecha de inicio futura: se ve cuándo empieza y se puede empezar hoy', asy
   await page.getByRole('button', { name: 'Cambiar', exact: true }).click();
   await expect(page.getByText(/Vuelves a la semana 1/)).toBeVisible();
 });
+
+test('recordatorios de la semana: se descarga un archivo para la agenda', async ({ page }) => {
+  await onboarding(page);
+  await page.getByRole('button', { name: 'Semana', exact: true }).click();
+  await page.getByRole('button', { name: 'Recordatorios', exact: true }).click();
+  const sheet = page.getByRole('dialog', { name: /Recordatorios/ });
+  await sheet.getByLabel(/Agua con sal/).uncheck();
+  const download = page.waitForEvent('download');
+  await sheet.getByRole('button', { name: /^Agregar \d+ recordatorios a mi agenda$/ }).click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe('recordatorios-semana-1.ics');
+  const text = (await import('node:fs')).readFileSync((await file.path())!, 'utf8');
+  expect(text).toContain('BEGIN:VCALENDAR');
+  expect(text).toContain('SUMMARY:Desayuno: Huevos revueltos con queso');
+  expect(text).not.toContain('Agua con sal');
+  await expect(sheet.getByText(/Agregar todo/)).toBeVisible();
+});

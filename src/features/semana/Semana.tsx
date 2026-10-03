@@ -7,11 +7,13 @@ import { programWeek } from '../../engine/data';
 import { addDays, daysBetween, getWeekPlan, isFastingWeek } from '../../engine/plan';
 import { localDate, shortDate } from '../../lib/date';
 import { planProfile, useApp } from '../../store/useApp';
+import { RemindersSheet } from './RemindersSheet';
 
 export function Semana({ initialWeek, onShoppingList }: { initialWeek?: number; onShoppingList: (week: number) => void }) {
   const state = useApp();
   const { profile, progress, overrides, mealSwaps } = state;
   const [viewWeek, setViewWeek] = useState(initialWeek && initialWeek >= 1 && initialWeek <= 14 ? initialWeek : (progress?.currentWeek ?? 1));
+  const [reminders, setReminders] = useState(false);
   if (!profile || !progress) return null;
 
   const today = localDate();
@@ -47,9 +49,20 @@ export function Semana({ initialWeek, onShoppingList }: { initialWeek?: number; 
 
       {isFastingWeek(viewWeek) && <MedicalWarning />}
 
-      <Button variant="secondary" className="w-full" onClick={() => onShoppingList(viewWeek)}>
-        Lista de compras de la semana {viewWeek}
-      </Button>
+      <div className="grid grid-cols-2 gap-2">
+        <Button variant="secondary" onClick={() => onShoppingList(viewWeek)}>Lista de compras</Button>
+        <Button variant="secondary" onClick={() => setReminders(true)}>Recordatorios</Button>
+      </div>
+      {reminders && (
+        <RemindersSheet
+          week={viewWeek}
+          days={days}
+          progress={progress}
+          wakeTime={profile.wakeTime}
+          today={today}
+          onClose={() => setReminders(false)}
+        />
+      )}
 
       <Card className="space-y-3 text-sm">
         <div>
