@@ -1,9 +1,9 @@
-// Progreso: peso, glucosa en ayunas y ratio Dr. Boz en el tiempo; racha de días que cumplen la regla.
+// Progreso: peso, glucosa en ayunas y índice glucosa-cetonas en el tiempo; racha de días que cumplen la regla.
 import { LineChart } from '../../components/LineChart';
 import { Card } from '../../components/ui';
 import { programWeek } from '../../engine/data';
 import {
-  ZONE_LABELS, drBozZone, glucoseSeries, ratioSeries, ruleStreak, weightSeries,
+  ZONE_LABELS, indexZone, glucoseSeries, ratioSeries, ruleStreak, waistSeries, weightSeries,
 } from '../../engine/progress';
 import { localDate, shortDate } from '../../lib/date';
 import { fmt, glucoseToDisplay, weightToDisplay } from '../../lib/units';
@@ -25,6 +25,7 @@ export function Progreso() {
   const { units } = profile;
 
   const weight = weightSeries(logs).map((p) => ({ ...p, value: weightToDisplay(p.value, units.weight) }));
+  const waist = waistSeries(logs);
   const glucose = glucoseSeries(logs).map((p) => ({ ...p, value: glucoseToDisplay(p.value, units.glucose) }));
   const ratio = ratioSeries(logs).map((p) => ({ ...p, value: Math.round(p.value) }));
   const streak = ruleStreak(logs, localDate());
@@ -46,11 +47,13 @@ export function Progreso() {
           detail={deltaW === null ? `Inicio: ${fmt(startW)} ${units.weight}` : `${deltaW > 0 ? '+' : deltaW < 0 ? '−' : ''}${fmt(Math.abs(deltaW))} ${units.weight} desde el inicio`}
         />
         <Tile label="Racha" value={`${streak} ${streak === 1 ? 'día' : 'días'}`} detail="cumpliendo la regla de la semana" />
-        <Tile label="Semana" value={`${progress.currentWeek} de 14`} detail={programWeek(progress.currentWeek).title} />
+        {progress.vivir
+          ? <Tile label="Fase" value="5 · Vivir" detail={`${progress.vivir.level} g de carbohidratos al día`} />
+          : <Tile label="Semana" value={`${progress.currentWeek} de 14`} detail={programWeek(progress.currentWeek).title} />}
         <Tile
-          label="Último ratio Dr. Boz"
+          label="Último índice glucosa-cetonas"
           value={lastR ? String(lastR.value) : '—'}
-          detail={lastR ? `${ZONE_LABELS[drBozZone(lastR.value)]} · ${shortDate(lastR.date)}` : 'Glucosa ÷ cetonas'}
+          detail={lastR ? `${ZONE_LABELS[indexZone(lastR.value)]} · ${shortDate(lastR.date)}` : 'Glucosa ÷ cetonas'}
         />
       </div>
 
@@ -62,6 +65,13 @@ export function Progreso() {
         describe={weight.length > 1 ? change(weight[0].value, weight.at(-1)!.value, units.weight) + '.' : undefined}
       />
       <LineChart
+        title="Cintura (cm)"
+        points={waist}
+        unit="cm"
+        format={fmt}
+        describe={waist.length > 1 ? change(waist[0].value, waist.at(-1)!.value, 'cm') + '.' : undefined}
+      />
+      <LineChart
         title={`Glucosa en ayunas (${units.glucose})`}
         points={glucose}
         unit={units.glucose}
@@ -69,7 +79,7 @@ export function Progreso() {
         describe={glucose.length > 1 ? change(glucose[0].value, glucose.at(-1)!.value, units.glucose) + '.' : undefined}
       />
       <LineChart
-        title="Ratio Dr. Boz"
+        title="Índice glucosa-cetonas"
         points={ratio}
         unit=""
         format={(v) => String(Math.round(v))}
@@ -78,7 +88,7 @@ export function Progreso() {
           { value: 40, label: '< 40 autofagia' },
           { value: 20, label: '< 20 terapéutico' },
         ]}
-        describe={lastR ? `Último valor ${lastR.value}, zona ${ZONE_LABELS[drBozZone(lastR.value)].toLowerCase()}.` : undefined}
+        describe={lastR ? `Último valor ${lastR.value}, zona ${ZONE_LABELS[indexZone(lastR.value)].toLowerCase()}.` : undefined}
       />
 
       <Card>

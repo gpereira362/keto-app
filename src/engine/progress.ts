@@ -1,25 +1,25 @@
-// Ratio Dr. Boz y criterios para SUGERIR avanzar de semana. La app nunca avanza sola.
+// Índice glucosa-cetonas y criterios para SUGERIR avanzar de semana. La app nunca avanza sola.
 import { addDays } from './plan';
-import type { DailyLog, DrBozZone, Profile, ProgressState } from './types';
+import type { DailyLog, IndexZone, Profile, ProgressState } from './types';
 
 export const MGDL_PER_MMOL = 18;
 
 /** Glucosa (mg/dL) ÷ cetonas (mmol/L). Si la glucosa viene en mmol/L se multiplica por 18. */
-export function drBozRatio(glucose: number, ketonesMmol: number, glucoseUnit: Profile['units']['glucose'] = 'mg/dL'): number | null {
+export function glucoseKetoneIndex(glucose: number, ketonesMmol: number, glucoseUnit: Profile['units']['glucose'] = 'mg/dL'): number | null {
   if (!(ketonesMmol > 0) || !(glucose > 0)) return null;
   const mgdl = glucoseUnit === 'mmol/L' ? glucose * MGDL_PER_MMOL : glucose;
   return mgdl / ketonesMmol;
 }
 
 /** < 20 terapéutico · < 40 autofagia · < 80 pérdida de peso · 80 o más: insulina alta. */
-export function drBozZone(ratio: number): DrBozZone {
+export function indexZone(ratio: number): IndexZone {
   if (ratio < 20) return 'terapeutico';
   if (ratio < 40) return 'autofagia';
   if (ratio < 80) return 'perdida-peso';
   return 'alta-insulina';
 }
 
-export const ZONE_LABELS: Record<DrBozZone, string> = {
+export const ZONE_LABELS: Record<IndexZone, string> = {
   'alta-insulina': 'Insulina alta',
   'perdida-peso': 'Pérdida de peso',
   autofagia: 'Autofagia',
@@ -137,8 +137,13 @@ export function suggestAdvance(input: AdvanceInput): AdvanceSuggestion {
       }
       return { ready: true, reason: 'Glucosa en ayunas estable.', needsMedicalAck: onMeds };
     }
-    case 14:
-      return { ready: false, reason: 'Terminaste las 14 semanas. El paso 12 (ayuno de 72 h) solo con aval médico.' };
+    case 14: {
+      // Última semana: al completarla se sugiere pasar a la fase 5, Vivir.
+      const days = new Set(thisWeek.map((l) => l.date)).size;
+      return days >= 7
+        ? { ready: true, reason: 'Terminaste las 14 semanas. Ya puedes pasar a la fase 5: Vivir.', selfAssessed: true }
+        : { ready: false, reason: `Llevas ${days} de 7 días registrados en la última semana.`, selfAssessed: true };
+    }
     default: {
       // Sin criterio medible: sugerir tras completar los 7 días de la semana.
       const days = new Set(thisWeek.map((l) => l.date)).size;
@@ -189,10 +194,11 @@ function series(logs: DailyLog[], pick: (l: DailyLog) => number | null | undefin
 }
 
 export const weightSeries = (logs: DailyLog[]) => series(logs, (l) => l.weightKg);
+export const waistSeries = (logs: DailyLog[]) => series(logs, (l) => l.waistCm);
 /** Glucosa en ayunas, en mg/dL. */
 export const glucoseSeries = (logs: DailyLog[]) => series(logs, (l) => l.bloodGlucose);
 export const ratioSeries = (logs: DailyLog[]) =>
-  series(logs, (l) => (l.bloodGlucose && l.bloodKetoneMmol ? drBozRatio(l.bloodGlucose, l.bloodKetoneMmol) : null));
+  series(logs, (l) => (l.bloodGlucose && l.bloodKetoneMmol ? glucoseKetoneIndex(l.bloodGlucose, l.bloodKetoneMmol) : null));
 
 /** Semana que estaba en curso en una fecha (según el historial), para ver días pasados. */
 export function progressAt(progress: ProgressState, date: string): ProgressState {

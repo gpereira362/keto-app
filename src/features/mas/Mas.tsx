@@ -9,7 +9,7 @@ export type MasRoute = 'mapa' | 'alimentos' | 'exclusiones' | 'ajustes';
 export function Mas({ go }: { go: (route: MasRoute) => void }) {
   const count = useApp((s) => activeExclusions(s.exclusions, localDate()).length + s.overrides.length);
   const items: { route: MasRoute; title: string; detail: string; badge?: string }[] = [
-    { route: 'mapa', title: 'Mapa', detail: 'Los 12 pasos y las 14 semanas: dónde estás' },
+    { route: 'mapa', title: 'Mapa', detail: 'Las 5 fases y las 14 semanas: dónde estás' },
     { route: 'alimentos', title: 'Alimentos', detail: 'Catálogo con macros, alérgenos y comidas' },
     { route: 'exclusiones', title: 'Mis exclusiones', detail: 'Alergias, lo que no te gusta y lo que no encuentras', badge: count ? String(count) : undefined },
     { route: 'ajustes', title: 'Ajustes', detail: 'Perfil, unidades, paquetes, respaldo y aviso médico' },

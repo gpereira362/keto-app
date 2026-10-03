@@ -66,7 +66,7 @@ export function Onboarding() {
   return (
     <div className="mx-auto flex min-h-dvh max-w-md flex-col px-4 pb-6 pt-8">
       <header>
-        <p className="text-sm font-medium text-emerald-800">Keto Continuum · paso {step + 1} de 4</p>
+        <p className="text-sm font-medium text-emerald-800">Método Renacer · paso {step + 1} de 4</p>
         <h1 className="mt-1 text-2xl font-bold text-stone-900">{STEPS[step]}</h1>
         <div className="mt-3 flex gap-1.5" aria-hidden>
           {STEPS.map((_, i) => (

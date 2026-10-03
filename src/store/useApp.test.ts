@@ -104,6 +104,18 @@ describe('estado de la app', () => {
     expect(s.logs).toHaveLength(1);
   });
 
+  it('fase Vivir: empezar, responder la pregunta semanal y reiniciar', () => {
+    useApp.getState().completeOnboarding(profile, []);
+    useApp.getState().startVivir('2027-01-04');
+    expect(useApp.getState().progress?.vivir).toMatchObject({ level: 30, checkins: [] });
+    useApp.getState().vivirCheckin('2027-01-11', false);
+    expect(useApp.getState().progress?.vivir?.level).toBe(40);
+    useApp.getState().vivirCheckin('2027-01-18', true);
+    expect(useApp.getState().progress?.vivir).toMatchObject({ level: 30, equilibrium: 30 });
+    useApp.getState().startVivirReset('2027-02-01');
+    expect(useApp.getState().progress?.vivir?.resetUntil).toBe('2027-02-07');
+  });
+
   it('las exclusiones vencidas no llegan al motor', () => {
     const p = planProfile(
       { profile, exclusions: [{ type: 'food', id: 'esparragos', reason: 'no-disponible', until: '2026-10-11' }] },

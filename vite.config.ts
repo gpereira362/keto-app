@@ -17,9 +17,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Keto Continuum',
-        short_name: 'Keto',
-        description: 'Plan de 14 semanas del Keto Continuum de Dr. Boz, ajustado a tu peso ideal.',
+        name: 'Método Renacer',
+        short_name: 'Renacer',
+        description: 'Método Renacer: 5 fases para bajar la insulina, recuperar tu energía y encontrar tu forma de comer para siempre.',
         lang: 'es',
         start_url: base,
         scope: base,

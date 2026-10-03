@@ -3,8 +3,11 @@ import { Button } from '../../components/ui';
 import { suggestAdvance } from '../../engine/progress';
 import type { DailyLog, Profile, ProgressState } from '../../engine/types';
 
-/** Regla 7: la app sugiere avanzar; la persona decide. Si no se cumple tras 7 días, ofrece repetir. */
-export function AdvanceBanner({ progress, logs, today, profile, daysInWeek, onAdvance, onRepeat, onAcknowledge }: {
+/**
+ * Regla 7: la app sugiere avanzar; la persona decide. Si no se cumple tras 7 días, ofrece repetir.
+ * En la semana 14, avanzar significa pasar a la fase 5: Vivir.
+ */
+export function AdvanceBanner({ progress, logs, today, profile, daysInWeek, onAdvance, onRepeat, onAcknowledge, onStartVivir }: {
   progress: ProgressState;
   logs: DailyLog[];
   today: string;
@@ -13,17 +16,21 @@ export function AdvanceBanner({ progress, logs, today, profile, daysInWeek, onAd
   onAdvance: () => void;
   onRepeat: () => void;
   onAcknowledge: () => void;
+  onStartVivir: () => void;
 }) {
   const [comfortable, setComfortable] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const s = suggestAdvance({ progress, logs, today, profile, comfortableIn18_6: comfortable });
   const week = progress.currentWeek;
-  if (week >= 14 || dismissed) return null;
+  const last = week >= 14;
+  if (progress.vivir || dismissed) return null;
   if (!s.ready && daysInWeek < 7 && week !== 9) return null;
 
   return (
     <div className="rounded-2xl bg-emerald-50 p-4 text-sm text-emerald-950 ring-1 ring-emerald-200">
-      <p className="font-semibold">{s.ready ? `Puedes pasar a la semana ${week + 1}` : `Semana ${week}: aún no`}</p>
+      <p className="font-semibold">
+        {s.ready ? (last ? 'Puedes pasar a la fase 5: Vivir' : `Puedes pasar a la semana ${week + 1}`) : `Semana ${week}: aún no`}
+      </p>
       <p className="mt-1">{s.reason}</p>
       {week === 9 && !s.ready && (
         <label className="mt-2 flex items-center gap-3">
@@ -37,7 +44,9 @@ export function AdvanceBanner({ progress, logs, today, profile, daysInWeek, onAd
       <div className="mt-3 flex flex-wrap gap-2">
         {s.ready ? (
           <>
-            <Button onClick={onAdvance}>Avanzar a la semana {week + 1}</Button>
+            {last
+              ? <Button onClick={onStartVivir}>Empezar la fase Vivir</Button>
+              : <Button onClick={onAdvance}>Avanzar a la semana {week + 1}</Button>}
             <Button variant="ghost" onClick={() => setDismissed(true)}>Todavía no</Button>
           </>
         ) : (

@@ -1,6 +1,6 @@
-# Keto Continuum App
+# Método Renacer
 
-Plan de 14 semanas del Keto Continuum de Dr. Boz, ajustado a tu estatura y peso ideal, con sustitución de ingredientes (falta en la tienda, gusto o alergia) y lista de supermercado semanal. App personal para el celular (PWA), sin cuenta ni servidor: todo vive en el dispositivo.
+Método en 5 fases para bajar la insulina, recuperar la energía y encontrar una forma de comer para siempre: **1 Limpiar · 2 Adaptar · 3 Espaciar · 4 Ayunar** (14 semanas) y **5 Vivir** (mantenimiento con tu propio punto de equilibrio de carbohidratos). Ajustado a tu estatura y peso ideal, con sustitución de ingredientes, lista de supermercado semanal y recordatorios en la agenda. App para el celular (PWA), sin cuenta ni servidor: todo vive en el dispositivo.
 
 ## Uso
 
@@ -21,7 +21,7 @@ La app se compila para la ruta `/` salvo que se defina `BASE_PATH` (el workflow 
 
 ## Pantallas
 
-Hoy · Semana · Compras · Registro (día y progreso) · Más → Mapa, Alimentos, Mis exclusiones y Ajustes (perfil, unidades, tamaños de paquete, exportar/importar JSON, borrar datos, aviso médico).
+Hoy (o Vivir, después de la semana 14) · Semana (con recordatorios) · Compras · Registro (día y progreso) · Más → Mapa de las 5 fases, Alimentos, Mis exclusiones y Ajustes (perfil, unidades, tamaños de paquete, exportar/importar JSON, borrar datos, aviso médico).
 
 ## Contenido
 

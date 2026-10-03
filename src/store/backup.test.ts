@@ -22,7 +22,7 @@ describe('respaldo JSON', () => {
   });
 
   it('nombre del archivo con la fecha', () => {
-    expect(backupFileName(new Date('2026-10-10T12:00:00Z'))).toBe('keto-continuum-2026-10-10.json');
+    expect(backupFileName(new Date('2026-10-10T12:00:00Z'))).toBe('metodo-renacer-2026-10-10.json');
   });
 
   it('completa los campos que falten (respaldos viejos)', () => {

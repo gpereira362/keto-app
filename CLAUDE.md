@@ -1,9 +1,12 @@
-# Keto Continuum App — instrucciones para Claude Code
+# Método Renacer — instrucciones para Claude Code
 
-App personal para seguir el programa Keto Continuum (12 pasos) de Dr. Boz en un plan de 14 semanas. A partir de la estatura y el peso ideal genera el plan de comidas de cada día, con gramos de proteína, grasa y carbohidratos por comida. Además:
+App del **Método Renacer**: 5 fases (1 Limpiar · 2 Adaptar · 3 Espaciar · 4 Ayunar · 5 Vivir). Las fases 1–4 son un plan de 14 semanas; la fase 5 (Vivir) es el mantenimiento para siempre. A partir de la estatura y el peso ideal genera el plan de comidas de cada día, con gramos de proteína, grasa y carbohidratos por comida. Además:
 - sustituye ingredientes por falta en la tienda, gusto o alergia, con la cantidad equivalente;
 - arma la lista de supermercado de cada semana;
-- registra las mediciones: cetonas, glucosa y ratio Dr. Boz.
+- registra las mediciones: cetonas, glucosa, cintura e índice glucosa-cetonas.
+
+Es un método propio: no usar nombres, textos ni marcas de otros programas (por ejemplo, "Keto Continuum" o "Dr. Boz").
+Los identificadores internos `keto-continuum` (base de datos, respaldo) se mantienen para no perder los datos ya guardados.
 
 Lee `docs/SPEC.md` antes de escribir código. Es la fuente de verdad del producto.
 `docs/reference_impl.py` es la implementación de referencia del motor. Si hay duda sobre un cálculo, córrela (`python3 docs/reference_impl.py`) y compara.
@@ -21,8 +24,9 @@ Lee `docs/SPEC.md` antes de escribir código. Es la fuente de verdad del product
 data/                 JSON del programa (no editar a mano sin correr las pruebas)
   foods.json          alimentos con macros por unidad
   meals.json          comidas = lista de alimentos + cantidades base (persona de 60 kg de peso ideal)
-  program-weeks.json  14 semanas: reglas, horario y comidas de cada día
-  continuum-steps.json los 12 pasos del continuum
+  program-weeks.json  14 semanas (fases 1–4): reglas, horario y comidas de cada día
+  phases.json         las 5 fases del método
+  vivir-carbs.json    porciones de carbohidratos de verdad para la fase Vivir
   substitution-groups.json grupos de equivalencia para sustituir ingredientes
 docs/golden-*.json    resultados esperados (plan 60 kg, sustituciones, listas de compras)
 src/engine/           lógica pura, sin React (100 % testeable)
@@ -30,15 +34,17 @@ src/engine/           lógica pura, sin React (100 % testeable)
   body.ts             peso ideal, metas de proteína
   scaling.ts          escalar comidas y redondear porciones
   plan.ts             generar el plan diario/semanal para un perfil
-  progress.ts         criterios para avanzar, ratio Dr. Boz
+  progress.ts         criterios para avanzar, índice glucosa-cetonas
   substitutions.ts    exclusiones, opciones equivalentes, completar grasa
   shopping.ts         lista de compras semanal
+  vivir.ts            fase 5: subir carbohidratos de 10 en 10 g hasta el punto de equilibrio, reinicio de 7 días
+  reminders.ts        recordatorios para la agenda del teléfono (.ics)
 src/features/         pantallas (onboarding, hoy, semana, cambiar-ingrediente, exclusiones, lista-compras, registro, progreso, mapa, alimentos, ajustes)
 src/store/            Zustand + Dexie
 ```
 
 ## Reglas del dominio (no romper)
-1. Ningún día del plan puede superar **20 g de carbohidratos totales** para ningún peso ideal entre 40 y 150 kg. Debe haber una prueba que lo verifique.
+1. Ningún día de las 14 semanas puede superar **20 g de carbohidratos totales** para ningún peso ideal entre 40 y 150 kg. Debe haber una prueba que lo verifique. En la fase Vivir el tope es el nivel de la persona (empieza en 30 g, sube 10 g por semana) y vuelve a 20 g durante un reinicio.
 2. La proteína se calcula sobre el **peso ideal**, no el peso actual.
 3. Verduras, condimentos y la crema del café **no se escalan** (`scalable: false`).
 4. Las porciones se redondean al `roundStep` de cada alimento (huevos enteros, gramos de 5 en 5, cucharadas de ½ en ½).

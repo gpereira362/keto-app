@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { MedicalWarning } from '../../components/MedicalWarning';
 import { Button, Card, EstimatedNote, MacroChips, cx } from '../../components/ui';
 import { proteinTargets } from '../../engine/body';
-import { programWeek } from '../../engine/data';
+import { phaseInfo, programWeek } from '../../engine/data';
 import { addDays, daysBetween, getWeekPlan, isFastingWeek } from '../../engine/plan';
 import { localDate, shortDate } from '../../lib/date';
 import { planProfile, useApp } from '../../store/useApp';
@@ -42,7 +42,7 @@ export function Semana({ initialWeek, onShoppingList }: { initialWeek?: number; 
             Semana {viewWeek} de 14{isCurrent && ' · actual'}
           </p>
           <h1 className="text-xl font-bold text-stone-900">{w.title}</h1>
-          <p className="text-xs text-stone-500">Paso {w.step} · {w.phase}</p>
+          <p className="text-xs text-stone-500">Fase {w.phase} · {phaseInfo(w.phase).name}</p>
         </div>
         <Button variant="secondary" aria-label="Semana siguiente" disabled={viewWeek >= 14} onClick={() => setViewWeek(viewWeek + 1)}>›</Button>
       </header>

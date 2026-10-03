@@ -5,6 +5,7 @@ import { applyChange, type ChangeChoice, type ChangeState } from '../engine/chan
 import { swapMeal } from '../engine/plan';
 import { advanceWeek, repeatWeek, startProgress } from '../engine/progress';
 import { activeExclusions } from '../engine/substitutions';
+import { applyCheckin, startReset, startVivir } from '../engine/vivir';
 import type {
   DailyLog, Exclusion, FoodId, MealId, MealSwap, Override, PantryItem, PlanProfile, Profile, ProgressState, ShoppingCheck,
 } from '../engine/types';
@@ -54,6 +55,11 @@ export interface AppActions {
   replaceAll(data: AppData): void;
   advance(today: string): void;
   repeat(today: string): void;
+  /** Fase 5 · Vivir: lo decide la persona al terminar la semana 14. */
+  startVivir(today: string): void;
+  /** Respuesta semanal de Vivir: ¿subieron la glucosa o la cintura? */
+  vivirCheckin(today: string, rose: boolean): void;
+  startVivirReset(today: string): void;
   reset(): void;
 }
 
@@ -141,6 +147,11 @@ export const useApp = create<AppData & AppActions>()(
 
       advance: (today) => set((s) => (s.progress ? { progress: advanceWeek(s.progress, today) } : {})),
       repeat: (today) => set((s) => (s.progress ? { progress: repeatWeek(s.progress, today) } : {})),
+      startVivir: (today) => set((s) => (s.progress ? { progress: startVivir(s.progress, today) } : {})),
+      vivirCheckin: (today, rose) =>
+        set((s) => (s.progress?.vivir ? { progress: { ...s.progress, vivir: applyCheckin(s.progress.vivir, today, rose) } } : {})),
+      startVivirReset: (today) =>
+        set((s) => (s.progress?.vivir ? { progress: { ...s.progress, vivir: startReset(s.progress.vivir, today) } } : {})),
       reset: () => set(EMPTY),
     }),
     {

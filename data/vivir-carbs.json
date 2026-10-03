@@ -1,0 +1,11 @@
+[
+  { "id": "fresas", "label": "1 taza de fresas", "carbs": 12 },
+  { "id": "moras", "label": "1 taza de moras o frambuesas", "carbs": 15 },
+  { "id": "manzana", "label": "1 manzana pequeña", "carbs": 20 },
+  { "id": "tortilla", "label": "1 tortilla de maíz", "carbs": 11 },
+  { "id": "camote", "label": "½ taza de camote o batata cocido", "carbs": 20 },
+  { "id": "frijoles", "label": "½ taza de frijoles o caraotas negras cocidas", "carbs": 20 },
+  { "id": "lentejas", "label": "½ taza de lentejas cocidas", "carbs": 20 },
+  { "id": "arroz", "label": "½ taza de arroz cocido", "carbs": 22 },
+  { "id": "platano", "label": "¼ de plátano maduro cocido", "carbs": 15 }
+]

@@ -1,33 +1,33 @@
 import { describe, expect, it } from 'vitest';
 import { addDays } from './plan';
 import {
-  advanceWeek, progressAt, drBozRatio, glucoseSeries, ratioSeries, weightSeries, drBozZone, repeatWeek, startProgress, streak, suggestAdvance, type AdvanceInput,
+  advanceWeek, progressAt, glucoseKetoneIndex, glucoseSeries, ratioSeries, weightSeries, indexZone, repeatWeek, startProgress, streak, suggestAdvance, type AdvanceInput,
 } from './progress';
 import type { DailyLog } from './types';
 
-describe('ratio Dr. Boz', () => {
+describe('índice glucosa-cetonas', () => {
   it('glucosa (mg/dL) ÷ cetonas (mmol/L)', () => {
-    expect(drBozRatio(90, 1.5)).toBe(60);
-    expect(drBozRatio(80, 0.5)).toBe(160);
+    expect(glucoseKetoneIndex(90, 1.5)).toBe(60);
+    expect(glucoseKetoneIndex(80, 0.5)).toBe(160);
   });
 
   it('glucosa en mmol/L se multiplica por 18', () => {
-    expect(drBozRatio(5, 1.5, 'mmol/L')).toBeCloseTo(60);
+    expect(glucoseKetoneIndex(5, 1.5, 'mmol/L')).toBeCloseTo(60);
   });
 
   it('sin cetonas no hay ratio', () => {
-    expect(drBozRatio(90, 0)).toBeNull();
-    expect(drBozRatio(0, 1)).toBeNull();
+    expect(glucoseKetoneIndex(90, 0)).toBeNull();
+    expect(glucoseKetoneIndex(0, 1)).toBeNull();
   });
 
   it('zonas: > 80 insulina alta · < 80 pérdida de peso · < 40 autofagia · < 20 terapéutico', () => {
-    expect(drBozZone(120)).toBe('alta-insulina');
-    expect(drBozZone(80)).toBe('alta-insulina');
-    expect(drBozZone(79.9)).toBe('perdida-peso');
-    expect(drBozZone(40)).toBe('perdida-peso');
-    expect(drBozZone(39.9)).toBe('autofagia');
-    expect(drBozZone(20)).toBe('autofagia');
-    expect(drBozZone(19.9)).toBe('terapeutico');
+    expect(indexZone(120)).toBe('alta-insulina');
+    expect(indexZone(80)).toBe('alta-insulina');
+    expect(indexZone(79.9)).toBe('perdida-peso');
+    expect(indexZone(40)).toBe('perdida-peso');
+    expect(indexZone(39.9)).toBe('autofagia');
+    expect(indexZone(20)).toBe('autofagia');
+    expect(indexZone(19.9)).toBe('terapeutico');
   });
 });
 

@@ -17,7 +17,7 @@ export function makeBackup(data: AppData, now = new Date()): Backup {
 }
 
 export function backupFileName(now = new Date()): string {
-  return `keto-continuum-${now.toISOString().slice(0, 10)}.json`;
+  return `metodo-renacer-${now.toISOString().slice(0, 10)}.json`;
 }
 
 const isObj = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
@@ -34,7 +34,7 @@ export function readBackup(text: string): { data: AppData } | { error: string } 
     return { error: 'El archivo no es un JSON válido.' };
   }
   if (!isObj(raw) || raw.app !== BACKUP_APP || !isObj(raw.data)) {
-    return { error: 'Este archivo no es un respaldo de Keto Continuum.' };
+    return { error: 'Este archivo no es un respaldo del Método Renacer.' };
   }
   if (typeof raw.version !== 'number' || raw.version > BACKUP_VERSION) {
     return { error: 'El respaldo es de una versión más nueva de la app.' };

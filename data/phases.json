@@ -1,0 +1,37 @@
+[
+  {
+    "phase": 1,
+    "name": "Limpiar",
+    "weeks": [1, 3],
+    "summary": "Bajar el azúcar y las harinas a menos de 20 g de carbohidratos al día para que la insulina baje y el cuerpo empiece a usar grasa.",
+    "signal": "Primera tira de cetonas en rosa."
+  },
+  {
+    "phase": 2,
+    "name": "Adaptar",
+    "weeks": [4, 5],
+    "summary": "El cuerpo aprende a vivir de su grasa: menos hambre, menos antojos y comidas que se pueden espaciar.",
+    "signal": "Te saltas una comida sin darte cuenta y no tienes hambre."
+  },
+  {
+    "phase": 3,
+    "name": "Espaciar",
+    "weeks": [6, 9],
+    "summary": "Comer en una ventana más corta: primero 8 horas, después 6. Más horas de descanso para la insulina.",
+    "signal": "16:8 se vuelve fácil y 18:6 se siente natural."
+  },
+  {
+    "phase": 4,
+    "name": "Ayunar",
+    "weeks": [10, 14],
+    "summary": "Una comida al día y ayunos más largos, siempre con aviso médico, para profundizar la limpieza del cuerpo.",
+    "signal": "Terminas un ayuno largo con energía y buen ánimo."
+  },
+  {
+    "phase": 5,
+    "name": "Vivir",
+    "weeks": null,
+    "summary": "Encontrar cuántos carbohidratos de verdad tolera tu cuerpo y quedarte ahí, con fuerza, buen descanso y chequeos mensuales.",
+    "signal": "Tu glucosa y tu cintura se mantienen estables mes a mes."
+  }
+]

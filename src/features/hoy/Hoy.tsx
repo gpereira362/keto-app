@@ -18,6 +18,7 @@ import { AdvanceBanner } from './AdvanceBanner';
 import { DayTotals } from './DayTotals';
 import { FastingCard } from './FastingCard';
 import { MealCard } from './MealCard';
+import { VivirHoy } from './VivirHoy';
 
 /** Hora actual, actualizada cada 30 s para la cuenta regresiva. */
 function useNow(): Date {
@@ -48,6 +49,8 @@ export function Hoy({ onChangeStartDate }: { onChangeStartDate: () => void }) {
   /** Día del programa que se está mirando; null = hoy. */
   const [viewing, setViewing] = useState<ProgramDay | null>(null);
   if (!profile || !progress) return null;
+  // Fase 5 · Vivir: después de la semana 14 la pantalla cambia.
+  if (progress.vivir) return <VivirHoy today={localDate(now)} />;
 
   const today = localDate(now);
   const notStarted = today < profile.startDate;
@@ -101,7 +104,7 @@ export function Hoy({ onChangeStartDate }: { onChangeStartDate: () => void }) {
             ›
           </button>
         </div>
-        <p className="mt-1 text-sm text-emerald-50">Paso {week.step} · {week.title}</p>
+        <p className="mt-1 text-sm text-emerald-50">Fase {week.phase} · {week.title}</p>
         <p className="text-xs text-emerald-100">
           {notStarted ? 'Empiezas' : 'Empezaste'} el {longDate(profile.startDate)} ·{' '}
           <button type="button" onClick={onChangeStartDate} className="-my-3 min-h-11 font-semibold text-white underline">
@@ -135,6 +138,7 @@ export function Hoy({ onChangeStartDate }: { onChangeStartDate: () => void }) {
           onAdvance={() => state.advance(today)}
           onRepeat={() => state.repeat(today)}
           onAcknowledge={() => state.updateLog(today, { medicalWarningAcknowledged: true })}
+          onStartVivir={() => state.startVivir(today)}
         />
       )}
 

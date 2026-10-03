@@ -207,7 +207,7 @@ export function Ajustes({ focus, onBack, onExclusions }: { focus?: string; onBac
 
       <MedicalWarning />
       <p className="px-1 text-center text-xs text-stone-400">
-        Uso educativo. Basado en el Keto Continuum de Dr. Boz (Annette Bosworth, MD). Macros aproximados (USDA).
+        Método Renacer. Uso educativo; no reemplaza la consulta médica. Macros aproximados (USDA).
       </p>
     </div>
   );

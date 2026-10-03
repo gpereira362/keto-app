@@ -12,10 +12,14 @@ function Bar({ value, max, tone, track }: { value: number; max: number; tone: st
 }
 
 /** Totales del día contra las metas. Mismos colores que las etiquetas P/G/C. */
-export function DayTotals({ totals, idealWeightKg, week }: { totals: Macros; idealWeightKg: number; week: number }) {
+export function DayTotals({ totals, idealWeightKg, week, carbLimit = CARB_LIMIT }: {
+  totals: Macros; idealWeightKg: number; week: number;
+  /** Tope de carbohidratos del día: 20 g en el programa; en Vivir, tu nivel actual. */
+  carbLimit?: number;
+}) {
   const p = proteinTargets(idealWeightKg, week);
   const pct = Math.round(fatCaloriePct(totals) * 100);
-  const nearLimit = totals.carbs > CARB_LIMIT * 0.85;
+  const nearLimit = totals.carbs > carbLimit * 0.85;
   return (
     <Card>
       <h2 className="font-semibold text-stone-900">Totales del día</h2>
@@ -42,11 +46,11 @@ export function DayTotals({ totals, idealWeightKg, week }: { totals: Macros; ide
           <div className="flex justify-between">
             <dt className="font-medium text-rose-800">Carbohidratos totales</dt>
             <dd className="tabular-nums text-stone-900">
-              {grams(totals.carbs, 1)} <span className="text-stone-500">/ máx. {CARB_LIMIT} g</span>
+              {grams(totals.carbs, 1)} <span className="text-stone-500">/ máx. {carbLimit} g</span>
             </dd>
           </div>
-          <Bar value={totals.carbs} max={CARB_LIMIT} tone={nearLimit ? 'bg-red-600' : 'bg-rose-400'} track="bg-rose-100" />
-          {nearLimit && <p className="mt-1 text-xs text-red-800">Cerca del límite de 20 g.</p>}
+          <Bar value={totals.carbs} max={carbLimit} tone={nearLimit ? 'bg-red-600' : 'bg-rose-400'} track="bg-rose-100" />
+          {nearLimit && <p className="mt-1 text-xs text-red-800">Cerca de tu límite de {carbLimit} g.</p>}
         </div>
       </dl>
     </Card>

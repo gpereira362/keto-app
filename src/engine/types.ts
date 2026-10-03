@@ -20,13 +20,13 @@ export interface Meal { id: MealId; name: string; items: MealItem[] }
 export interface Slot { label: string; time: string; meal: MealId }
 export interface DayPlan { day: 'Lun'|'Mar'|'Mié'|'Jue'|'Vie'|'Sáb'|'Dom'; slots: Slot[] }
 
-export type Phase = 'Principiante' | 'Metabolismo base' | 'Estresar el metabolismo';
+/** Las 5 fases del Método Renacer: 1 Limpiar · 2 Adaptar · 3 Espaciar · 4 Ayunar · 5 Vivir. */
+export type PhaseId = 1 | 2 | 3 | 4 | 5;
 
 export interface ProgramWeek {
   week: number;                       // 1–14
-  step: string;                       // "2", "2 → 3", "6 → 7"
+  phase: PhaseId;                     // fases 1–4 (la 5, Vivir, empieza después de la semana 14)
   title: string;
-  phase: Phase;
   schedule: string;
   proteinGPerKg: { min: number; max: number };
   goal: string;
@@ -36,12 +36,12 @@ export interface ProgramWeek {
   days: DayPlan[];                    // siempre 7
 }
 
-export interface ContinuumStep {
-  step: number;                       // 1–12
-  phase: Phase;
-  title: string;
-  notes: string | null;
-  minDuration: string | null;
+export interface PhaseInfo {
+  phase: PhaseId;
+  name: string;                       // "Limpiar"
+  weeks: [number, number] | null;     // semanas que abarca; null = Vivir (sin fin)
+  summary: string;
+  signal: string;                     // la señal de que funciona
 }
 
 export type IdealWeightSource = 'bmi22' | 'devine' | 'robinson' | 'manual';
@@ -80,16 +80,27 @@ export interface DailyLog {
   medicalWarningAcknowledged?: boolean;
   followedWeekRule?: boolean;         // cumplió la regla de la semana (16:8, 2 comidas…)
   carbsUnder20?: boolean;             // si falta, se asume cumplido cuando hay comidas registradas
+  waistCm?: number;                   // cintura, a la altura del ombligo
   notes?: string;
+}
+
+/** Fase 5 · Vivir: encontrar cuántos carbohidratos tolera el cuerpo y quedarse ahí. */
+export interface VivirState {
+  startedAt: string;
+  level: number;                      // carbohidratos al día que toca ahora (g)
+  equilibrium?: number;               // punto de equilibrio encontrado (g)
+  checkins: { date: string; rose: boolean; level: number }[];
+  resetUntil?: string;                // reinicio de 7 días a 20 g, hasta esta fecha (incluida)
 }
 
 export interface ProgressState {
   currentWeek: number;
   weekStartedAt: string;
   history: { week: number; startedAt: string; endedAt?: string; repeated: boolean }[];
+  vivir?: VivirState;                 // presente cuando la persona pasó a la fase 5
 }
 
-export type DrBozZone = 'alta-insulina' | 'perdida-peso' | 'autofagia' | 'terapeutico';
+export type IndexZone = 'alta-insulina' | 'perdida-peso' | 'autofagia' | 'terapeutico';
 
 // ---------------------------------------------------------------- sustituciones
 export type Allergen = 'huevo' | 'lacteos' | 'pescado' | 'mariscos' | 'cerdo' | 'mostaza' | 'coco';

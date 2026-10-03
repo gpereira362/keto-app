@@ -1,8 +1,8 @@
-// Registro del día: tira de orina, glucosa y cetonas (ratio Dr. Boz), peso, hambre y comidas cumplidas.
+// Registro del día: tira de orina, glucosa y cetonas (índice glucosa-cetonas), peso, hambre y comidas cumplidas.
 import { useEffect, useState } from 'react';
 import { Button, Card, Chip, Field, cx, inputClass } from '../../components/ui';
 import { addDays, getTodayPlan, mealCategory } from '../../engine/plan';
-import { ZONE_LABELS, drBozRatio, drBozZone, progressAt } from '../../engine/progress';
+import { ZONE_LABELS, glucoseKetoneIndex, indexZone, progressAt } from '../../engine/progress';
 import type { DailyLog } from '../../engine/types';
 import { localDate, longDate } from '../../lib/date';
 import {
@@ -56,7 +56,7 @@ export function Registro() {
   const units = profile.units;
   const log: DailyLog = logs.find((l) => l.date === date) ?? { date, mealsEaten: [] };
   const update = (patch: Partial<DailyLog>) => state.updateLog(date, patch);
-  const ratio = log.bloodGlucose && log.bloodKetoneMmol ? drBozRatio(log.bloodGlucose, log.bloodKetoneMmol) : null;
+  const ratio = log.bloodGlucose && log.bloodKetoneMmol ? glucoseKetoneIndex(log.bloodGlucose, log.bloodKetoneMmol) : null;
   const beforeStart = date < profile.startDate;
   const plan = beforeStart ? null : getTodayPlan(planProfile(state, date), progressAt(progress, date), date, { overrides, mealSwaps });
   const meals = plan?.slots.filter((s) => !['CAF', 'AYU'].includes(mealCategory(s.mealId))) ?? [];
@@ -114,23 +114,32 @@ export function Registro() {
         <div className="rounded-xl bg-stone-50 p-3 text-sm" aria-live="polite">
           {ratio !== null ? (
             <p>
-              Ratio Dr. Boz: <span className="text-lg font-bold tabular-nums text-stone-900">{Math.round(ratio)}</span>{' '}
-              <span className="font-medium text-stone-700">· {ZONE_LABELS[drBozZone(ratio)]}</span>
+              Índice glucosa-cetonas: <span className="text-lg font-bold tabular-nums text-stone-900">{Math.round(ratio)}</span>{' '}
+              <span className="font-medium text-stone-700">· {ZONE_LABELS[indexZone(ratio)]}</span>
             </p>
           ) : (
-            <p className="text-stone-500">Anota glucosa y cetonas para ver el ratio Dr. Boz (glucosa ÷ cetonas).</p>
+            <p className="text-stone-500">Anota glucosa y cetonas para ver tu índice glucosa-cetonas (glucosa ÷ cetonas).</p>
           )}
           <p className="mt-1 text-xs text-stone-500">Menos de 80: pérdida de peso · menos de 40: autofagia · menos de 20: terapéutico.</p>
         </div>
       </Card>
 
       <Card className="space-y-3">
-        <NumberField
-          key={`${date}-w`}
-          label={`Peso (${units.weight})`}
-          value={log.weightKg === undefined ? undefined : weightToDisplay(log.weightKg, units.weight)}
-          onCommit={(n) => update({ weightKg: n === undefined ? undefined : weightFromInput(n, units.weight) })}
-        />
+        <div className="grid grid-cols-2 gap-3">
+          <NumberField
+            key={`${date}-w`}
+            label={`Peso (${units.weight})`}
+            value={log.weightKg === undefined ? undefined : weightToDisplay(log.weightKg, units.weight)}
+            onCommit={(n) => update({ weightKg: n === undefined ? undefined : weightFromInput(n, units.weight) })}
+          />
+          <NumberField
+            key={`${date}-c`}
+            label="Cintura (cm)"
+            hint="A la altura del ombligo"
+            value={log.waistCm}
+            onCommit={(n) => update({ waistCm: n })}
+          />
+        </div>
         <div>
           <span className="text-sm font-medium text-stone-700">Hambre</span>
           <div className="mt-1 flex flex-wrap gap-2">

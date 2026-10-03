@@ -2,14 +2,19 @@
 import foodsJson from '../../data/foods.json';
 import mealsJson from '../../data/meals.json';
 import weeksJson from '../../data/program-weeks.json';
-import stepsJson from '../../data/continuum-steps.json';
+import phasesJson from '../../data/phases.json';
 import groupsJson from '../../data/substitution-groups.json';
-import type { ContinuumStep, FoodFull, FoodId, Meal, MealId, ProgramWeek, SubstitutionGroup } from './types';
+import type { FoodFull, FoodId, Meal, MealId, PhaseId, PhaseInfo, ProgramWeek, SubstitutionGroup } from './types';
 
 export const FOOD_LIST = foodsJson as unknown as FoodFull[];
 export const MEAL_LIST = mealsJson as unknown as Meal[];
 export const WEEKS = weeksJson as unknown as ProgramWeek[];
-export const STEPS = stepsJson as unknown as ContinuumStep[];
+/** Las 5 fases del Método Renacer. */
+export const PHASES = phasesJson as unknown as PhaseInfo[];
+
+export function phaseInfo(phase: PhaseId): PhaseInfo {
+  return PHASES.find((p) => p.phase === phase)!;
+}
 const ALL_GROUPS = groupsJson as unknown as (SubstitutionGroup & { matchBy?: SubstitutionGroup['matchBy'] })[];
 
 export const FOODS: Record<FoodId, FoodFull> = Object.fromEntries(FOOD_LIST.map((f) => [f.id, f]));

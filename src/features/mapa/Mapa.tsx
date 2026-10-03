@@ -1,73 +1,72 @@
-// Mapa: los 12 pasos del continuum y las 14 semanas. Dónde está y lo que falta.
+// Mapa: las 5 fases del Método Renacer y las 14 semanas. Dónde está y lo que falta.
 import { Button, Card, cx } from '../../components/ui';
-import { STEPS, WEEKS, programWeek } from '../../engine/data';
+import { PHASES, WEEKS } from '../../engine/data';
 import { isFastingWeek } from '../../engine/plan';
-import type { Phase } from '../../engine/types';
+import type { PhaseId } from '../../engine/types';
 import { useApp } from '../../store/useApp';
 
-/** "2 → 3" → [2, 3]. */
-export function stepsOf(step: string): number[] {
-  return (step.match(/\d+/g) ?? []).map(Number);
-}
-
-const PHASES: Phase[] = ['Principiante', 'Metabolismo base', 'Estresar el metabolismo'];
+const PHASE_COLOR: Record<PhaseId, string> = {
+  1: 'bg-orange-100 text-orange-800',
+  2: 'bg-amber-100 text-amber-800',
+  3: 'bg-teal-100 text-teal-800',
+  4: 'bg-sky-100 text-sky-800',
+  5: 'bg-emerald-100 text-emerald-800',
+};
 
 export function Mapa({ onBack, onOpenWeek }: { onBack: () => void; onOpenWeek: (week: number) => void }) {
   const progress = useApp((s) => s.progress);
   if (!progress) return null;
+  const inVivir = !!progress.vivir;
   const current = progress.currentWeek;
-  const currentSteps = stepsOf(programWeek(current).step);
-  const maxDone = Math.min(...currentSteps) - 1;
+  const currentPhase: PhaseId = inVivir ? 5 : WEEKS.find((w) => w.week === current)!.phase;
 
   return (
     <div className="space-y-4">
       <header className="flex items-center gap-2">
         <Button variant="ghost" onClick={onBack} aria-label="Volver">‹</Button>
-        <h1 className="text-2xl font-bold text-stone-900">Mapa</h1>
+        <h1 className="text-2xl font-bold text-stone-900">Mapa del Método Renacer</h1>
       </header>
 
       <Card>
-        <p className="text-sm text-stone-600">Estás en la semana <span className="font-semibold text-stone-900">{current} de 14</span>, paso <span className="font-semibold text-stone-900">{programWeek(current).step}</span> de 12.</p>
-        <div className="mt-2 h-2 overflow-hidden rounded-full bg-stone-100" aria-hidden>
-          <div className="h-full rounded-full bg-emerald-600" style={{ width: `${((current - 1) / 14) * 100}%` }} />
+        <p className="text-sm text-stone-600">
+          {inVivir ? (
+            <>Terminaste las 14 semanas. Estás en la <span className="font-semibold text-stone-900">fase 5: Vivir</span>.</>
+          ) : (
+            <>Estás en la semana <span className="font-semibold text-stone-900">{current} de 14</span>, fase <span className="font-semibold text-stone-900">{currentPhase} de 5</span>.</>
+          )}
+        </p>
+        <div className="mt-2 h-2 overflow-hidden rounded-full bg-emerald-100" aria-hidden>
+          <div className="h-full rounded-full bg-emerald-600" style={{ width: `${inVivir ? 100 : ((current - 1) / 14) * 100}%` }} />
         </div>
       </Card>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-bold text-stone-900">Los 12 pasos</h2>
-        {PHASES.map((phase) => (
-          <Card key={phase} flush>
-            <h3 className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-stone-500">{phase}</h3>
-            <ol className="divide-y divide-stone-100">
-              {STEPS.filter((s) => s.phase === phase).map((s) => {
-                const state = currentSteps.includes(s.step) ? 'actual' : s.step <= maxDone ? 'hecho' : 'pendiente';
-                return (
-                  <li key={s.step} className={cx('flex gap-3 px-4 py-3', state === 'actual' && 'bg-emerald-50')} aria-current={state === 'actual' ? 'step' : undefined}>
-                    <span
-                      className={cx(
-                        'flex size-7 shrink-0 items-center justify-center rounded-full text-xs font-bold',
-                        state === 'hecho' && 'bg-emerald-700 text-white',
-                        state === 'actual' && 'bg-white text-emerald-800 ring-2 ring-emerald-700',
-                        state === 'pendiente' && 'bg-stone-100 text-stone-500',
-                      )}
-                    >
-                      {state === 'hecho' ? '✓' : s.step}
-                    </span>
-                    <span className="min-w-0">
-                      <span className="block text-sm font-medium text-stone-900">
-                        {s.title}
-                        <span className="sr-only"> ({state})</span>
+        <h2 className="text-lg font-bold text-stone-900">Las 5 fases</h2>
+        <Card flush>
+          <ol className="divide-y divide-stone-100">
+            {PHASES.map((p) => {
+              const state = p.phase === currentPhase ? 'actual' : p.phase < currentPhase ? 'hecha' : 'pendiente';
+              return (
+                <li key={p.phase} className={cx('flex gap-3 px-4 py-3', state === 'actual' && 'bg-emerald-50')} aria-current={state === 'actual' ? 'step' : undefined}>
+                  <span className={cx('flex size-8 shrink-0 items-center justify-center rounded-full text-sm font-bold', state === 'hecha' ? 'bg-emerald-700 text-white' : PHASE_COLOR[p.phase])}>
+                    {state === 'hecha' ? '✓' : p.phase}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm font-semibold text-stone-900">
+                      {p.name}
+                      <span className="ml-2 text-xs font-normal text-stone-500">
+                        {p.weeks ? `semanas ${p.weeks[0]}–${p.weeks[1]}` : 'para siempre'}
                       </span>
-                      {(s.notes || s.minDuration) && (
-                        <span className="block text-xs text-stone-500">{[s.notes, s.minDuration].filter(Boolean).join(' · ')}</span>
-                      )}
+                      <span className="sr-only"> ({state})</span>
                     </span>
-                  </li>
-                );
-              })}
-            </ol>
-          </Card>
-        ))}
+                    <span className="block text-xs text-stone-600">{p.summary}</span>
+                    <span className="mt-0.5 block text-xs text-emerald-800">Señal: {p.signal}</span>
+                  </span>
+                </li>
+              );
+            })}
+          </ol>
+        </Card>
       </section>
 
       <section className="space-y-3">
@@ -75,7 +74,7 @@ export function Mapa({ onBack, onOpenWeek }: { onBack: () => void; onOpenWeek: (
         <Card flush>
           <ol className="divide-y divide-stone-100">
             {WEEKS.map((w) => {
-              const state = w.week === current ? 'actual' : w.week < current ? 'hecha' : 'pendiente';
+              const state = !inVivir && w.week === current ? 'actual' : inVivir || w.week < current ? 'hecha' : 'pendiente';
               return (
                 <li key={w.week}>
                   <button
@@ -90,7 +89,7 @@ export function Mapa({ onBack, onOpenWeek }: { onBack: () => void; onOpenWeek: (
                     <span className="min-w-0 flex-1">
                       <span className="block text-sm font-medium text-stone-900">{w.title}</span>
                       <span className="block text-xs text-stone-500">
-                        Semana {w.week} · paso {w.step}{isFastingWeek(w.week) && ' · ayuno'}{state === 'actual' && ' · estás aquí'}
+                        Semana {w.week} · fase {w.phase}{isFastingWeek(w.week) && ' · ayuno'}{state === 'actual' && ' · estás aquí'}
                       </span>
                     </span>
                     <span className="text-stone-400" aria-hidden>›</span>
